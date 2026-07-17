@@ -1,9 +1,10 @@
 # Package
 version       = "0.1.0"
 author        = "Leon Lysak (Niminem)"
-description   = "Write Arduino firmware in Nim using your favorite IDE"
+description   = "Write and flash Arduino firmware with Nim using your favorite IDE- easily!"
 license       = "MIT"
 srcDir        = "src"
+bin           = @["narduino"]
 
 # Dependencies
 requires "nim >= 2.2.10"

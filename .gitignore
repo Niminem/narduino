@@ -1,5 +1,7 @@
 .DS_Store
 *.exe
+*.out
+/sketch_*/
 nimble.develop
 nimble.paths
 nimbledeps
