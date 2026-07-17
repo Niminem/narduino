@@ -1,5 +1,5 @@
 ## This example is a simple blink program that blinks the built-in LED on the board.
-## Successfully tested with an Arduino UNO on MacOS.
+## Successfully tested with Arduino UNO board
 
 import ../src/narduino
 
