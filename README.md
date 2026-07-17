@@ -12,6 +12,15 @@ your board and flashes it — all from one command.
 nim source ──(nim cpp)──> generated .cpp/.h ──> sketch dir ──(arduino-cli)──> board
 ```
 
+narduino is both a CLI tool and a library:
+
+- **CLI**: detect boards, compile Nim into sketches, and flash — zero-config.
+- **Bindings** (`narduino/bindings`): the Arduino API in Nim — digital/analog I/O,
+  time, interrupts, `Serial`, and `setup:` / `loop:` templates so firmware code needs
+  no FFI boilerplate.
+- **Toolchain** (`import narduino`): everything the CLI does, as procs you can call
+  from your own tools.
+
 ## Prerequisites
 
 - [Nim](https://nim-lang.org/) >= 2.2.10
@@ -93,44 +102,60 @@ Note: flags take the `--flag:value` form. Boolean flags need an explicit value, 
 
 ## Writing firmware in Nim
 
-A minimal blink ([examples/blink.nim](examples/blink.nim)):
+The `narduino/bindings` module provides the Arduino API in Nim, so a blink is just:
 
 ```nim
-var
-    LED_BUILTIN {.importc,nodecl,header:"Arduino.h".}: cint
-    OUTPUT {.importc,nodecl,header:"Arduino.h".}: cint
-    HIGH {.importc,nodecl,header:"Arduino.h".}: cint
-    LOW {.importc,nodecl,header:"Arduino.h".}: cint
+import narduino/bindings
 
-proc pinMode(pin, mode: cint) {.importc,header:"Arduino.h".}
-proc digitalWrite(pin, value: cint) {.importc,header:"Arduino.h".}
-proc delay(ms: culong) {.importc,header:"Arduino.h".}
+setup:
+  pinMode(LED_BUILTIN, OUTPUT)
 
-proc NimMain() {.importc.} # has to be fwd declared
-proc setup() {.exportc.} =
-    NimMain() # required: initializes the Nim runtime
-    pinMode(LED_BUILTIN, OUTPUT)
-proc loop() {.exportc.} =
-    digitalWrite(LED_BUILTIN, HIGH)
-    delay(1000)
-    digitalWrite(LED_BUILTIN, LOW)
-    delay(1000)
+loop:
+  digitalWrite(LED_BUILTIN, HIGH)
+  delay(1000)
+  digitalWrite(LED_BUILTIN, LOW)
+  delay(1000)
 ```
 
-The rules of the game:
+The `setup:` and `loop:` templates take care of the entry points the Arduino core
+expects (exported with C linkage, no name mangling) and of initializing the Nim
+runtime — no boilerplate in your firmware code.
 
-- Export `setup()` and `loop()` with `{.exportc.}` — the sketch's `.ino` file is just a
-  stub; your Nim code provides the real implementations.
-- Call `NimMain()` first thing in `setup()` to initialize the Nim runtime (global
-  variable initialization, etc.).
-- Bind to Arduino functions/constants with `{.importc, header:"Arduino.h".}`.
+The bindings cover the core API from the
+[official reference](https://docs.arduino.cc/language-reference/): digital and analog
+I/O, time, tone/pulse/shift, interrupts, random numbers, character tests, and the
+`Serial` class (see [src/narduino/serial.nim](src/narduino/serial.nim) for what's
+included and what's intentionally left out):
+
+```nim
+import narduino/bindings
+
+setup:
+  Serial.begin(9600)
+
+loop:
+  if Serial.available() > 0:
+    Serial.print("got: ")
+    Serial.println(Serial.read())
+```
+
+Anything not (yet) wrapped can be bound by hand — that's all the bindings do under
+the hood:
+
+```nim
+proc bitRead(value: culong, bit: uint8): cint {.importc, header: "Arduino.h".}
+```
+
+If you write the entry points manually instead of using the templates, export
+`setup()`/`loop()` with `{.exportc.}` and call `NimMain()` first thing in `setup()`
+to initialize the Nim runtime.
 
 Under the hood, narduino compiles with flags suited for embedded targets
 (`--os:any --mm:arc -d:useMalloc --noMain -d:danger ...`) and copies the generated
 C++ files plus `nimbase.h` into the sketch directory, where arduino-cli treats them
 as ordinary sketch sources.
 
-## Using narduino as a library
+## Using the toolchain as a library
 
 Everything the CLI does is available programmatically:
 
