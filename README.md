@@ -32,7 +32,7 @@ No other dependencies. Stdlib only.
 
 ## Installation
 
-Once narduino is published to the nimble package directory (in progress):
+Once narduino is published to the nimble package directory ([see progress](https://github.com/nim-lang/packages/pull/3427)):
 
 ```sh
 nimble install narduino
