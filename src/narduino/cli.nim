@@ -7,7 +7,7 @@ type Args* = object
 
 
 const HelpText = """
-narduino - write and flash Arduino firmware with Nim using arduino-cli and your favorite IDE
+narduino - write and flash Arduino firmware with Nim using arduino-cli and your favorite IDE - easily!
 
 Usage:
   narduino <command> [--flag:value]

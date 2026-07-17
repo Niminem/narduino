@@ -1,7 +1,7 @@
 # Package
 version       = "0.1.0"
 author        = "Leon Lysak (Niminem)"
-description   = "Write and flash Arduino firmware with Nim using your favorite IDE- easily!"
+description   = "Write and flash Arduino firmware with Nim using your favorite IDE - easily!"
 license       = "MIT"
 srcDir        = "src"
 bin           = @["narduino"]

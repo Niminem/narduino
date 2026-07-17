@@ -1,6 +1,6 @@
 # narduino
 
-Write and flash Arduino firmware with **Nim** using your favorite IDE- easily!
+Write and flash Arduino firmware with **Nim** using your favorite IDE — easily!
 
 [Arduino CLI](https://arduino.github.io/arduino-cli/) powers the Arduino IDE and other official tooling. `narduino` provides abstractions on top of it and the Nim compiler so you can build firmware in Nim from any editor: your Nim code is translated to C++, placed into a standard Arduino sketch, and arduino-cli then compiles that sketch for your board and flashes it — all from one command.
 
@@ -54,7 +54,8 @@ nimble install
 
 ## Quick start
 
-Plug in your board, and from the root directory run:
+Plug in your board, then clone this repo (or copy the blink example from
+[Writing firmware in Nim](#writing-firmware-in-nim) below) and run from its root:
 
 ```sh
 narduino flash --src:examples/blink.nim
