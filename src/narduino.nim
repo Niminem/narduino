@@ -1,7 +1,8 @@
-## CLI tool, toolchain functions, and bindings to (most) Arduino functions and constants w/ helper templates
-import narduino/[toolchain, bindings]
-export toolchain, bindings # notice we're not exporting narduino/cli as that is just for the CLI tool
-
+## Bindings to (most) Arduino functions and constants w/ helper templates.
+## Firmware-safe: host-side toolchain procs live in narduino/toolchain,
+## which is only pulled in by the CLI binary (below) or an explicit import.
+import narduino/bindings
+export bindings
 
 when isMainModule: # binary entry point (narduino cli)
   import narduino/cli

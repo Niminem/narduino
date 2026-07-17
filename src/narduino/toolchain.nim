@@ -280,14 +280,3 @@ proc upload*(sketchDir, fqbn, port: string = "", autoInstallCore: bool = true, v
   # execute the command
   let output = execProcess(cmd) # here we use execProcess instead of execCmdEx because we want the output regardless
   echo "Arduino-CLI output:\n\n" & output
-
-
-
-when isMainModule: # dummy testing
-  let sketchDir = createSketch(currentSourcePath.parentDir.parentDir.parentDir / "examples" / "blink.nim")
-  upload(verbose=false)
-  let activeBoard = getActiveBoard()
-  echo activeBoard.fqbn & " on " & activeBoard.port
-  let boards = listBoards()
-  for board in boards:
-    echo board
