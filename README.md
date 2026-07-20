@@ -83,6 +83,7 @@ narduino <command> [--flag:value]
 | `sketch` | Creates a sketch directory and compiles Nim code into it |
 | `upload` | Uploads a compiled sketch to the board |
 | `flash` | One-shot `sketch` + `upload` |
+| `monitor` | Opens an interactive serial monitor (Ctrl+C to exit) |
 | `help` | Shows help for all commands (also shown when run with no arguments) |
 
 ### `narduino sketch`
@@ -113,6 +114,17 @@ Does `sketch` + `upload` in one shot, resolving the board once and reusing it fo
 
 Note: flags take the `--flag:value` form. Boolean flags need an explicit value, e.g.
 `--verbose:true` or `--autoinstall:false`.
+
+### `narduino monitor`
+
+Opens an interactive serial monitor on the board's port. Data is streamed in real time; press Ctrl+C to exit.
+
+| Flag | Description |
+|---|---|
+| `--port:<port>` | Serial port of the board |
+| `--baud:<rate>` | Baud rate (default: `9600`) |
+
+> **Arduino UNO R4 WiFi note:** the R4 WiFi routes serial through an ESP32-S3 bridge chip, which can produce garbled serial monitor output after plugging in or flashing. This is a [known hardware issue](https://github.com/arduino/uno-r4-wifi-usb-bridge/issues/77) — press the board's reset button before opening the monitor to resolve it.
 
 ## Writing firmware in Nim
 

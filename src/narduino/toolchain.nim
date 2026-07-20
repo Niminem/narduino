@@ -280,3 +280,23 @@ proc upload*(sketchDir, fqbn, port: string = "", autoInstallCore: bool = true, v
   # execute the command
   let output = execProcess(cmd) # here we use execProcess instead of execCmdEx because we want the output regardless
   echo "Arduino-CLI output:\n\n" & output
+
+
+proc monitor*(port: string = "", baud: int = 9600) =
+  ## Opens an interactive serial monitor on the given port at the given baud rate.
+  ## Uses arduino-cli monitor under the hood — stdin/stdout are inherited so the
+  ## user can interact in real time.  Ctrl+C exits cleanly.
+  var finalPort = port
+  if finalPort.len == 0:
+    finalPort = getActiveBoard().port
+
+  echo "Opening serial monitor on " & finalPort & " at " & $baud & " baud..."
+  echo "Press Ctrl+C to exit.\n"
+
+  let exitCode = execCmd(
+    "arduino-cli monitor -p " & finalPort & " -c baudrate=" & $baud
+  )
+  if exitCode != 0:
+    raise newException(IOError,
+      "Serial monitor failed (exit code: " & $exitCode & ").\n" &
+      "Is another program using " & finalPort & "?")

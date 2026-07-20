@@ -1,9 +1,9 @@
-import std/[parseopt, os]
+import std/[parseopt, os, strutils]
 import toolchain
 
 type Args* = object
   command*, src*, dir*, cpu*, fqbn*,
-   port*, autoinstall*, verbose*: string
+   port*, autoinstall*, verbose*, baud*: string
 
 
 const HelpText = """
@@ -34,6 +34,9 @@ Commands:
               --port:<port>       serial port of the board
               --autoinstall:<bool> auto-install the board's core (default: true)
               --verbose:<bool>    verbose arduino-cli output (default: false)
+  monitor   Opens an interactive serial monitor (Ctrl+C to exit)
+              --port:<port>       serial port of the board
+              --baud:<rate>       baud rate (default: 9600)
   help      Shows this help message
 
 Flags are optional unless marked required: the fqbn, port, and cpu are
@@ -55,6 +58,7 @@ proc getArgs*(): Args =
       elif key == "port": result.port = val
       elif key == "autoinstall": result.autoinstall = val
       elif key == "verbose": result.verbose = val
+      elif key == "baud": result.baud = val
       else:
         quit "Invalid Option: " & key & "\nRun 'narduino help' for a list of valid options."
     of cmdArgument:
@@ -121,6 +125,16 @@ proc runFlashCommand*(args: Args) =
     verbose=args.verbose == "true")
 
 
+proc runMonitorCommand*(args: Args) =
+  var baud = 9600
+  if args.baud.len > 0:
+    try:
+      baud = parseInt(args.baud)
+    except ValueError:
+      quit "Invalid baud rate: '" & args.baud & "'. Must be an integer."
+  monitor(args.port, baud)
+
+
 proc runHelpCommand*() =
   echo HelpText
 
@@ -133,6 +147,7 @@ proc runCommand*(args: Args) =
   of "sketch": runSketchCommand(args)
   of "upload": runUploadCommand(args)
   of "flash": runFlashCommand(args)
+  of "monitor": runMonitorCommand(args)
   of "help", "": runHelpCommand()
   else:
     quit "Invalid Command: " & args.command & "\nRun 'narduino help' for a list of valid commands."

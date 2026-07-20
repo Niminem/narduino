@@ -1,5 +1,5 @@
 # Package
-version       = "0.1.0"
+version       = "0.2.0"
 author        = "Leon Lysak (Niminem)"
 description   = "Write and flash Arduino firmware with Nim using your favorite IDE - easily!"
 license       = "MIT"
