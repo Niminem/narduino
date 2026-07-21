@@ -32,19 +32,13 @@ No other dependencies. Stdlib only.
 
 ## Installation
 
-Once narduino is published to the nimble package directory ([see progress](https://github.com/nim-lang/packages/pull/3427)):
+Install via nimble:
 
 ```sh
 nimble install narduino
 ```
 
-Until then, install straight from GitHub:
-
-```sh
-nimble install https://github.com/Niminem/narduino
-```
-
-Or clone and install from a local copy:
+Or clone and install from a local copy via git:
 
 ```sh
 git clone https://github.com/Niminem/narduino
