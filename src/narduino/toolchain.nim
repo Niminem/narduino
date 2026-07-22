@@ -273,7 +273,7 @@ proc upload*(sketchDir, fqbn, port: string = "", autoInstallCore: bool = true, v
 
   # build the command
   # ref: https://arduino.github.io/arduino-cli/1.5/getting-started/
-  var cmd = "arduino-cli compile -b " & finalFqbn & " -p " & finalPort & " --clean --upload --verify "
+  var cmd = "arduino-cli compile -b " & finalFqbn & " -p " & finalPort & " --clean --upload --verify --jobs 0 "
   if verbose: cmd &= "-v "
   cmd &= finalSketchDir
 
