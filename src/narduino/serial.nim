@@ -7,10 +7,6 @@
 ## Print.h (print/println)
 ##
 ## Intentionally not wrapped:
-## - readString(), readStringUntil(), and the print/println(String) overloads:
-##   the heap-allocating Arduino `String` class is deliberately unsupported
-##   (fragmentation-prone on small targets); use readBytes/readBytesUntil
-##   with a caller-owned buffer instead
 ## - the write(int/long/...) helpers, which silently truncate to one byte in
 ##   C++; write(uint8) covers them and makes out-of-range values an error
 ## - serialEvent(): only ever called by classic AVR cores (silent no-op on
@@ -19,6 +15,10 @@
 
 type
   SerialObj* {.incompleteStruct, byref.} = object
+  String* {.importcpp: "String", header: "WString.h".} = object
+    ## The Arduino String class. Heap-allocating and fragmentation-prone on
+    ## small targets; prefer caller-owned buffers (readBytes/readBytesUntil)
+    ## when memory is tight.
 
 {.push importc, nodecl, header:"Arduino.h".}
 # Serial objects
@@ -106,6 +106,8 @@ proc printlnSigned(s: SerialObj, value: int32, base: cint): csize_t
   {.importcpp: "#.println((long)(#), #)", discardable.}
 proc printlnUnsigned(s: SerialObj, value: uint32, base: cint): csize_t
   {.importcpp: "#.println((unsigned long)(#), #)", discardable.}
+proc print*(s: SerialObj, value: String): csize_t {.importcpp, discardable.}
+proc println*(s: SerialObj, value: String): csize_t {.importcpp, discardable.}
 proc read*(s: SerialObj): cint {.importcpp.}
   ## Returns the next incoming byte, or -1 if none is available
 proc readBytes*(s: SerialObj, buffer: ptr uint8, length: csize_t): csize_t {.importcpp.}
@@ -115,6 +117,11 @@ proc readBytesUntil*(s: SerialObj, terminator: char, buffer: ptr uint8,
                      length: csize_t): csize_t {.importcpp: "#.readBytesUntil((char)#, #, #)".}
   ## As readBytes, but also stops at `terminator` (which is discarded
   ## from the stream and not stored in the buffer)
+proc readString*(s: SerialObj): String {.importcpp.}
+  ## Reads incoming serial data into a String until timeout (setTimeout)
+proc readStringUntil*(s: SerialObj, terminator: char): String
+  {.importcpp: "#.readStringUntil((char)#)".}
+  ## Reads incoming serial data into a String until `terminator` or timeout
 proc setTimeout*(s: SerialObj, time: uint32 = 1000'u32) {.importcpp.}
 proc write*(s: SerialObj, value: uint8): csize_t {.importcpp, discardable.}
 proc write*(s: SerialObj, str: cstring): csize_t {.importcpp, discardable.}

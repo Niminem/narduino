@@ -139,7 +139,7 @@ loop:
 
 The `setup:` and `loop:` templates take care of the entry points the Arduino core expects (exported with C linkage, no name mangling) and of initializing the Nim runtime — no boilerplate in your firmware code.
 
-The bindings cover the core API from the [official reference](https://docs.arduino.cc/language-reference/): digital and analog I/O, time, tone/pulse/shift, interrupts, random numbers, character tests, and the `Serial` class (see [src/narduino/serial.nim](src/narduino/serial.nim) for what's included and what's intentionally left out):
+The bindings cover the core API from the [official reference](https://docs.arduino.cc/language-reference/): digital and analog I/O, time, tone/pulse/shift, interrupts, random numbers, character tests, and the `Serial` class (including `String`, `readString`/`readStringUntil`, `print`/`println` — see [src/narduino/serial.nim](src/narduino/serial.nim) for details):
 
 ```nim
 import narduino
