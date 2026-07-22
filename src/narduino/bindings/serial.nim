@@ -8,17 +8,14 @@
 ##
 ## Intentionally not wrapped:
 ## - the write(int/long/...) helpers, which silently truncate to one byte in
-##   C++; write(uint8) covers them and makes out-of-range values an error
+##   C++. write(uint8) covers them and makes out-of-range values an error
 ## - serialEvent(): only ever called by classic AVR cores (silent no-op on
-##   modern boards); poll `available()` at the top of `loop:` instead
+##   modern boards). poll `available()` at the top of `loop:` instead
 
+import wstring
 
 type
   SerialObj* {.incompleteStruct, byref.} = object
-  String* {.importcpp: "String", header: "WString.h".} = object
-    ## The Arduino String class. Heap-allocating and fragmentation-prone on
-    ## small targets; prefer caller-owned buffers (readBytes/readBytesUntil)
-    ## when memory is tight.
 
 {.push importc, nodecl, header:"Arduino.h".}
 # Serial objects
@@ -70,9 +67,9 @@ const NO_IGNORE_CHAR* = '\x01'
   ## Default `ignore` for parseInt/parseFloat: a char not found in valid
   ## numeric fields (Stream.h #undefs its macro, so it's a Nim const here)
 
-# if (Serial) - reports whether the port is ready.
-# As a converter, `if Serial: ...` and `while not Serial: ...` work directly.
-converter toBool*(s: SerialObj): bool {.importcpp: "((bool)(#))".}
+# if (Serial) - reports whether the port is ready (USB CDC boards
+# return false until a host opens the port; classic AVR always true).
+proc isReady*(s: SerialObj): bool {.importcpp: "((bool)(#))".}
 
 {.push header: "Arduino.h".}
 
@@ -107,7 +104,9 @@ proc printlnSigned(s: SerialObj, value: int32, base: cint): csize_t
 proc printlnUnsigned(s: SerialObj, value: uint32, base: cint): csize_t
   {.importcpp: "#.println((unsigned long)(#), #)", discardable.}
 proc print*(s: SerialObj, value: String): csize_t {.importcpp, discardable.}
+proc print*(s: SerialObj, value: ptr FlashStringHelper): csize_t {.importcpp, discardable.}
 proc println*(s: SerialObj, value: String): csize_t {.importcpp, discardable.}
+proc println*(s: SerialObj, value: ptr FlashStringHelper): csize_t {.importcpp, discardable.}
 proc read*(s: SerialObj): cint {.importcpp.}
   ## Returns the next incoming byte, or -1 if none is available
 proc readBytes*(s: SerialObj, buffer: ptr uint8, length: csize_t): csize_t {.importcpp.}
@@ -149,3 +148,5 @@ template readBytes*(s: SerialObj, buf: var openArray[uint8]): csize_t =
 template readBytesUntil*(s: SerialObj, terminator: char,
                          buf: var openArray[uint8]): csize_t =
   readBytesUntil(s, terminator, addr buf[0], csize_t(buf.len))
+template write*(s: SerialObj, buf: openArray[uint8]): csize_t =
+  write(s, unsafeAddr buf[0], csize_t(buf.len))

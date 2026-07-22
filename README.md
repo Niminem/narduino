@@ -137,7 +137,7 @@ loop:
 
 The `setup:` and `loop:` templates take care of the entry points the Arduino core expects (exported with C linkage, no name mangling) and of initializing the Nim runtime — no boilerplate in your firmware code.
 
-The bindings cover the core API from the [official reference](https://docs.arduino.cc/language-reference/): digital and analog I/O, time, tone/pulse/shift, interrupts, random numbers, character tests, and the `Serial` class (including `String`, `readString`/`readStringUntil`, `print`/`println` — see [src/narduino/serial.nim](src/narduino/serial.nim) for details):
+The bindings cover the core API from the [official reference](https://docs.arduino.cc/language-reference/): digital and analog I/O, time, tone/pulse/shift, interrupts, random numbers, character tests, the `String` class, and `Serial` (see [src/narduino/bindings/](src/narduino/bindings/) for details):
 
 ```nim
 import narduino
@@ -204,6 +204,8 @@ arduino-cli config add board_manager.additional_urls https://arduino.esp8266.com
 **Garbled serial monitor output (Arduino UNO R4 WiFi):** the R4 WiFi routes serial through an ESP32-S3 bridge chip, which can produce garbled serial monitor output after plugging in or flashing. This is a [known hardware issue](https://github.com/arduino/uno-r4-wifi-usb-bridge/issues/77) — press the board's reset button before opening the monitor to resolve it.
 
 **Board unresponsive after flashing:** some boards (including the R4 WiFi) can occasionally end up in a bad state after flashing — the board may stop responding or behave unexpectedly. If a reset doesn't fix it, disconnecting and reconnecting the USB cable reliably resolves the issue.
+
+**Serial monitor line endings:** the Arduino IDE lets you choose "No line ending" when sending data, but `arduino-cli monitor` (which narduino uses under the hood) has no such option — your terminal's newline is sent as-is when you press Enter. If your firmware reads line-based input, one option is to use `readStringUntil('\n')` followed by `trim()` to strip the trailing `\r` that terminals send (see [examples/serial.nim](examples/serial.nim) for a working pattern). A built-in serial monitor with line-ending control is planned; PRs welcome.
 
 ## License
 

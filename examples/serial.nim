@@ -1,18 +1,19 @@
-## Serial echo example — reads characters from the serial monitor and echoes them back.
+## Serial echo example — reads lines from the serial monitor and echoes them back.
 ## Flash, then run `narduino monitor` to interact.
-## NOTE: If you'd like to see 'Ready! Type something:' in the serial monitor,
-## you need to open the monitor first (then hit reset button).
+## NOTE: If you'd like to see 'Ready!' in the serial monitor,
+## open the monitor first (then hit the reset button).
 
 import ../src/narduino
 
 setup:
-    Serial.begin(9600) # common baud rate for Arduino boards
-    delay(2000) # gives a delay to the serial port to stabilize (arduinor4 wifi quirk)
-    Serial.println("Ready! Type something:") # won't see unless you open monitor
-                                             # first (then hit reset button)
+    Serial.begin(9600)
+    delay(2000)
+    Serial.println("Ready! Type a line and press Enter:")
 
 loop:
     if Serial.available() > 0:
-        let c = Serial.read() # read the incoming character (type something in monitor)
-        Serial.print("Got: ")
-        Serial.println(char c) # print the character to the serial monitor
+        var input = Serial.readStringUntil('\n')
+        input.trim()  # strip \r\n or trailing whitespace from terminal
+        if input.length() > 0:
+            Serial.print("Echo: ")
+            Serial.println(input)
