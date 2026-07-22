@@ -118,8 +118,6 @@ Opens an interactive serial monitor on the board's port. Data is streamed in rea
 | `--port:<port>` | Serial port of the board |
 | `--baud:<rate>` | Baud rate (default: `9600`) |
 
-> **Arduino UNO R4 WiFi note:** the R4 WiFi routes serial through an ESP32-S3 bridge chip, which can produce garbled serial monitor output after plugging in or flashing. This is a [known hardware issue](https://github.com/arduino/uno-r4-wifi-usb-bridge/issues/77) — press the board's reset button before opening the monitor to resolve it.
-
 ## Writing firmware in Nim
 
 Importing `narduino` gives you the Arduino API in Nim, so a blink is just:
@@ -200,6 +198,12 @@ core installation picks it up automatically from your arduino-cli configuration.
 arduino-cli config add board_manager.additional_urls https://arduino.esp8266.com/stable/package_esp8266com_index.json
 ```
 *note: third-party cores are untested with narduino; see the [arduino-cli docs](https://arduino.github.io/arduino-cli/latest/getting-started/#adding-3rd-party-cores) for details on registering additional package indexes*
+
+## Troubleshooting
+
+**Garbled serial monitor output (Arduino UNO R4 WiFi):** the R4 WiFi routes serial through an ESP32-S3 bridge chip, which can produce garbled serial monitor output after plugging in or flashing. This is a [known hardware issue](https://github.com/arduino/uno-r4-wifi-usb-bridge/issues/77) — press the board's reset button before opening the monitor to resolve it.
+
+**Board unresponsive after flashing:** some boards (including the R4 WiFi) can occasionally end up in a bad state after flashing — the board may stop responding or behave unexpectedly. If a reset doesn't fix it, disconnecting and reconnecting the USB cable reliably resolves the issue.
 
 ## License
 
