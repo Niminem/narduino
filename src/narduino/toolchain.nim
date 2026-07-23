@@ -1,4 +1,4 @@
-import std/[compilesettings, os, osproc, tempfiles, strutils, json, tables, options]
+import std/[compilesettings, os, osproc, tempfiles, strutils, json, tables, options, sequtils]
 export options, tables
 
 {.warning[ImplicitDefaultValue]: off.}
@@ -300,3 +300,56 @@ proc monitor*(port: string = "", baud: int = 9600) =
     raise newException(IOError,
       "Serial monitor failed (exit code: " & $exitCode & ").\n" &
       "Is another program using " & finalPort & "?")
+
+
+proc searchLib*(query: string) =
+  ## Searches the Arduino library index for libraries matching the query.
+  ## Updates the library index first to ensure fresh results.
+  echo "Updating library index..."
+  let (indexOutput, indexExitCode) = execCmdEx("arduino-cli lib update-index")
+  if indexExitCode != 0:
+    raise newException(IOError, "Failed to update library index:\n" & indexOutput)
+
+  echo "Searching for '" & query & "'...\n"
+  let (output, exitCode) = execCmdEx("arduino-cli lib search " & query & " --json")
+  if exitCode != 0:
+    raise newException(IOError, "Failed to search libraries:\n" & output)
+
+  let data = parseJson(output)
+  let libraries = data.getOrDefault("libraries")
+  if libraries.isNil or libraries.kind != JArray or libraries.len == 0:
+    echo "No libraries found for '" & query & "'."
+    return
+
+  for lib in libraries:
+    let name = lib["name"].getStr()
+    let latest = lib.getOrDefault("latest")
+
+    var sentence, website, category, latestVersion: string
+    var architectures: seq[string]
+
+    if not latest.isNil and latest.kind == JObject:
+      sentence = latest.getOrDefault("sentence").getStr("")
+      website = latest.getOrDefault("website").getStr("")
+      category = latest.getOrDefault("category").getStr("")
+      latestVersion = latest.getOrDefault("version").getStr("")
+      let archNode = latest.getOrDefault("architectures")
+      if not archNode.isNil and archNode.kind == JArray:
+        architectures = archNode.getElems().mapIt(it.getStr())
+
+    echo name
+    echo "  " & sentence
+    echo "  Latest Version: " & latestVersion
+    echo "  Website: " & website
+    echo "  Category: " & category
+    echo "  Architecture: " & architectures.join(", ")
+    echo ""
+
+
+proc installLib*(lib: string) =
+  ## Installs an Arduino library by name. Supports versioned syntax (e.g. "Servo@1.2.1").
+  echo "Installing library '" & lib & "'..."
+  let (output, exitCode) = execCmdEx("arduino-cli lib install " & quoteShell(lib))
+  if exitCode != 0:
+    raise newException(IOError, "Failed to install library '" & lib & "':\n" & output)
+  echo "Successfully installed library '" & lib & "'."

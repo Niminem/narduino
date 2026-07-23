@@ -78,6 +78,8 @@ narduino <command> [--flag:value]
 | `upload` | Uploads a compiled sketch to the board |
 | `flash` | One-shot `sketch` + `upload` |
 | `monitor` | Opens an interactive serial monitor (Ctrl+C to exit) |
+| `libsearch` | Searches the Arduino library index |
+| `libinstall` | Installs an Arduino library |
 | `help` | Shows help for all commands (also shown when run with no arguments) |
 
 ### `narduino sketch`
@@ -117,6 +119,37 @@ Opens an interactive serial monitor on the board's port. Data is streamed in rea
 |---|---|
 | `--port:<port>` | Serial port of the board |
 | `--baud:<rate>` | Baud rate (default: `9600`) |
+
+### `narduino libsearch`
+
+Searches the Arduino library index (updates the index first to ensure fresh results). The query is passed directly to `arduino-cli lib search`, so the full [qualifier-value syntax](https://arduino.github.io/arduino-cli/latest/commands/arduino-cli_lib_search/) is supported.
+
+| Flag | Description |
+|---|---|
+| `--query:<text>` | Search query **[required]** |
+
+Examples:
+
+```sh
+narduino libsearch --query:servo
+narduino libsearch --query:'servo category:"Device Control"'
+narduino libsearch --query:'name:Servo'
+```
+
+### `narduino libinstall`
+
+Installs an Arduino library by name. Supports versioned syntax to pin a specific version.
+
+| Flag | Description |
+|---|---|
+| `--lib:<name>` | Library name (supports `Name@version` syntax) **[required]** |
+
+Examples:
+
+```sh
+narduino libinstall --lib:Servo
+narduino libinstall --lib:"Servo@1.2.1"
+```
 
 ## Writing firmware in Nim
 
@@ -174,6 +207,10 @@ let active = getActiveBoard()        # the single connected board (fqbn + port)
 
 # core management
 ensureCoreInstalled(active.fqbn)     # install the board's core if missing
+
+# library management
+searchLib("servo")                   # search + print results from the library index
+installLib("Servo")                  # install a library (or "Servo@1.2.1" for a specific version)
 
 # build & flash
 let sketchDir = createSketch("blink.nim")  # nim -> c++ -> sketch dir

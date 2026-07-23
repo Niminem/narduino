@@ -3,7 +3,8 @@ import toolchain
 
 type Args* = object
   command*, src*, dir*, cpu*, fqbn*,
-   port*, autoinstall*, verbose*, baud*: string
+   port*, autoinstall*, verbose*, baud*,
+   lib*, query*: string
 
 
 const HelpText = """
@@ -37,6 +38,10 @@ Commands:
   monitor   Opens an interactive serial monitor (Ctrl+C to exit)
               --port:<port>       serial port of the board
               --baud:<rate>       baud rate (default: 9600)
+  libsearch   Searches the Arduino library index
+                --query:<text>      search query [required]
+  libinstall  Installs an Arduino library
+                --lib:<name>        library name, supports versioned (e.g. "Servo@1.2.1") [required]
   help      Shows this help message
 
 Flags are optional unless marked required: the fqbn, port, and cpu are
@@ -59,6 +64,8 @@ proc getArgs*(): Args =
       elif key == "autoinstall": result.autoinstall = val
       elif key == "verbose": result.verbose = val
       elif key == "baud": result.baud = val
+      elif key == "lib": result.lib = val
+      elif key == "query": result.query = val
       else:
         quit "Invalid Option: " & key & "\nRun 'narduino help' for a list of valid options."
     of cmdArgument:
@@ -135,6 +142,18 @@ proc runMonitorCommand*(args: Args) =
   monitor(args.port, baud)
 
 
+proc runLibSearchCommand*(args: Args) =
+  if args.query.len == 0:
+    quit "Missing required option: --query:<search text>"
+  searchLib(args.query)
+
+
+proc runLibInstallCommand*(args: Args) =
+  if args.lib.len == 0:
+    quit "Missing required option: --lib:<library name>"
+  installLib(args.lib)
+
+
 proc runHelpCommand*() =
   echo HelpText
 
@@ -148,6 +167,8 @@ proc runCommand*(args: Args) =
   of "upload": runUploadCommand(args)
   of "flash": runFlashCommand(args)
   of "monitor": runMonitorCommand(args)
+  of "libsearch": runLibSearchCommand(args)
+  of "libinstall": runLibInstallCommand(args)
   of "help", "": runHelpCommand()
   else:
     quit "Invalid Command: " & args.command & "\nRun 'narduino help' for a list of valid commands."
