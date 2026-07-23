@@ -1,4 +1,4 @@
-import std/[parseopt, os, strutils]
+import std/[parseopt, os, osproc, strutils, browsers]
 import toolchain
 
 type Args* = object
@@ -42,6 +42,7 @@ Commands:
                 --query:<text>      search query [required]
   libinstall  Installs an Arduino library
                 --lib:<name>        library name, supports versioned (e.g. "Servo@1.2.1") [required]
+  docs      Opens the API documentation in your default browser
   help      Shows this help message
 
 Flags are optional unless marked required: the fqbn, port, and cpu are
@@ -154,6 +155,20 @@ proc runLibInstallCommand*(args: Args) =
   installLib(args.lib)
 
 
+const DevDocsIndex = currentSourcePath().parentDir().parentDir().parentDir() / "docs" / "theindex.html"
+
+proc runDocsCommand*() =
+  if fileExists(DevDocsIndex):
+    openDefaultBrowser("file://" & DevDocsIndex)
+    return
+  let (pkgPath, exitCode) = execCmdEx("nimble path narduino")
+  if exitCode == 0:
+    let indexPath = pkgPath.strip() / "docs" / "theindex.html"
+    if fileExists(indexPath):
+      openDefaultBrowser("file://" & indexPath)
+      return
+  quit "Documentation not found.\nRun 'nimble docs' from the project root to generate it."
+
 proc runHelpCommand*() =
   echo HelpText
 
@@ -169,6 +184,7 @@ proc runCommand*(args: Args) =
   of "monitor": runMonitorCommand(args)
   of "libsearch": runLibSearchCommand(args)
   of "libinstall": runLibInstallCommand(args)
+  of "docs": runDocsCommand()
   of "help", "": runHelpCommand()
   else:
     quit "Invalid Command: " & args.command & "\nRun 'narduino help' for a list of valid commands."

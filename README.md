@@ -11,9 +11,12 @@ nim source ──(nim cpp)──> generated .cpp/.h ──> sketch dir ──(ar
 `narduino` is both a CLI tool and a library:
 
 - **CLI**: detect boards, compile Nim into sketches, and flash — zero-config.
-- **Bindings** (`import narduino`): the Arduino API in Nim — digital/analog I/O,
+- **Core API** (`import narduino`): the Arduino API in Nim — digital/analog I/O,
   time, interrupts, `Serial`, and `setup:` / `loop:` templates so firmware code needs
   no FFI boilerplate.
+- **Library bindings** (`import narduino/libs/<name>`): Nim wrappers for popular
+  Arduino libraries (currently: [Servo](src/narduino/libs/servo.nim)). Install the
+  Arduino library first with `narduino libinstall`, then import the binding.
 - **Toolchain** (`import narduino/toolchain`): everything the CLI does, as procs you
   can call from your own tools.
 
@@ -80,6 +83,7 @@ narduino <command> [--flag:value]
 | `monitor` | Opens an interactive serial monitor (Ctrl+C to exit) |
 | `libsearch` | Searches the Arduino library index |
 | `libinstall` | Installs an Arduino library |
+| `docs` | Opens the API documentation in your default browser |
 | `help` | Shows help for all commands (also shown when run with no arguments) |
 
 ### `narduino sketch`
@@ -170,7 +174,7 @@ loop:
 
 The `setup:` and `loop:` templates take care of the entry points the Arduino core expects (exported with C linkage, no name mangling) and of initializing the Nim runtime — no boilerplate in your firmware code.
 
-The bindings cover the core API from the [official reference](https://docs.arduino.cc/language-reference/): digital and analog I/O, time, tone/pulse/shift, interrupts, random numbers, character tests, the `String` class, and `Serial` (see [src/narduino/bindings/](src/narduino/bindings/) for details):
+The core API covers everything from the [official reference](https://docs.arduino.cc/language-reference/): digital and analog I/O, time, tone/pulse/shift, interrupts, random numbers, character tests, the `String` class, and `Serial` (see [src/narduino/api/](src/narduino/api/) for details):
 
 ```nim
 import narduino
@@ -184,11 +188,33 @@ loop:
     Serial.println(Serial.read())
 ```
 
-Anything not (yet) wrapped can be bound by hand — that's all the bindings do under the hood:
+Anything not (yet) wrapped can be bound by hand.
 
 ```nim
 proc bitRead(value: culong, bit: uint8): cint {.importc, header: "Arduino.h".}
 ```
+
+### Arduino library bindings
+
+Some popular Arduino libraries have Nim wrappers under `narduino/libs/`. Install the Arduino library with `narduino libinstall`, then import the binding alongside `narduino`:
+
+```nim
+import narduino
+import narduino/libs/servo
+
+var myServo = initServo()
+
+setup:
+  myServo.attach(9)
+
+loop:
+  myServo.write(90)
+  delay(1000)
+```
+
+| Library | Import | Arduino install |
+|---|---|---|
+| [Servo](https://github.com/arduino-libraries/Servo) | `import narduino/libs/servo` | `narduino libinstall --lib:Servo` |
 
 If you write the entry points manually instead of using the templates, export `setup()`/`loop()` with `{.exportc.}` and call `NimMain()` first thing in `setup()` to initialize the Nim runtime.
 

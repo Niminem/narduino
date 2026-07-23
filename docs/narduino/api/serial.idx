@@ -1,0 +1,81 @@
+nimTitle	serial	narduino/api/serial.html	module src/narduino/api/serial		0
+nim	SerialObj	narduino/api/serial.html#SerialObj	object SerialObj		18
+nim	Serial	narduino/api/serial.html#Serial	var Serial		22
+nim	Serial1	narduino/api/serial.html#Serial1	var Serial1		23
+nim	Serial2	narduino/api/serial.html#Serial2	var Serial2		24
+nim	Serial3	narduino/api/serial.html#Serial3	var Serial3		25
+nim	DEC	narduino/api/serial.html#DEC	let DEC		28
+nim	HEX	narduino/api/serial.html#HEX	let HEX		29
+nim	OCT	narduino/api/serial.html#OCT	let OCT		30
+nim	BIN	narduino/api/serial.html#BIN	let BIN		31
+nim	SERIAL_5N1	narduino/api/serial.html#SERIAL_5N1	let SERIAL_5N1		33
+nim	SERIAL_6N1	narduino/api/serial.html#SERIAL_6N1	let SERIAL_6N1		34
+nim	SERIAL_7N1	narduino/api/serial.html#SERIAL_7N1	let SERIAL_7N1		35
+nim	SERIAL_8N1	narduino/api/serial.html#SERIAL_8N1	let SERIAL_8N1		36
+nim	SERIAL_5N2	narduino/api/serial.html#SERIAL_5N2	let SERIAL_5N2		37
+nim	SERIAL_6N2	narduino/api/serial.html#SERIAL_6N2	let SERIAL_6N2		38
+nim	SERIAL_7N2	narduino/api/serial.html#SERIAL_7N2	let SERIAL_7N2		39
+nim	SERIAL_8N2	narduino/api/serial.html#SERIAL_8N2	let SERIAL_8N2		40
+nim	SERIAL_5E1	narduino/api/serial.html#SERIAL_5E1	let SERIAL_5E1		41
+nim	SERIAL_6E1	narduino/api/serial.html#SERIAL_6E1	let SERIAL_6E1		42
+nim	SERIAL_7E1	narduino/api/serial.html#SERIAL_7E1	let SERIAL_7E1		43
+nim	SERIAL_8E1	narduino/api/serial.html#SERIAL_8E1	let SERIAL_8E1		44
+nim	SERIAL_5E2	narduino/api/serial.html#SERIAL_5E2	let SERIAL_5E2		45
+nim	SERIAL_6E2	narduino/api/serial.html#SERIAL_6E2	let SERIAL_6E2		46
+nim	SERIAL_7E2	narduino/api/serial.html#SERIAL_7E2	let SERIAL_7E2		47
+nim	SERIAL_8E2	narduino/api/serial.html#SERIAL_8E2	let SERIAL_8E2		48
+nim	SERIAL_5O1	narduino/api/serial.html#SERIAL_5O1	let SERIAL_5O1		49
+nim	SERIAL_6O1	narduino/api/serial.html#SERIAL_6O1	let SERIAL_6O1		50
+nim	SERIAL_7O1	narduino/api/serial.html#SERIAL_7O1	let SERIAL_7O1		51
+nim	SERIAL_8O1	narduino/api/serial.html#SERIAL_8O1	let SERIAL_8O1		52
+nim	SERIAL_5O2	narduino/api/serial.html#SERIAL_5O2	let SERIAL_5O2		53
+nim	SERIAL_6O2	narduino/api/serial.html#SERIAL_6O2	let SERIAL_6O2		54
+nim	SERIAL_7O2	narduino/api/serial.html#SERIAL_7O2	let SERIAL_7O2		55
+nim	SERIAL_8O2	narduino/api/serial.html#SERIAL_8O2	let SERIAL_8O2		56
+nim	LookaheadMode	narduino/api/serial.html#LookaheadMode	enum LookaheadMode		60
+nim	NO_IGNORE_CHAR	narduino/api/serial.html#NO_IGNORE_CHAR	const NO_IGNORE_CHAR		66
+nim	isReady	narduino/api/serial.html#isReady,SerialObj	proc isReady(s: SerialObj): bool		72
+nim	available	narduino/api/serial.html#available,SerialObj	proc available(s: SerialObj): cint		76
+nim	availableForWrite	narduino/api/serial.html#availableForWrite,SerialObj	proc availableForWrite(s: SerialObj): cint		77
+nim	begin	narduino/api/serial.html#begin,SerialObj,uint32	proc begin(s: SerialObj; baud: uint32)		78
+nim	begin	narduino/api/serial.html#begin,SerialObj,uint32,uint8	proc begin(s: SerialObj; baud: uint32; config: uint8)		79
+nim	`end`	narduino/api/serial.html#end,SerialObj	proc `end`(s: SerialObj)		80
+nim	find	narduino/api/serial.html#find,SerialObj,cstring	proc find(s: SerialObj; target: cstring): bool		81
+nim	find	narduino/api/serial.html#find,SerialObj,cstring,csize_t	proc find(s: SerialObj; target: cstring; length: csize_t): bool		82
+nim	find	narduino/api/serial.html#find,SerialObj,char	proc find(s: SerialObj; target: char): bool		83
+nim	findUntil	narduino/api/serial.html#findUntil,SerialObj,cstring,cstring	proc findUntil(s: SerialObj; target: cstring; terminal: cstring): bool		84
+nim	flush	narduino/api/serial.html#flush,SerialObj	proc flush(s: SerialObj)		85
+nim	parseFloat	narduino/api/serial.html#parseFloat,SerialObj,LookaheadMode,char	proc parseFloat(s: SerialObj; lookahead: LookaheadMode = SKIP_ALL;\n           ignore: char = NO_IGNORE_CHAR): cfloat		86
+nim	parseInt	narduino/api/serial.html#parseInt,SerialObj,LookaheadMode,char	proc parseInt(s: SerialObj; lookahead: LookaheadMode = SKIP_ALL;\n         ignore: char = NO_IGNORE_CHAR): int32		88
+nim	peek	narduino/api/serial.html#peek,SerialObj	proc peek(s: SerialObj): cint		90
+nim	print	narduino/api/serial.html#print,SerialObj,cstring	proc print(s: SerialObj; value: cstring): csize_t		91
+nim	print	narduino/api/serial.html#print,SerialObj,char	proc print(s: SerialObj; value: char): csize_t		92
+nim	print	narduino/api/serial.html#print,SerialObj,cdouble,cint	proc print(s: SerialObj; value: cdouble; digits: cint = 2): csize_t		93
+nim	println	narduino/api/serial.html#println,SerialObj	proc println(s: SerialObj): csize_t		98
+nim	println	narduino/api/serial.html#println,SerialObj,cstring	proc println(s: SerialObj; value: cstring): csize_t		99
+nim	println	narduino/api/serial.html#println,SerialObj,char	proc println(s: SerialObj; value: char): csize_t		100
+nim	println	narduino/api/serial.html#println,SerialObj,cdouble,cint	proc println(s: SerialObj; value: cdouble; digits: cint = 2): csize_t		101
+nim	print	narduino/api/serial.html#print,SerialObj,String	proc print(s: SerialObj; value: String): csize_t		106
+nim	print	narduino/api/serial.html#print,SerialObj,ptr.FlashStringHelper	proc print(s: SerialObj; value: ptr FlashStringHelper): csize_t		107
+nim	println	narduino/api/serial.html#println,SerialObj,String	proc println(s: SerialObj; value: String): csize_t		108
+nim	println	narduino/api/serial.html#println,SerialObj,ptr.FlashStringHelper	proc println(s: SerialObj; value: ptr FlashStringHelper): csize_t		109
+nim	read	narduino/api/serial.html#read,SerialObj	proc read(s: SerialObj): cint		110
+nim	readBytes	narduino/api/serial.html#readBytes,SerialObj,ptr.uint8,csize_t	proc readBytes(s: SerialObj; buffer: ptr uint8; length: csize_t): csize_t		112
+nim	readBytesUntil	narduino/api/serial.html#readBytesUntil,SerialObj,char,ptr.uint8,csize_t	proc readBytesUntil(s: SerialObj; terminator: char; buffer: ptr uint8;\n               length: csize_t): csize_t		115
+nim	readString	narduino/api/serial.html#readString,SerialObj	proc readString(s: SerialObj): String		119
+nim	readStringUntil	narduino/api/serial.html#readStringUntil,SerialObj,char	proc readStringUntil(s: SerialObj; terminator: char): String		121
+nim	setTimeout	narduino/api/serial.html#setTimeout,SerialObj,uint32	proc setTimeout(s: SerialObj; time: uint32 = 1000'u32)		124
+nim	write	narduino/api/serial.html#write,SerialObj,uint8	proc write(s: SerialObj; value: uint8): csize_t		125
+nim	write	narduino/api/serial.html#write,SerialObj,cstring	proc write(s: SerialObj; str: cstring): csize_t		126
+nim	write	narduino/api/serial.html#write,SerialObj,ptr.uint8,csize_t	proc write(s: SerialObj; buffer: ptr uint8; size: csize_t): csize_t		127
+nim	getTimeout	narduino/api/serial.html#getTimeout,SerialObj	proc getTimeout(s: SerialObj): uint32		128
+nim	print	narduino/api/serial.html#print.t,SerialObj,SomeInteger,cint	template print(s: SerialObj; value: SomeInteger; base: cint = 10): csize_t		132
+nim	println	narduino/api/serial.html#println.t,SerialObj,SomeInteger,cint	template println(s: SerialObj; value: SomeInteger; base: cint = 10): csize_t		138
+nim	readBytes	narduino/api/serial.html#readBytes.t,SerialObj,openArray[uint8]	template readBytes(s: SerialObj; buf: var openArray[uint8]): csize_t		146
+nim	readBytesUntil	narduino/api/serial.html#readBytesUntil.t,SerialObj,char,openArray[uint8]	template readBytesUntil(s: SerialObj; terminator: char; buf: var openArray[uint8]): csize_t		148
+nim	write	narduino/api/serial.html#write.t,SerialObj,openArray[uint8]	template write(s: SerialObj; buf: openArray[uint8]): csize_t		151
+nimgrp	write	narduino/api/serial.html#write-procs-all	proc		125
+nimgrp	begin	narduino/api/serial.html#begin-procs-all	proc		78
+nimgrp	find	narduino/api/serial.html#find-procs-all	proc		81
+nimgrp	print	narduino/api/serial.html#print-procs-all	proc		91
+nimgrp	println	narduino/api/serial.html#println-procs-all	proc		98

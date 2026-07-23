@@ -1,0 +1,22 @@
+nimTitle	toolchain	narduino/toolchain.html	module src/narduino/toolchain		0
+nim	Port	narduino/toolchain.html#Port	object Port		7
+nim	MatchingBoard	narduino/toolchain.html#MatchingBoard	object MatchingBoard		14
+nim	DetectedPort	narduino/toolchain.html#DetectedPort	object DetectedPort		17
+nim	BoardList	narduino/toolchain.html#BoardList	type BoardList		20
+nim	Board	narduino/toolchain.html#Board	object Board		21
+nim	`$`	narduino/toolchain.html#$,DetectedPort	proc `$`(detectedPort: DetectedPort): string		29
+nim	`$`	narduino/toolchain.html#$,BoardList	proc `$`(boardList: BoardList): string		38
+nim	`$`	narduino/toolchain.html#$,Board	proc `$`(board: Board): string		43
+nim	cpuFromFqbn	narduino/toolchain.html#cpuFromFqbn,string	proc cpuFromFqbn(fqbn: string): string		47
+nim	listBoards	narduino/toolchain.html#listBoards	proc listBoards(): BoardList		71
+nim	getActiveBoard	narduino/toolchain.html#getActiveBoard	proc getActiveBoard(): Board		78
+nim	coreFromFqbn	narduino/toolchain.html#coreFromFqbn,string	proc coreFromFqbn(fqbn: string): string		96
+nim	isCoreInstalled	narduino/toolchain.html#isCoreInstalled,string	proc isCoreInstalled(coreId: string): bool		105
+nim	installCore	narduino/toolchain.html#installCore,string	proc installCore(coreId: string)		115
+nim	ensureCoreInstalled	narduino/toolchain.html#ensureCoreInstalled,string,bool	proc ensureCoreInstalled(fqbn: string; autoInstall: bool = true)		130
+nim	createSketch	narduino/toolchain.html#createSketch,string,string,string	proc createSketch(nimSrcFile: string; sketchDir, cpu: string = ""): string		166
+nim	upload	narduino/toolchain.html#upload,string,string,string,bool,bool	proc upload(sketchDir, fqbn, port: string = ""; autoInstallCore: bool = true;\n       verbose: bool = false)		244
+nim	monitor	narduino/toolchain.html#monitor,string,int	proc monitor(port: string = ""; baud: int = 9600)		285
+nim	searchLib	narduino/toolchain.html#searchLib,string	proc searchLib(query: string)		305
+nim	installLib	narduino/toolchain.html#installLib,string	proc installLib(lib: string)		349
+nimgrp	$	narduino/toolchain.html#$-procs-all	proc		29

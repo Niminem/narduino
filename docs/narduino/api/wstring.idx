@@ -1,0 +1,101 @@
+nimTitle	wstring	narduino/api/wstring.html	module src/narduino/api/wstring		0
+nim	FlashStringHelper	narduino/api/wstring.html#FlashStringHelper	object FlashStringHelper		19
+nim	String	narduino/api/wstring.html#String	object String		23
+nim	F	narduino/api/wstring.html#F,cstring	proc F(s: cstring): ptr FlashStringHelper		28
+nim	initString	narduino/api/wstring.html#initString	proc initString(): String		39
+nim	initString	narduino/api/wstring.html#initString,cstring	proc initString(cstr: cstring): String		41
+nim	initString	narduino/api/wstring.html#initString,String	proc initString(s: String): String		43
+nim	initString	narduino/api/wstring.html#initString,ptr.FlashStringHelper	proc initString(s: ptr FlashStringHelper): String		45
+nim	initString	narduino/api/wstring.html#initString,char	proc initString(c: char): String		47
+nim	initString	narduino/api/wstring.html#initString,cfloat,uint8	proc initString(val: cfloat; decimalPlaces: uint8 = 2): String		49
+nim	initString	narduino/api/wstring.html#initString,cdouble,uint8	proc initString(val: cdouble; decimalPlaces: uint8 = 2): String		52
+nim	initString	narduino/api/wstring.html#initString.t,SomeInteger,uint8	template initString(val: SomeInteger; base: uint8 = 10): String		63
+nim	isValid	narduino/api/wstring.html#isValid,String	proc isValid(s: String): bool		75
+nim	reserve	narduino/api/wstring.html#reserve,String,cuint	proc reserve(s: var String; size: cuint): bool		85
+nim	length	narduino/api/wstring.html#length,String	proc length(s: String): cuint		90
+nim	len	narduino/api/wstring.html#len,String	proc len(s: String): cuint		93
+nim	concat	narduino/api/wstring.html#concat,String,String	proc concat(s: var String; str: String): bool		100
+nim	concat	narduino/api/wstring.html#concat,String,cstring	proc concat(s: var String; cstr: cstring): bool		101
+nim	concat	narduino/api/wstring.html#concat,String,char	proc concat(s: var String; c: char): bool		102
+nim	concat	narduino/api/wstring.html#concat,String,cfloat	proc concat(s: var String; num: cfloat): bool		107
+nim	concat	narduino/api/wstring.html#concat,String,cdouble	proc concat(s: var String; num: cdouble): bool		108
+nim	concat	narduino/api/wstring.html#concat,String,ptr.FlashStringHelper	proc concat(s: var String; str: ptr FlashStringHelper): bool		109
+nim	concat	narduino/api/wstring.html#concat.t,String,SomeInteger	template concat(s: var String; val: SomeInteger): bool		113
+nim	add	narduino/api/wstring.html#add.t,String,String	template add(s: var String; val: String)		119
+nim	add	narduino/api/wstring.html#add.t,String,cstring	template add(s: var String; val: cstring)		120
+nim	add	narduino/api/wstring.html#add.t,String,char	template add(s: var String; val: char)		121
+nim	add	narduino/api/wstring.html#add.t,String,cfloat	template add(s: var String; val: cfloat)		122
+nim	add	narduino/api/wstring.html#add.t,String,cdouble	template add(s: var String; val: cdouble)		123
+nim	add	narduino/api/wstring.html#add.t,String,ptr.FlashStringHelper	template add(s: var String; val: ptr FlashStringHelper)		124
+nim	add	narduino/api/wstring.html#add.t,String,SomeInteger	template add(s: var String; val: SomeInteger)		125
+nim	`&=`	narduino/api/wstring.html#&=.t,String,String	template `&=`(s: var String; val: String)		132
+nim	`&=`	narduino/api/wstring.html#&=.t,String,cstring	template `&=`(s: var String; val: cstring)		133
+nim	`&=`	narduino/api/wstring.html#&=.t,String,char	template `&=`(s: var String; val: char)		134
+nim	`&=`	narduino/api/wstring.html#&=.t,String,cfloat	template `&=`(s: var String; val: cfloat)		135
+nim	`&=`	narduino/api/wstring.html#&=.t,String,cdouble	template `&=`(s: var String; val: cdouble)		136
+nim	`&=`	narduino/api/wstring.html#&=.t,String,ptr.FlashStringHelper	template `&=`(s: var String; val: ptr FlashStringHelper)		137
+nim	`&=`	narduino/api/wstring.html#&=.t,String,SomeInteger	template `&=`(s: var String; val: SomeInteger)		138
+nim	`+`	narduino/api/wstring.html#+,String,String	proc `+`(a, b: String): String		153
+nim	`+`	narduino/api/wstring.html#+,String,cstring	proc `+`(a: String; b: cstring): String		154
+nim	`+`	narduino/api/wstring.html#+,String,char	proc `+`(a: String; b: char): String		155
+nim	`+`	narduino/api/wstring.html#+,String,int32	proc `+`(a: String; b: int32): String		156
+nim	`+`	narduino/api/wstring.html#+,String,uint32	proc `+`(a: String; b: uint32): String		157
+nim	`+`	narduino/api/wstring.html#+,String,cfloat	proc `+`(a: String; b: cfloat): String		158
+nim	`+`	narduino/api/wstring.html#+,String,cdouble	proc `+`(a: String; b: cdouble): String		159
+nim	`+`	narduino/api/wstring.html#+,String,ptr.FlashStringHelper	proc `+`(a: String; b: ptr FlashStringHelper): String		160
+nim	`&`	narduino/api/wstring.html#&.t,String,String	template `&`(a, b: String): String		165
+nim	`&`	narduino/api/wstring.html#&.t,String,cstring	template `&`(a: String; b: cstring): String		166
+nim	`&`	narduino/api/wstring.html#&.t,String,char	template `&`(a: String; b: char): String		167
+nim	compareTo	narduino/api/wstring.html#compareTo,String,String	proc compareTo(s: String; other: String): cint		175
+nim	equals	narduino/api/wstring.html#equals,String,String	proc equals(s: String; other: String): bool		178
+nim	equals	narduino/api/wstring.html#equals,String,cstring	proc equals(s: String; cstr: cstring): bool		179
+nim	equalsIgnoreCase	narduino/api/wstring.html#equalsIgnoreCase,String,String	proc equalsIgnoreCase(s: String; other: String): bool		180
+nim	startsWith	narduino/api/wstring.html#startsWith,String,String	proc startsWith(s: String; prefix: String): bool		182
+nim	startsWith	narduino/api/wstring.html#startsWith,String,String,cuint	proc startsWith(s: String; prefix: String; offset: cuint): bool		183
+nim	endsWith	narduino/api/wstring.html#endsWith,String,String	proc endsWith(s: String; suffix: String): bool		184
+nim	`==`	narduino/api/wstring.html#==,String,String	proc `==`(a, b: String): bool		189
+nim	`==`	narduino/api/wstring.html#==,String,cstring	proc `==`(a: String; b: cstring): bool		190
+nim	`<`	narduino/api/wstring.html#<,String,String	proc `<`(a, b: String): bool		191
+nim	`<=`	narduino/api/wstring.html#<=,String,String	proc `<=`(a, b: String): bool		192
+nim	charAt	narduino/api/wstring.html#charAt,String,cuint	proc charAt(s: String; index: cuint): char		200
+nim	setCharAt	narduino/api/wstring.html#setCharAt,String,cuint,char	proc setCharAt(s: var String; index: cuint; c: char)		201
+nim	`[]`	narduino/api/wstring.html#[],String,cuint	proc `[]`(s: String; index: cuint): char		204
+nim	`[]=`	narduino/api/wstring.html#[]=,String,cuint,char	proc `[]=`(s: var String; index: cuint; c: char)		205
+nim	getBytes	narduino/api/wstring.html#getBytes,String,ptr.uint8,cuint,cuint	proc getBytes(s: String; buf: ptr uint8; bufsize: cuint; index: cuint = 0)		208
+nim	toCharArray	narduino/api/wstring.html#toCharArray,String,cstring,cuint,cuint	proc toCharArray(s: String; buf: cstring; bufsize: cuint; index: cuint = 0)		211
+nim	c_str	narduino/api/wstring.html#c_str,String	proc c_str(s: String): cstring		214
+nim	getBytes	narduino/api/wstring.html#getBytes.t,String,openArray[uint8]	template getBytes(s: String; buf: var openArray[uint8])		220
+nim	indexOf	narduino/api/wstring.html#indexOf,String,char	proc indexOf(s: String; ch: char): cint		229
+nim	indexOf	narduino/api/wstring.html#indexOf,String,char,cuint	proc indexOf(s: String; ch: char; fromIndex: cuint): cint		230
+nim	indexOf	narduino/api/wstring.html#indexOf,String,String	proc indexOf(s: String; str: String): cint		232
+nim	indexOf	narduino/api/wstring.html#indexOf,String,String,cuint	proc indexOf(s: String; str: String; fromIndex: cuint): cint		233
+nim	lastIndexOf	narduino/api/wstring.html#lastIndexOf,String,char	proc lastIndexOf(s: String; ch: char): cint		235
+nim	lastIndexOf	narduino/api/wstring.html#lastIndexOf,String,char,cuint	proc lastIndexOf(s: String; ch: char; fromIndex: cuint): cint		236
+nim	lastIndexOf	narduino/api/wstring.html#lastIndexOf,String,String	proc lastIndexOf(s: String; str: String): cint		238
+nim	lastIndexOf	narduino/api/wstring.html#lastIndexOf,String,String,cuint	proc lastIndexOf(s: String; str: String; fromIndex: cuint): cint		239
+nim	substring	narduino/api/wstring.html#substring,String,cuint	proc substring(s: String; beginIndex: cuint): String		241
+nim	substring	narduino/api/wstring.html#substring,String,cuint,cuint	proc substring(s: String; beginIndex: cuint; endIndex: cuint): String		242
+nim	replace	narduino/api/wstring.html#replace,String,char,char	proc replace(s: var String; find: char; replaceWith: char)		252
+nim	replace	narduino/api/wstring.html#replace,String,String,String	proc replace(s: var String; find: String; replaceWith: String)		254
+nim	remove	narduino/api/wstring.html#remove,String,cuint	proc remove(s: var String; index: cuint)		255
+nim	remove	narduino/api/wstring.html#remove,String,cuint,cuint	proc remove(s: var String; index: cuint; count: cuint)		256
+nim	toLowerCase	narduino/api/wstring.html#toLowerCase,String	proc toLowerCase(s: var String)		257
+nim	toUpperCase	narduino/api/wstring.html#toUpperCase,String	proc toUpperCase(s: var String)		258
+nim	trim	narduino/api/wstring.html#trim,String	proc trim(s: var String)		259
+nim	toInt	narduino/api/wstring.html#toInt,String	proc toInt(s: String): int32		269
+nim	toFloat	narduino/api/wstring.html#toFloat,String	proc toFloat(s: String): cfloat		271
+nim	toDouble	narduino/api/wstring.html#toDouble,String	proc toDouble(s: String): cdouble		273
+nimgrp	replace	narduino/api/wstring.html#replace-procs-all	proc		252
+nimgrp	==	narduino/api/wstring.html#==-procs-all	proc		189
+nimgrp	+	narduino/api/wstring.html#+-procs-all	proc		153
+nimgrp	startswith	narduino/api/wstring.html#startsWith-procs-all	proc		182
+nimgrp	equals	narduino/api/wstring.html#equals-procs-all	proc		178
+nimgrp	indexof	narduino/api/wstring.html#indexOf-procs-all	proc		229
+nimgrp	substring	narduino/api/wstring.html#substring-procs-all	proc		241
+nimgrp	remove	narduino/api/wstring.html#remove-procs-all	proc		255
+nimgrp	lastindexof	narduino/api/wstring.html#lastIndexOf-procs-all	proc		235
+nimgrp	concat	narduino/api/wstring.html#concat-procs-all	proc		100
+nimgrp	initstring	narduino/api/wstring.html#initString-procs-all	proc		39
+nimgrp	&=	narduino/api/wstring.html#&=-templates-all	template		132
+nimgrp	&	narduino/api/wstring.html#&-templates-all	template		165
+nimgrp	add	narduino/api/wstring.html#add-templates-all	template		119

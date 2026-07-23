@@ -1,0 +1,75 @@
+nimTitle	arduino	narduino/api/arduino.html	module src/narduino/api/arduino		0
+nim	setup	narduino/api/arduino.html#setup.t	template setup(body)		7
+nim	loop	narduino/api/arduino.html#loop.t	template loop(body)		15
+nim	HIGH	narduino/api/arduino.html#HIGH	let HIGH		25
+nim	LOW	narduino/api/arduino.html#LOW	let LOW		26
+nim	INPUT	narduino/api/arduino.html#INPUT	let INPUT		28
+nim	OUTPUT	narduino/api/arduino.html#OUTPUT	let OUTPUT		29
+nim	INPUT_PULLUP	narduino/api/arduino.html#INPUT_PULLUP	let INPUT_PULLUP		30
+nim	LED_BUILTIN	narduino/api/arduino.html#LED_BUILTIN	let LED_BUILTIN		32
+nim	A0	narduino/api/arduino.html#A0	let A0		33
+nim	A1	narduino/api/arduino.html#A1	let A1		34
+nim	A2	narduino/api/arduino.html#A2	let A2		35
+nim	A3	narduino/api/arduino.html#A3	let A3		36
+nim	A4	narduino/api/arduino.html#A4	let A4		37
+nim	A5	narduino/api/arduino.html#A5	let A5		38
+nim	A6	narduino/api/arduino.html#A6	let A6		39
+nim	A7	narduino/api/arduino.html#A7	let A7		40
+nim	LSBFIRST	narduino/api/arduino.html#LSBFIRST	let LSBFIRST		42
+nim	MSBFIRST	narduino/api/arduino.html#MSBFIRST	let MSBFIRST		43
+nim	CHANGE	narduino/api/arduino.html#CHANGE	let CHANGE		45
+nim	FALLING	narduino/api/arduino.html#FALLING	let FALLING		46
+nim	RISING	narduino/api/arduino.html#RISING	let RISING		47
+nim	NOT_AN_INTERRUPT	narduino/api/arduino.html#NOT_AN_INTERRUPT	let NOT_AN_INTERRUPT		49
+nim	NOT_A_PIN	narduino/api/arduino.html#NOT_A_PIN	let NOT_A_PIN		51
+nim	NOT_A_PORT	narduino/api/arduino.html#NOT_A_PORT	let NOT_A_PORT		52
+nim	DEFAULT	narduino/api/arduino.html#DEFAULT	let DEFAULT		54
+nim	EXTERNAL	narduino/api/arduino.html#EXTERNAL	let EXTERNAL		55
+nim	yieldArduino	narduino/api/arduino.html#yieldArduino	proc yieldArduino()		61
+nim	pinMode	narduino/api/arduino.html#pinMode,uint8,uint8	proc pinMode(pin, mode: uint8)		65
+nim	digitalWrite	narduino/api/arduino.html#digitalWrite,uint8,uint8	proc digitalWrite(pin, value: uint8)		66
+nim	digitalRead	narduino/api/arduino.html#digitalRead,uint8	proc digitalRead(pin: uint8): cint		67
+nim	analogRead	narduino/api/arduino.html#analogRead,uint8	proc analogRead(pin: uint8): cint		70
+nim	analogReadResolution	narduino/api/arduino.html#analogReadResolution,cint	proc analogReadResolution(bits: cint)		71
+nim	analogReference	narduino/api/arduino.html#analogReference,uint8	proc analogReference(mode: uint8)		72
+nim	analogWrite	narduino/api/arduino.html#analogWrite,uint8,cint	proc analogWrite(pin: uint8; value: cint)		73
+nim	analogWriteResolution	narduino/api/arduino.html#analogWriteResolution,cint	proc analogWriteResolution(bits: cint)		74
+nim	delay	narduino/api/arduino.html#delay,culong	proc delay(ms: culong)		77
+nim	delayMicroseconds	narduino/api/arduino.html#delayMicroseconds,cuint	proc delayMicroseconds(us: cuint)		78
+nim	micros	narduino/api/arduino.html#micros	proc micros(): culong		79
+nim	millis	narduino/api/arduino.html#millis	proc millis(): culong		80
+nim	map	narduino/api/arduino.html#map,clong,clong,clong,clong,clong	proc map(x, inMin, inMax, outMin, outMax: clong): clong		83
+nim	makeWord	narduino/api/arduino.html#makeWord,uint16	proc makeWord(w: uint16): uint16		86
+nim	makeWord	narduino/api/arduino.html#makeWord,uint8,uint8	proc makeWord(h, l: uint8): uint16		87
+nim	attachInterrupt	narduino/api/arduino.html#attachInterrupt,uint8,proc),cint	proc attachInterrupt(interruptNum: uint8; userFunc: proc () {.cdecl.}; mode: cint)		90
+nim	detachInterrupt	narduino/api/arduino.html#detachInterrupt,uint8	proc detachInterrupt(interruptNum: uint8)		91
+nim	digitalPinToInterrupt	narduino/api/arduino.html#digitalPinToInterrupt,uint8	proc digitalPinToInterrupt(pin: uint8): cint		92
+nim	interrupts	narduino/api/arduino.html#interrupts	proc interrupts()		95
+nim	noInterrupts	narduino/api/arduino.html#noInterrupts	proc noInterrupts()		96
+nim	tone	narduino/api/arduino.html#tone,uint8,cuint,culong	proc tone(pin: uint8; frequency: cuint; duration: culong = 0)		99
+nim	noTone	narduino/api/arduino.html#noTone,uint8	proc noTone(pin: uint8)		100
+nim	pulseIn	narduino/api/arduino.html#pulseIn,uint8,uint8,culong	proc pulseIn(pin, state: uint8; timeout: culong = 1000000): culong		101
+nim	pulseInLong	narduino/api/arduino.html#pulseInLong,uint8,uint8,culong	proc pulseInLong(pin, state: uint8; timeout: culong = 1000000): culong		102
+nim	shiftIn	narduino/api/arduino.html#shiftIn,uint8,uint8,uint8	proc shiftIn(dataPin, clockPin, bitOrder: uint8): uint8		103
+nim	shiftOut	narduino/api/arduino.html#shiftOut,uint8,uint8,uint8,uint8	proc shiftOut(dataPin, clockPin, bitOrder, value: uint8)		104
+nim	random	narduino/api/arduino.html#random,clong	proc random(howbig: clong): clong		107
+nim	random	narduino/api/arduino.html#random,clong,clong	proc random(howsmall, howbig: clong): clong		108
+nim	randomSeed	narduino/api/arduino.html#randomSeed,culong	proc randomSeed(seed: culong)		109
+nim	isAlpha	narduino/api/arduino.html#isAlpha,cint	proc isAlpha(c: cint): bool		112
+nim	isAlphaNumeric	narduino/api/arduino.html#isAlphaNumeric,cint	proc isAlphaNumeric(c: cint): bool		113
+nim	isAscii	narduino/api/arduino.html#isAscii,cint	proc isAscii(c: cint): bool		114
+nim	isControl	narduino/api/arduino.html#isControl,cint	proc isControl(c: cint): bool		115
+nim	isDigit	narduino/api/arduino.html#isDigit,cint	proc isDigit(c: cint): bool		116
+nim	isGraph	narduino/api/arduino.html#isGraph,cint	proc isGraph(c: cint): bool		117
+nim	isHexadecimalDigit	narduino/api/arduino.html#isHexadecimalDigit,cint	proc isHexadecimalDigit(c: cint): bool		118
+nim	isLowerCase	narduino/api/arduino.html#isLowerCase,cint	proc isLowerCase(c: cint): bool		119
+nim	isPrintable	narduino/api/arduino.html#isPrintable,cint	proc isPrintable(c: cint): bool		120
+nim	isPunct	narduino/api/arduino.html#isPunct,cint	proc isPunct(c: cint): bool		121
+nim	isSpace	narduino/api/arduino.html#isSpace,cint	proc isSpace(c: cint): bool		122
+nim	isUpperCase	narduino/api/arduino.html#isUpperCase,cint	proc isUpperCase(c: cint): bool		123
+nim	isWhitespace	narduino/api/arduino.html#isWhitespace,cint	proc isWhitespace(c: cint): bool		124
+nim	toAscii	narduino/api/arduino.html#toAscii,cint	proc toAscii(c: cint): cint		125
+nim	toLowerCase	narduino/api/arduino.html#toLowerCase,cint	proc toLowerCase(c: cint): cint		126
+nim	toUpperCase	narduino/api/arduino.html#toUpperCase,cint	proc toUpperCase(c: cint): cint		127
+nimgrp	makeword	narduino/api/arduino.html#makeWord-procs-all	proc		86
+nimgrp	random	narduino/api/arduino.html#random-procs-all	proc		107

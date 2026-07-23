@@ -1,0 +1,17 @@
+nimTitle	servo	narduino/libs/servo.html	module src/narduino/libs/servo		0
+nim	MIN_PULSE_WIDTH	narduino/libs/servo.html#MIN_PULSE_WIDTH	const MIN_PULSE_WIDTH		10
+nim	MAX_PULSE_WIDTH	narduino/libs/servo.html#MAX_PULSE_WIDTH	const MAX_PULSE_WIDTH		11
+nim	DEFAULT_PULSE_WIDTH	narduino/libs/servo.html#DEFAULT_PULSE_WIDTH	const DEFAULT_PULSE_WIDTH		12
+nim	REFRESH_INTERVAL	narduino/libs/servo.html#REFRESH_INTERVAL	const REFRESH_INTERVAL		13
+nim	INVALID_SERVO	narduino/libs/servo.html#INVALID_SERVO	const INVALID_SERVO		14
+nim	Servo	narduino/libs/servo.html#Servo	object Servo		17
+nim	initServo	narduino/libs/servo.html#initServo	proc initServo(): Servo		27
+nim	attach	narduino/libs/servo.html#attach,Servo,cint	proc attach(s: var Servo; pin: cint): uint8		29
+nim	attach	narduino/libs/servo.html#attach,Servo,cint,cint,cint	proc attach(s: var Servo; pin: cint; min: cint; max: cint): uint8		32
+nim	detach	narduino/libs/servo.html#detach,Servo	proc detach(s: var Servo)		35
+nim	write	narduino/libs/servo.html#write,Servo,cint	proc write(s: var Servo; value: cint)		37
+nim	writeMicroseconds	narduino/libs/servo.html#writeMicroseconds,Servo,cint	proc writeMicroseconds(s: var Servo; value: cint)		41
+nim	read	narduino/libs/servo.html#read,Servo	proc read(s: Servo): cint		43
+nim	readMicroseconds	narduino/libs/servo.html#readMicroseconds,Servo	proc readMicroseconds(s: Servo): cint		45
+nim	attached	narduino/libs/servo.html#attached,Servo	proc attached(s: Servo): bool		47
+nimgrp	attach	narduino/libs/servo.html#attach-procs-all	proc		29
