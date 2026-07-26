@@ -59,23 +59,27 @@ nim	print	narduino/api/serial.html#print,SerialObj,String	proc print(s: SerialOb
 nim	print	narduino/api/serial.html#print,SerialObj,ptr.FlashStringHelper	proc print(s: SerialObj; value: ptr FlashStringHelper): csize_t		107
 nim	println	narduino/api/serial.html#println,SerialObj,String	proc println(s: SerialObj; value: String): csize_t		108
 nim	println	narduino/api/serial.html#println,SerialObj,ptr.FlashStringHelper	proc println(s: SerialObj; value: ptr FlashStringHelper): csize_t		109
-nim	read	narduino/api/serial.html#read,SerialObj	proc read(s: SerialObj): cint		110
-nim	readBytes	narduino/api/serial.html#readBytes,SerialObj,ptr.uint8,csize_t	proc readBytes(s: SerialObj; buffer: ptr uint8; length: csize_t): csize_t		112
-nim	readBytesUntil	narduino/api/serial.html#readBytesUntil,SerialObj,char,ptr.uint8,csize_t	proc readBytesUntil(s: SerialObj; terminator: char; buffer: ptr uint8;\n               length: csize_t): csize_t		115
-nim	readString	narduino/api/serial.html#readString,SerialObj	proc readString(s: SerialObj): String		119
-nim	readStringUntil	narduino/api/serial.html#readStringUntil,SerialObj,char	proc readStringUntil(s: SerialObj; terminator: char): String		121
-nim	setTimeout	narduino/api/serial.html#setTimeout,SerialObj,uint32	proc setTimeout(s: SerialObj; time: uint32 = 1000'u32)		124
-nim	write	narduino/api/serial.html#write,SerialObj,uint8	proc write(s: SerialObj; value: uint8): csize_t		125
-nim	write	narduino/api/serial.html#write,SerialObj,cstring	proc write(s: SerialObj; str: cstring): csize_t		126
-nim	write	narduino/api/serial.html#write,SerialObj,ptr.uint8,csize_t	proc write(s: SerialObj; buffer: ptr uint8; size: csize_t): csize_t		127
-nim	getTimeout	narduino/api/serial.html#getTimeout,SerialObj	proc getTimeout(s: SerialObj): uint32		128
-nim	print	narduino/api/serial.html#print.t,SerialObj,SomeInteger,cint	template print(s: SerialObj; value: SomeInteger; base: cint = 10): csize_t		132
-nim	println	narduino/api/serial.html#println.t,SerialObj,SomeInteger,cint	template println(s: SerialObj; value: SomeInteger; base: cint = 10): csize_t		138
-nim	readBytes	narduino/api/serial.html#readBytes.t,SerialObj,openArray[uint8]	template readBytes(s: SerialObj; buf: var openArray[uint8]): csize_t		146
-nim	readBytesUntil	narduino/api/serial.html#readBytesUntil.t,SerialObj,char,openArray[uint8]	template readBytesUntil(s: SerialObj; terminator: char; buf: var openArray[uint8]): csize_t		148
-nim	write	narduino/api/serial.html#write.t,SerialObj,openArray[uint8]	template write(s: SerialObj; buf: openArray[uint8]): csize_t		151
-nimgrp	write	narduino/api/serial.html#write-procs-all	proc		125
+nim	print	narduino/api/serial.html#print.t,SerialObj,bool	template print(s: SerialObj; value: bool)		110
+nim	println	narduino/api/serial.html#println.t,SerialObj,bool	template println(s: SerialObj; value: bool)		111
+nim	read	narduino/api/serial.html#read,SerialObj	proc read(s: SerialObj): cint		112
+nim	readBytes	narduino/api/serial.html#readBytes,SerialObj,ptr.uint8,csize_t	proc readBytes(s: SerialObj; buffer: ptr uint8; length: csize_t): csize_t		114
+nim	readBytesUntil	narduino/api/serial.html#readBytesUntil,SerialObj,char,ptr.uint8,csize_t	proc readBytesUntil(s: SerialObj; terminator: char; buffer: ptr uint8;\n               length: csize_t): csize_t		117
+nim	readString	narduino/api/serial.html#readString,SerialObj	proc readString(s: SerialObj): String		121
+nim	readStringUntil	narduino/api/serial.html#readStringUntil,SerialObj,char	proc readStringUntil(s: SerialObj; terminator: char): String		123
+nim	setTimeout	narduino/api/serial.html#setTimeout,SerialObj,uint32	proc setTimeout(s: SerialObj; time: uint32 = 1000'u32)		126
+nim	write	narduino/api/serial.html#write,SerialObj,uint8	proc write(s: SerialObj; value: uint8): csize_t		127
+nim	write	narduino/api/serial.html#write,SerialObj,cstring	proc write(s: SerialObj; str: cstring): csize_t		128
+nim	write	narduino/api/serial.html#write,SerialObj,ptr.uint8,csize_t	proc write(s: SerialObj; buffer: ptr uint8; size: csize_t): csize_t		129
+nim	getTimeout	narduino/api/serial.html#getTimeout,SerialObj	proc getTimeout(s: SerialObj): uint32		130
+nim	print	narduino/api/serial.html#print.t,SerialObj,SomeInteger,cint	template print(s: SerialObj; value: SomeInteger; base: cint = 10): csize_t		134
+nim	println	narduino/api/serial.html#println.t,SerialObj,SomeInteger,cint	template println(s: SerialObj; value: SomeInteger; base: cint = 10): csize_t		140
+nim	readBytes	narduino/api/serial.html#readBytes.t,SerialObj,openArray[uint8]	template readBytes(s: SerialObj; buf: var openArray[uint8]): csize_t		148
+nim	readBytesUntil	narduino/api/serial.html#readBytesUntil.t,SerialObj,char,openArray[uint8]	template readBytesUntil(s: SerialObj; terminator: char; buf: var openArray[uint8]): csize_t		150
+nim	write	narduino/api/serial.html#write.t,SerialObj,openArray[uint8]	template write(s: SerialObj; buf: openArray[uint8]): csize_t		153
+nimgrp	write	narduino/api/serial.html#write-procs-all	proc		127
 nimgrp	begin	narduino/api/serial.html#begin-procs-all	proc		78
 nimgrp	find	narduino/api/serial.html#find-procs-all	proc		81
 nimgrp	print	narduino/api/serial.html#print-procs-all	proc		91
 nimgrp	println	narduino/api/serial.html#println-procs-all	proc		98
+nimgrp	print	narduino/api/serial.html#print-templates-all	template		110
+nimgrp	println	narduino/api/serial.html#println-templates-all	template		111

@@ -611,11 +611,12 @@
 </div>
 <div id="F-procs-all">
   <div id="F,cstring">
-  <dt><pre><span class="Keyword">proc</span> <a href="#F%2Ccstring"><span class="Identifier">F</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="#FlashStringHelper"><span class="Identifier">FlashStringHelper</span></a> {.<span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">&quot;F&quot;</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;Arduino.h&quot;</span><span class="Other">,</span>
+  <dt><pre><span class="Keyword">proc</span> <a href="#F%2Ccstring"><span class="Identifier">F</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="#FlashStringHelper"><span class="Identifier">FlashStringHelper</span></a> {.
+    <span class="Identifier">importcpp</span><span class="Other">:</span> <span class="StringLit">&quot;((__FlashStringHelper*)(F(#)))&quot;</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;Arduino.h&quot;</span><span class="Other">,</span>
     <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    Places a string literal in flash (PROGMEM) and returns a pointer suitable for passing to String/print overloads that accept FlashStringHelper.  Only meaningful with compile-time string literals.
+    Places a string literal in flash (PROGMEM) and returns a pointer suitable for passing to String/print overloads that accept FlashStringHelper.  Only meaningful with compile-time string literals. Casts away const because F() returns const __FlashStringHelper* but Nim has no const pointer distinction.
     
   </dd>
 </div>
@@ -1210,7 +1211,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-23 03:03:10 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-26 06:57:48 UTC</small>
       </div>
     </div>
   </div>
