@@ -15,8 +15,8 @@ nim source ──(nim cpp)──> generated .cpp/.h ──> sketch dir ──(ar
   time, interrupts, `Serial`, and `setup:` / `loop:` templates so firmware code needs
   no FFI boilerplate.
 - **Library bindings** (`import narduino/libs/<name>`): Nim wrappers for popular
-  Arduino libraries (currently: [Servo](src/narduino/libs/servo.nim)). Install the
-  Arduino library first with `narduino libinstall`, then import the binding.
+  Arduino libraries (see [src/narduino/libs/](src/narduino/libs/) for the full list).
+  Install the Arduino library first with `narduino libinstall`, then import the binding.
 - **Toolchain** (`import narduino/toolchain`): everything the CLI does, as procs you
   can call from your own tools.
 
@@ -215,6 +215,10 @@ loop:
 | Library | Import | Arduino install |
 |---|---|---|
 | [Servo](https://github.com/arduino-libraries/Servo) | `import narduino/libs/servo` | `narduino libinstall --lib:Servo` |
+| [ArduinoGraphics](https://github.com/arduino-libraries/ArduinoGraphics) | `import narduino/libs/arduino_graphics` | `narduino libinstall --lib:ArduinoGraphics` |
+| [Arduino LED Matrix](https://docs.arduino.cc/tutorials/uno-r4-wifi/led-matrix/) | `import narduino/libs/arduino_led_matrix` | Bundled with UNO R4 board package |
+
+See [src/narduino/libs/](src/narduino/libs/) for the full updated list of available library bindings.
 
 If you write the entry points manually instead of using the templates, export `setup()`/`loop()` with `{.exportc.}` and call `NimMain()` first thing in `setup()` to initialize the Nim runtime.
 

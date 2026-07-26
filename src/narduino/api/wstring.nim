@@ -25,10 +25,13 @@ type
     ## small targets; prefer caller-owned buffers (readBytes/readBytesUntil)
     ## when memory is tight.
 
-proc F*(s: cstring): ptr FlashStringHelper {.importc: "F", header: "Arduino.h".}
+proc F*(s: cstring): ptr FlashStringHelper
+  {.importcpp: "((__FlashStringHelper*)(F(#)))", header: "Arduino.h".}
   ## Places a string literal in flash (PROGMEM) and returns a pointer
   ## suitable for passing to String/print overloads that accept
   ## FlashStringHelper.  Only meaningful with compile-time string literals.
+  ## Casts away const because F() returns const __FlashStringHelper*
+  ## but Nim has no const pointer distinction.
 
 # ==========================================================================
 # Constructors

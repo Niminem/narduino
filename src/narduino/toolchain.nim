@@ -121,7 +121,7 @@ proc installCore*(coreId: string) =
   if indexExitCode != 0:
     raise newException(IOError, "Failed to update core index:\n" & indexOutput)
   echo "Installing core for active board: '" & coreId & "' (this may take a while)..."
-  let (output, exitCode) = execCmdEx("arduino-cli core install " & coreId)
+  let (output, exitCode) = execCmdEx("arduino-cli core install " & quoteShell(coreId))
   if exitCode != 0:
     raise newException(IOError, "Failed to install core '" & coreId & "':\n" & output)
   echo "Successfully installed core '" & coreId & "'."
@@ -218,8 +218,8 @@ proc createSketch*(nimSrcFile: string, sketchDir, cpu: string = ""): string {.di
     "--compileOnly",
     "--exceptions:goto",
     "-f",
-    "--nimcache:" & tmpDir,
-    nimSrcFile,
+    "--nimcache:" & quoteShell(tmpDir),
+    quoteShell(nimSrcFile),
   ]
   cmd &= flags.join(" ")
   
@@ -275,7 +275,7 @@ proc upload*(sketchDir, fqbn, port: string = "", autoInstallCore: bool = true, v
   # ref: https://arduino.github.io/arduino-cli/1.5/getting-started/
   var cmd = "arduino-cli compile -b " & finalFqbn & " -p " & finalPort & " --clean --upload --verify --jobs 0 "
   if verbose: cmd &= "-v "
-  cmd &= finalSketchDir
+  cmd &= quoteShell(finalSketchDir)
 
   # execute the command
   let output = execProcess(cmd) # here we use execProcess instead of execCmdEx because we want the output regardless
@@ -311,7 +311,7 @@ proc searchLib*(query: string) =
     raise newException(IOError, "Failed to update library index:\n" & indexOutput)
 
   echo "Searching for '" & query & "'...\n"
-  let (output, exitCode) = execCmdEx("arduino-cli lib search " & query & " --json")
+  let (output, exitCode) = execCmdEx("arduino-cli lib search " & quoteShell(query.strip()) & " --json")
   if exitCode != 0:
     raise newException(IOError, "Failed to search libraries:\n" & output)
 
