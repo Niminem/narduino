@@ -1,0 +1,31 @@
+nimTitle	dht_sensor	narduino/libs/dht_sensor.html	module src/narduino/libs/dht_sensor		0
+nim	DHT11	narduino/libs/dht_sensor.html#DHT11	const DHT11		19
+nim	DHT12	narduino/libs/dht_sensor.html#DHT12	const DHT12		20
+nim	DHT21	narduino/libs/dht_sensor.html#DHT21	const DHT21		21
+nim	DHT22	narduino/libs/dht_sensor.html#DHT22	const DHT22		22
+nim	AM2301	narduino/libs/dht_sensor.html#AM2301	const AM2301		23
+nim	DHT	narduino/libs/dht_sensor.html#DHT	object DHT		26
+nim	initDHT	narduino/libs/dht_sensor.html#initDHT,uint8,uint8,uint8	proc initDHT(pin: uint8; sensorType: uint8; count: uint8 = 6): DHT		30
+nim	begin	narduino/libs/dht_sensor.html#begin,DHT,uint8	proc begin(d: var DHT; usec: uint8 = 55)		36
+nim	readTemperature	narduino/libs/dht_sensor.html#readTemperature,DHT,bool,bool	proc readTemperature(d: var DHT; fahrenheit: bool = false; force: bool = false): cfloat		40
+nim	readHumidity	narduino/libs/dht_sensor.html#readHumidity,DHT,bool	proc readHumidity(d: var DHT; force: bool = false): cfloat		46
+nim	read	narduino/libs/dht_sensor.html#read,DHT,bool	proc read(d: var DHT; force: bool = false): bool		50
+nim	convertCtoF	narduino/libs/dht_sensor.html#convertCtoF,DHT,cfloat	proc convertCtoF(d: var DHT; celsius: cfloat): cfloat		54
+nim	convertFtoC	narduino/libs/dht_sensor.html#convertFtoC,DHT,cfloat	proc convertFtoC(d: var DHT; fahrenheit: cfloat): cfloat		57
+nim	computeHeatIndex	narduino/libs/dht_sensor.html#computeHeatIndex,DHT,bool	proc computeHeatIndex(d: var DHT; isFahrenheit: bool = true): cfloat		60
+nim	computeHeatIndex	narduino/libs/dht_sensor.html#computeHeatIndex,DHT,cfloat,cfloat,bool	proc computeHeatIndex(d: var DHT; temperature: cfloat; percentHumidity: cfloat;\n                 isFahrenheit: bool = true): cfloat		66
+nim	DHTUnifiedTemperature	narduino/libs/dht_sensor.html#DHTUnifiedTemperature	object DHTUnifiedTemperature		87
+nim	DHTUnifiedHumidity	narduino/libs/dht_sensor.html#DHTUnifiedHumidity	object DHTUnifiedHumidity		90
+nim	DHTUnified	narduino/libs/dht_sensor.html#DHTUnified	object DHTUnified		93
+nim	initDHTUnified	narduino/libs/dht_sensor.html#initDHTUnified,uint8,uint8,uint8,int32,int32	proc initDHTUnified(pin: uint8; sensorType: uint8; count: uint8 = 6;\n               tempSensorId: int32 = -1; humiditySensorId: int32 = -1): DHTUnified		97
+nim	begin	narduino/libs/dht_sensor.html#begin,DHTUnified	proc begin(d: var DHTUnified)		105
+nim	temperature	narduino/libs/dht_sensor.html#temperature,DHTUnified	proc temperature(d: var DHTUnified): DHTUnifiedTemperature		108
+nim	humidity	narduino/libs/dht_sensor.html#humidity,DHTUnified	proc humidity(d: var DHTUnified): DHTUnifiedHumidity		111
+nim	getEvent	narduino/libs/dht_sensor.html#getEvent,DHTUnifiedTemperature,SensorsEventT	proc getEvent(t: var DHTUnifiedTemperature; event: var SensorsEventT): bool		114
+nim	getSensor	narduino/libs/dht_sensor.html#getSensor,DHTUnifiedTemperature,SensorT	proc getSensor(t: var DHTUnifiedTemperature; sensor: var SensorT)		119
+nim	getEvent	narduino/libs/dht_sensor.html#getEvent,DHTUnifiedHumidity,SensorsEventT	proc getEvent(h: var DHTUnifiedHumidity; event: var SensorsEventT): bool		123
+nim	getSensor	narduino/libs/dht_sensor.html#getSensor,DHTUnifiedHumidity,SensorT	proc getSensor(h: var DHTUnifiedHumidity; sensor: var SensorT)		128
+nimgrp	getsensor	narduino/libs/dht_sensor.html#getSensor-procs-all	proc		119
+nimgrp	computeheatindex	narduino/libs/dht_sensor.html#computeHeatIndex-procs-all	proc		60
+nimgrp	getevent	narduino/libs/dht_sensor.html#getEvent-procs-all	proc		114
+nimgrp	begin	narduino/libs/dht_sensor.html#begin-procs-all	proc		36

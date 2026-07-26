@@ -1,0 +1,24 @@
+nimTitle	arduino_led_matrix	narduino/libs/arduino_led_matrix.html	module src/narduino/libs/arduino_led_matrix		0
+nim	NUM_LEDS	narduino/libs/arduino_led_matrix.html#NUM_LEDS	const NUM_LEDS		23
+nim	ArduinoLEDMatrix	narduino/libs/arduino_led_matrix.html#ArduinoLEDMatrix	object ArduinoLEDMatrix		28
+nim	initArduinoLEDMatrix	narduino/libs/arduino_led_matrix.html#initArduinoLEDMatrix	proc initArduinoLEDMatrix(): ArduinoLEDMatrix		36
+nim	begin	narduino/libs/arduino_led_matrix.html#begin,ArduinoLEDMatrix	proc begin(m: var ArduinoLEDMatrix): cint		46
+nim	autoscroll	narduino/libs/arduino_led_matrix.html#autoscroll,ArduinoLEDMatrix,uint32	proc autoscroll(m: var ArduinoLEDMatrix; interval_ms: uint32)		49
+nim	on	narduino/libs/arduino_led_matrix.html#on,ArduinoLEDMatrix,csize_t	proc on(m: var ArduinoLEDMatrix; pin: csize_t)		53
+nim	off	narduino/libs/arduino_led_matrix.html#off,ArduinoLEDMatrix,csize_t	proc off(m: var ArduinoLEDMatrix; pin: csize_t)		56
+nim	next	narduino/libs/arduino_led_matrix.html#next,ArduinoLEDMatrix	proc next(m: var ArduinoLEDMatrix)		59
+nim	loadFrame	narduino/libs/arduino_led_matrix.html#loadFrame,ArduinoLEDMatrix,ptr.uint32	proc loadFrame(m: var ArduinoLEDMatrix; buffer: ptr uint32)		62
+nim	renderFrame	narduino/libs/arduino_led_matrix.html#renderFrame,ArduinoLEDMatrix,uint8	proc renderFrame(m: var ArduinoLEDMatrix; frameNumber: uint8)		66
+nim	play	narduino/libs/arduino_led_matrix.html#play,ArduinoLEDMatrix,bool	proc play(m: var ArduinoLEDMatrix; loop: bool = false)		69
+nim	sequenceDone	narduino/libs/arduino_led_matrix.html#sequenceDone,ArduinoLEDMatrix	proc sequenceDone(m: var ArduinoLEDMatrix): bool		73
+nim	loadPixels	narduino/libs/arduino_led_matrix.html#loadPixels,ArduinoLEDMatrix,ptr.uint8,csize_t	proc loadPixels(m: var ArduinoLEDMatrix; arr: ptr uint8; size: csize_t)		77
+nim	loadWrapper	narduino/libs/arduino_led_matrix.html#loadWrapper,ArduinoLEDMatrix,ptr.array[,uint32],uint32	proc loadWrapper(m: var ArduinoLEDMatrix; frames: ptr array[4, uint32];\n            howMany: uint32)		81
+nim	setCallback	narduino/libs/arduino_led_matrix.html#setCallback,ArduinoLEDMatrix,proc)	proc setCallback(m: var ArduinoLEDMatrix; callBack: proc () {.cdecl.})		88
+nim	clear	narduino/libs/arduino_led_matrix.html#clear,ArduinoLEDMatrix	proc clear(m: var ArduinoLEDMatrix)		93
+nim	loadPixelsToBuffer	narduino/libs/arduino_led_matrix.html#loadPixelsToBuffer,ptr.uint8,csize_t,ptr.uint32	proc loadPixelsToBuffer(arr: ptr uint8; size: csize_t; dst: ptr uint32)		104
+nim	endTextToAnimationBuffer	narduino/libs/arduino_led_matrix.html#endTextToAnimationBuffer,ArduinoLEDMatrix,cint,ptr.array[,uint32],uint32,uint32	proc endTextToAnimationBuffer(m: var ArduinoLEDMatrix; scrollDirection: cint;\n                         frames: ptr array[4, uint32]; howManyMax: uint32;\n                         howManyUsed: var uint32)		113
+nim	loadFrame	narduino/libs/arduino_led_matrix.html#loadFrame.t,ArduinoLEDMatrix,array[,uint32]	template loadFrame(m: var ArduinoLEDMatrix; buffer: var array[3, uint32])		129
+nim	loadSequence	narduino/libs/arduino_led_matrix.html#loadSequence.t,ArduinoLEDMatrix,array[N,array[,uint32]]	template loadSequence[N: static int](m: var ArduinoLEDMatrix;\n                            frames: var array[N, array[4, uint32]])		133
+nim	renderBitmap	narduino/libs/arduino_led_matrix.html#renderBitmap.t,ArduinoLEDMatrix,array[R,array[C,uint8]]	template renderBitmap[R, C: static int](m: var ArduinoLEDMatrix;\n                               bitmap: var array[R, array[C, uint8]])		139
+nim	endTextAnimation	narduino/libs/arduino_led_matrix.html#endTextAnimation.t,ArduinoLEDMatrix,cint,array[N,array[,uint32]],uint32	template endTextAnimation[N: static int](m: var ArduinoLEDMatrix; scrollDirection: cint;\n                                frames: var array[N, array[4, uint32]];\n                                used: var uint32)		145
+nim	loadTextAnimationSequence	narduino/libs/arduino_led_matrix.html#loadTextAnimationSequence.t,ArduinoLEDMatrix,array[N,array[,uint32]],uint32	template loadTextAnimationSequence[N: static int](m: var ArduinoLEDMatrix;\n    frames: var array[N, array[4, uint32]]; used: uint32)		155

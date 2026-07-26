@@ -1,0 +1,99 @@
+nimTitle	arduino_graphics	narduino/libs/arduino_graphics.html	module src/narduino/libs/arduino_graphics		0
+nim	NO_SCROLL	narduino/libs/arduino_graphics.html#NO_SCROLL	const NO_SCROLL		26
+nim	SCROLL_LEFT	narduino/libs/arduino_graphics.html#SCROLL_LEFT	const SCROLL_LEFT		27
+nim	SCROLL_RIGHT	narduino/libs/arduino_graphics.html#SCROLL_RIGHT	const SCROLL_RIGHT		28
+nim	SCROLL_UP	narduino/libs/arduino_graphics.html#SCROLL_UP	const SCROLL_UP		29
+nim	SCROLL_DOWN	narduino/libs/arduino_graphics.html#SCROLL_DOWN	const SCROLL_DOWN		30
+nim	ENCODING_NONE	narduino/libs/arduino_graphics.html#ENCODING_NONE	const ENCODING_NONE		34
+nim	ENCODING_RGB	narduino/libs/arduino_graphics.html#ENCODING_RGB	const ENCODING_RGB		35
+nim	ENCODING_RGB24	narduino/libs/arduino_graphics.html#ENCODING_RGB24	const ENCODING_RGB24		36
+nim	ENCODING_RGB16	narduino/libs/arduino_graphics.html#ENCODING_RGB16	const ENCODING_RGB16		37
+nim	ArduinoGraphics	narduino/libs/arduino_graphics.html#ArduinoGraphics	object ArduinoGraphics		45
+nim	Font	narduino/libs/arduino_graphics.html#Font	object Font		52
+nim	Image	narduino/libs/arduino_graphics.html#Image	object Image		56
+nim	Font_4x6	narduino/libs/arduino_graphics.html#Font_4x6	let Font_4x6		67
+nim	Font_5x7	narduino/libs/arduino_graphics.html#Font_5x7	let Font_5x7		68
+nim	initFont	narduino/libs/arduino_graphics.html#initFont,cint,cint,ptr.ptr.uint8	proc initFont(width, height: cint; data: ptr ptr uint8): Font		77
+nim	width	narduino/libs/arduino_graphics.html#width,Font	proc width(f: Font): cint		83
+nim	height	narduino/libs/arduino_graphics.html#height,Font	proc height(f: Font): cint		86
+nim	data	narduino/libs/arduino_graphics.html#data,Font	proc data(f: Font): ptr ptr uint8		89
+nim	initImage	narduino/libs/arduino_graphics.html#initImage	proc initImage(): Image		96
+nim	initImage	narduino/libs/arduino_graphics.html#initImage,cint,ptr.uint8,cint,cint	proc initImage(encoding: cint; data: ptr uint8; width, height: cint): Image		99
+nim	initImage	narduino/libs/arduino_graphics.html#initImage,cint,ptr.uint16,cint,cint	proc initImage(encoding: cint; data: ptr uint16; width, height: cint): Image		104
+nim	initImage	narduino/libs/arduino_graphics.html#initImage,cint,ptr.uint32,cint,cint	proc initImage(encoding: cint; data: ptr uint32; width, height: cint): Image		109
+nim	encoding	narduino/libs/arduino_graphics.html#encoding,Image	proc encoding(img: Image): cint		114
+nim	data	narduino/libs/arduino_graphics.html#data,Image	proc data(img: Image): ptr uint8		117
+nim	width	narduino/libs/arduino_graphics.html#width,Image	proc width(img: Image): cint		120
+nim	height	narduino/libs/arduino_graphics.html#height,Image	proc height(img: Image): cint		123
+nim	isValid	narduino/libs/arduino_graphics.html#isValid,Image	proc isValid(img: Image): bool		126
+nim	begin	narduino/libs/arduino_graphics.html#begin,ArduinoGraphics	proc begin(g: var ArduinoGraphics): cint		134
+nim	endGraphics	narduino/libs/arduino_graphics.html#endGraphics,ArduinoGraphics	proc endGraphics(g: var ArduinoGraphics)		137
+nim	width	narduino/libs/arduino_graphics.html#width,ArduinoGraphics	proc width(g: ArduinoGraphics): cint		145
+nim	height	narduino/libs/arduino_graphics.html#height,ArduinoGraphics	proc height(g: ArduinoGraphics): cint		148
+nim	background	narduino/libs/arduino_graphics.html#background,ArduinoGraphics	proc background(g: ArduinoGraphics): uint32		151
+nim	beginDraw	narduino/libs/arduino_graphics.html#beginDraw,ArduinoGraphics	proc beginDraw(g: var ArduinoGraphics)		158
+nim	endDraw	narduino/libs/arduino_graphics.html#endDraw,ArduinoGraphics	proc endDraw(g: var ArduinoGraphics)		161
+nim	background	narduino/libs/arduino_graphics.html#background,ArduinoGraphics,uint8,uint8,uint8	proc background(g: var ArduinoGraphics; r, g2, b: uint8)		164
+nim	background	narduino/libs/arduino_graphics.html#background,ArduinoGraphics,uint32	proc background(g: var ArduinoGraphics; color: uint32)		168
+nim	clear	narduino/libs/arduino_graphics.html#clear,ArduinoGraphics	proc clear(g: var ArduinoGraphics)		172
+nim	clear	narduino/libs/arduino_graphics.html#clear,ArduinoGraphics,cint,cint	proc clear(g: var ArduinoGraphics; x, y: cint)		175
+nim	fill	narduino/libs/arduino_graphics.html#fill,ArduinoGraphics,uint8,uint8,uint8	proc fill(g: var ArduinoGraphics; r, g2, b: uint8)		181
+nim	fill	narduino/libs/arduino_graphics.html#fill,ArduinoGraphics,uint32	proc fill(g: var ArduinoGraphics; color: uint32)		185
+nim	noFill	narduino/libs/arduino_graphics.html#noFill,ArduinoGraphics	proc noFill(g: var ArduinoGraphics)		189
+nim	stroke	narduino/libs/arduino_graphics.html#stroke,ArduinoGraphics,uint8,uint8,uint8	proc stroke(g: var ArduinoGraphics; r, g2, b: uint8)		192
+nim	stroke	narduino/libs/arduino_graphics.html#stroke,ArduinoGraphics,uint32	proc stroke(g: var ArduinoGraphics; color: uint32)		196
+nim	noStroke	narduino/libs/arduino_graphics.html#noStroke,ArduinoGraphics	proc noStroke(g: var ArduinoGraphics)		200
+nim	circle	narduino/libs/arduino_graphics.html#circle,ArduinoGraphics,cint,cint,cint	proc circle(g: var ArduinoGraphics; x, y, diameter: cint)		207
+nim	ellipse	narduino/libs/arduino_graphics.html#ellipse,ArduinoGraphics,cint,cint,cint,cint	proc ellipse(g: var ArduinoGraphics; x, y, width, height: cint)		209
+nim	line	narduino/libs/arduino_graphics.html#line,ArduinoGraphics,cint,cint,cint,cint	proc line(g: var ArduinoGraphics; x1, y1, x2, y2: cint)		211
+nim	point	narduino/libs/arduino_graphics.html#point,ArduinoGraphics,cint,cint	proc point(g: var ArduinoGraphics; x, y: cint)		213
+nim	rect	narduino/libs/arduino_graphics.html#rect,ArduinoGraphics,cint,cint,cint,cint	proc rect(g: var ArduinoGraphics; x, y, width, height: cint)		215
+nim	text	narduino/libs/arduino_graphics.html#text,ArduinoGraphics,cstring,cint,cint	proc text(g: var ArduinoGraphics; str: cstring; x: cint = 0; y: cint = 0)		221
+nim	text	narduino/libs/arduino_graphics.html#text,ArduinoGraphics,String,cint,cint	proc text(g: var ArduinoGraphics; str: String; x: cint = 0; y: cint = 0)		225
+nim	textFont	narduino/libs/arduino_graphics.html#textFont,ArduinoGraphics,Font	proc textFont(g: var ArduinoGraphics; which: Font)		229
+nim	textSize	narduino/libs/arduino_graphics.html#textSize,ArduinoGraphics,uint8	proc textSize(g: var ArduinoGraphics; s: uint8)		232
+nim	textSize	narduino/libs/arduino_graphics.html#textSize,ArduinoGraphics,uint8,uint8	proc textSize(g: var ArduinoGraphics; sx, sy: uint8)		235
+nim	textFontWidth	narduino/libs/arduino_graphics.html#textFontWidth,ArduinoGraphics	proc textFontWidth(g: ArduinoGraphics): cint		238
+nim	textFontHeight	narduino/libs/arduino_graphics.html#textFontHeight,ArduinoGraphics	proc textFontHeight(g: ArduinoGraphics): cint		241
+nim	beginText	narduino/libs/arduino_graphics.html#beginText,ArduinoGraphics,cint,cint	proc beginText(g: var ArduinoGraphics; x: cint = 0; y: cint = 0)		244
+nim	beginText	narduino/libs/arduino_graphics.html#beginText,ArduinoGraphics,cint,cint,uint8,uint8,uint8	proc beginText(g: var ArduinoGraphics; x, y: cint; r, g2, b: uint8)		249
+nim	beginText	narduino/libs/arduino_graphics.html#beginText,ArduinoGraphics,cint,cint,uint32	proc beginText(g: var ArduinoGraphics; x, y: cint; color: uint32)		253
+nim	endText	narduino/libs/arduino_graphics.html#endText,ArduinoGraphics,cint	proc endText(g: var ArduinoGraphics; scroll: cint = NO_SCROLL)		257
+nim	textScrollSpeed	narduino/libs/arduino_graphics.html#textScrollSpeed,ArduinoGraphics,culong	proc textScrollSpeed(g: var ArduinoGraphics; speed: culong = 150)		260
+nim	image	narduino/libs/arduino_graphics.html#image,ArduinoGraphics,Image,cint,cint	proc image(g: var ArduinoGraphics; img: Image; x, y: cint)		268
+nim	image	narduino/libs/arduino_graphics.html#image,ArduinoGraphics,Image,cint,cint,cint,cint	proc image(g: var ArduinoGraphics; img: Image; x, y, width, height: cint)		271
+nim	set	narduino/libs/arduino_graphics.html#set,ArduinoGraphics,cint,cint,uint8,uint8,uint8	proc set(g: var ArduinoGraphics; x, y: cint; r, g2, b: uint8)		279
+nim	set	narduino/libs/arduino_graphics.html#set,ArduinoGraphics,cint,cint,uint32	proc set(g: var ArduinoGraphics; x, y: cint; color: uint32)		284
+nim	write	narduino/libs/arduino_graphics.html#write,ArduinoGraphics,uint8	proc write(g: var ArduinoGraphics; b: uint8): csize_t		297
+nim	write	narduino/libs/arduino_graphics.html#write,ArduinoGraphics,cstring	proc write(g: var ArduinoGraphics; str: cstring): csize_t		301
+nim	write	narduino/libs/arduino_graphics.html#write,ArduinoGraphics,ptr.uint8,csize_t	proc write(g: var ArduinoGraphics; buffer: ptr uint8; size: csize_t): csize_t		307
+nim	flush	narduino/libs/arduino_graphics.html#flush,ArduinoGraphics	proc flush(g: var ArduinoGraphics)		313
+nim	print	narduino/libs/arduino_graphics.html#print,ArduinoGraphics,cstring	proc print(g: var ArduinoGraphics; value: cstring): csize_t		316
+nim	print	narduino/libs/arduino_graphics.html#print,ArduinoGraphics,char	proc print(g: var ArduinoGraphics; value: char): csize_t		318
+nim	print	narduino/libs/arduino_graphics.html#print,ArduinoGraphics,cdouble,cint	proc print(g: var ArduinoGraphics; value: cdouble; digits: cint = 2): csize_t		320
+nim	print	narduino/libs/arduino_graphics.html#print,ArduinoGraphics,String	proc print(g: var ArduinoGraphics; value: String): csize_t		322
+nim	print	narduino/libs/arduino_graphics.html#print,ArduinoGraphics,ptr.FlashStringHelper	proc print(g: var ArduinoGraphics; value: ptr FlashStringHelper): csize_t		324
+nim	println	narduino/libs/arduino_graphics.html#println,ArduinoGraphics	proc println(g: var ArduinoGraphics): csize_t		331
+nim	println	narduino/libs/arduino_graphics.html#println,ArduinoGraphics,cstring	proc println(g: var ArduinoGraphics; value: cstring): csize_t		332
+nim	println	narduino/libs/arduino_graphics.html#println,ArduinoGraphics,char	proc println(g: var ArduinoGraphics; value: char): csize_t		334
+nim	println	narduino/libs/arduino_graphics.html#println,ArduinoGraphics,cdouble,cint	proc println(g: var ArduinoGraphics; value: cdouble; digits: cint = 2): csize_t		336
+nim	println	narduino/libs/arduino_graphics.html#println,ArduinoGraphics,String	proc println(g: var ArduinoGraphics; value: String): csize_t		338
+nim	println	narduino/libs/arduino_graphics.html#println,ArduinoGraphics,ptr.FlashStringHelper	proc println(g: var ArduinoGraphics; value: ptr FlashStringHelper): csize_t		340
+nim	print	narduino/libs/arduino_graphics.html#print.t,ArduinoGraphics,SomeInteger,cint	template print(g: var ArduinoGraphics; value: SomeInteger; base: cint = 10): csize_t		349
+nim	println	narduino/libs/arduino_graphics.html#println.t,ArduinoGraphics,SomeInteger,cint	template println(g: var ArduinoGraphics; value: SomeInteger; base: cint = 10): csize_t		356
+nimgrp	println	narduino/libs/arduino_graphics.html#println-procs-all	proc		331
+nimgrp	data	narduino/libs/arduino_graphics.html#data-procs-all	proc		89
+nimgrp	initimage	narduino/libs/arduino_graphics.html#initImage-procs-all	proc		96
+nimgrp	height	narduino/libs/arduino_graphics.html#height-procs-all	proc		86
+nimgrp	text	narduino/libs/arduino_graphics.html#text-procs-all	proc		221
+nimgrp	background	narduino/libs/arduino_graphics.html#background-procs-all	proc		151
+nimgrp	stroke	narduino/libs/arduino_graphics.html#stroke-procs-all	proc		192
+nimgrp	textsize	narduino/libs/arduino_graphics.html#textSize-procs-all	proc		232
+nimgrp	begintext	narduino/libs/arduino_graphics.html#beginText-procs-all	proc		244
+nimgrp	write	narduino/libs/arduino_graphics.html#write-procs-all	proc		297
+nimgrp	clear	narduino/libs/arduino_graphics.html#clear-procs-all	proc		172
+nimgrp	image	narduino/libs/arduino_graphics.html#image-procs-all	proc		268
+nimgrp	width	narduino/libs/arduino_graphics.html#width-procs-all	proc		83
+nimgrp	set	narduino/libs/arduino_graphics.html#set-procs-all	proc		279
+nimgrp	fill	narduino/libs/arduino_graphics.html#fill-procs-all	proc		181
+nimgrp	print	narduino/libs/arduino_graphics.html#print-procs-all	proc		316

@@ -1,0 +1,51 @@
+nimTitle	adafruit_sensor	narduino/libs/adafruit_sensor.html	module src/narduino/libs/adafruit_sensor		0
+nim	SENSORS_GRAVITY_EARTH	narduino/libs/adafruit_sensor.html#SENSORS_GRAVITY_EARTH	const SENSORS_GRAVITY_EARTH		15
+nim	SENSORS_GRAVITY_MOON	narduino/libs/adafruit_sensor.html#SENSORS_GRAVITY_MOON	const SENSORS_GRAVITY_MOON		16
+nim	SENSORS_GRAVITY_SUN	narduino/libs/adafruit_sensor.html#SENSORS_GRAVITY_SUN	const SENSORS_GRAVITY_SUN		17
+nim	SENSORS_GRAVITY_STANDARD	narduino/libs/adafruit_sensor.html#SENSORS_GRAVITY_STANDARD	const SENSORS_GRAVITY_STANDARD		18
+nim	SENSORS_MAGFIELD_EARTH_MAX	narduino/libs/adafruit_sensor.html#SENSORS_MAGFIELD_EARTH_MAX	const SENSORS_MAGFIELD_EARTH_MAX		19
+nim	SENSORS_MAGFIELD_EARTH_MIN	narduino/libs/adafruit_sensor.html#SENSORS_MAGFIELD_EARTH_MIN	const SENSORS_MAGFIELD_EARTH_MIN		20
+nim	SENSORS_PRESSURE_SEALEVELHPA	narduino/libs/adafruit_sensor.html#SENSORS_PRESSURE_SEALEVELHPA	const SENSORS_PRESSURE_SEALEVELHPA		21
+nim	SENSORS_DPS_TO_RADS	narduino/libs/adafruit_sensor.html#SENSORS_DPS_TO_RADS	const SENSORS_DPS_TO_RADS		22
+nim	SENSORS_RADS_TO_DPS	narduino/libs/adafruit_sensor.html#SENSORS_RADS_TO_DPS	const SENSORS_RADS_TO_DPS		23
+nim	SENSORS_GAUSS_TO_MICROTESLA	narduino/libs/adafruit_sensor.html#SENSORS_GAUSS_TO_MICROTESLA	const SENSORS_GAUSS_TO_MICROTESLA		24
+nim	SensorsTypeT	narduino/libs/adafruit_sensor.html#SensorsTypeT	enum SensorsTypeT		31
+nim	SensorsVecT	narduino/libs/adafruit_sensor.html#SensorsVecT	object SensorsVecT		70
+nim	roll	narduino/libs/adafruit_sensor.html#roll.t,SensorsVecT	template roll(v: SensorsVecT): cfloat		78
+nim	pitch	narduino/libs/adafruit_sensor.html#pitch.t,SensorsVecT	template pitch(v: SensorsVecT): cfloat		80
+nim	heading	narduino/libs/adafruit_sensor.html#heading.t,SensorsVecT	template heading(v: SensorsVecT): cfloat		82
+nim	SensorsColorT	narduino/libs/adafruit_sensor.html#SensorsColorT	object SensorsColorT		86
+nim	SensorsEventT	narduino/libs/adafruit_sensor.html#SensorsEventT	object SensorsEventT		98
+nim	acceleration	narduino/libs/adafruit_sensor.html#acceleration,SensorsEventT	proc acceleration(e: SensorsEventT): SensorsVecT		110
+nim	magnetic	narduino/libs/adafruit_sensor.html#magnetic,SensorsEventT	proc magnetic(e: SensorsEventT): SensorsVecT		114
+nim	orientation	narduino/libs/adafruit_sensor.html#orientation,SensorsEventT	proc orientation(e: SensorsEventT): SensorsVecT		118
+nim	gyro	narduino/libs/adafruit_sensor.html#gyro,SensorsEventT	proc gyro(e: SensorsEventT): SensorsVecT		122
+nim	temperature	narduino/libs/adafruit_sensor.html#temperature,SensorsEventT	proc temperature(e: SensorsEventT): cfloat		126
+nim	distance	narduino/libs/adafruit_sensor.html#distance,SensorsEventT	proc distance(e: SensorsEventT): cfloat		130
+nim	light	narduino/libs/adafruit_sensor.html#light,SensorsEventT	proc light(e: SensorsEventT): cfloat		134
+nim	pressure	narduino/libs/adafruit_sensor.html#pressure,SensorsEventT	proc pressure(e: SensorsEventT): cfloat		138
+nim	relative_humidity	narduino/libs/adafruit_sensor.html#relative_humidity,SensorsEventT	proc relative_humidity(e: SensorsEventT): cfloat		142
+nim	current	narduino/libs/adafruit_sensor.html#current,SensorsEventT	proc current(e: SensorsEventT): cfloat		146
+nim	voltage	narduino/libs/adafruit_sensor.html#voltage,SensorsEventT	proc voltage(e: SensorsEventT): cfloat		150
+nim	tvoc	narduino/libs/adafruit_sensor.html#tvoc,SensorsEventT	proc tvoc(e: SensorsEventT): cfloat		154
+nim	voc_index	narduino/libs/adafruit_sensor.html#voc_index,SensorsEventT	proc voc_index(e: SensorsEventT): cfloat		158
+nim	nox_index	narduino/libs/adafruit_sensor.html#nox_index,SensorsEventT	proc nox_index(e: SensorsEventT): cfloat		162
+nim	CO2	narduino/libs/adafruit_sensor.html#CO2,SensorsEventT	proc CO2(e: SensorsEventT): cfloat		166
+nim	eCO2	narduino/libs/adafruit_sensor.html#eCO2,SensorsEventT	proc eCO2(e: SensorsEventT): cfloat		170
+nim	pm10_std	narduino/libs/adafruit_sensor.html#pm10_std,SensorsEventT	proc pm10_std(e: SensorsEventT): cfloat		174
+nim	pm25_std	narduino/libs/adafruit_sensor.html#pm25_std,SensorsEventT	proc pm25_std(e: SensorsEventT): cfloat		178
+nim	pm100_std	narduino/libs/adafruit_sensor.html#pm100_std,SensorsEventT	proc pm100_std(e: SensorsEventT): cfloat		182
+nim	pm10_env	narduino/libs/adafruit_sensor.html#pm10_env,SensorsEventT	proc pm10_env(e: SensorsEventT): cfloat		186
+nim	pm25_env	narduino/libs/adafruit_sensor.html#pm25_env,SensorsEventT	proc pm25_env(e: SensorsEventT): cfloat		190
+nim	pm100_env	narduino/libs/adafruit_sensor.html#pm100_env,SensorsEventT	proc pm100_env(e: SensorsEventT): cfloat		194
+nim	gas_resistance	narduino/libs/adafruit_sensor.html#gas_resistance,SensorsEventT	proc gas_resistance(e: SensorsEventT): cfloat		198
+nim	unitless_percent	narduino/libs/adafruit_sensor.html#unitless_percent,SensorsEventT	proc unitless_percent(e: SensorsEventT): cfloat		202
+nim	color	narduino/libs/adafruit_sensor.html#color,SensorsEventT	proc color(e: SensorsEventT): SensorsColorT		206
+nim	altitude	narduino/libs/adafruit_sensor.html#altitude,SensorsEventT	proc altitude(e: SensorsEventT): cfloat		210
+nim	data	narduino/libs/adafruit_sensor.html#data,SensorsEventT	proc data(e: SensorsEventT): ptr cfloat		214
+nim	SensorT	narduino/libs/adafruit_sensor.html#SensorT	object SensorT		223
+nim	AdafruitSensor	narduino/libs/adafruit_sensor.html#AdafruitSensor	object AdafruitSensor		239
+nim	getEvent	narduino/libs/adafruit_sensor.html#getEvent,AdafruitSensor,SensorsEventT	proc getEvent(s: var AdafruitSensor; event: var SensorsEventT): bool		243
+nim	getSensor	narduino/libs/adafruit_sensor.html#getSensor,AdafruitSensor,SensorT	proc getSensor(s: var AdafruitSensor; sensor: var SensorT)		247
+nim	enableAutoRange	narduino/libs/adafruit_sensor.html#enableAutoRange,AdafruitSensor,bool	proc enableAutoRange(s: var AdafruitSensor; enabled: bool)		251
+nim	printSensorDetails	narduino/libs/adafruit_sensor.html#printSensorDetails,AdafruitSensor	proc printSensorDetails(s: var AdafruitSensor)		255

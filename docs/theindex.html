@@ -28,7 +28,7 @@
     <label for="nav-toggle" id="nav-overlay"></label>
     <div class="container">
       <h1 class="title">Index</h1>
-      Modules: <a href="narduino.html">narduino</a>, <a href="narduino/api.html">narduino/api</a>, <a href="narduino/api/arduino.html">narduino/api/arduino</a>, <a href="narduino/api/serial.html">narduino/api/serial</a>, <a href="narduino/api/wstring.html">narduino/api/wstring</a>, <a href="narduino/libs/servo.html">narduino/libs/servo</a>, <a href="narduino/toolchain.html">narduino/toolchain</a>.<br/><p /><h2>API symbols</h2>
+      Modules: <a href="narduino.html">narduino</a>, <a href="narduino/api.html">narduino/api</a>, <a href="narduino/api/arduino.html">narduino/api/arduino</a>, <a href="narduino/api/serial.html">narduino/api/serial</a>, <a href="narduino/api/wstring.html">narduino/api/wstring</a>, <a href="narduino/libs/adafruit_sensor.html">narduino/libs/adafruit_sensor</a>, <a href="narduino/libs/arduino_graphics.html">narduino/libs/arduino_graphics</a>, <a href="narduino/libs/arduino_led_matrix.html">narduino/libs/arduino_led_matrix</a>, <a href="narduino/libs/dht_sensor.html">narduino/libs/dht_sensor</a>, <a href="narduino/libs/servo.html">narduino/libs/servo</a>, <a href="narduino/toolchain.html">narduino/toolchain</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="%60%24%60" href="#%60%24%60"><span>`$`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="toolchain: proc `$`(board: Board): string" href="narduino/toolchain.html#%24%2CBoard">toolchain: proc `$`(board: Board): string</a></li>
@@ -137,6 +137,14 @@
 <li><a class="reference external"
           data-doc-search-tag="arduino: let A7" href="narduino/api/arduino.html#A7">arduino: let A7</a></li>
           </ul></dd>
+<dt><a name="acceleration" href="#acceleration"><span>acceleration:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc acceleration(e: SensorsEventT): SensorsVecT" href="narduino/libs/adafruit_sensor.html#acceleration%2CSensorsEventT">adafruit_sensor: proc acceleration(e: SensorsEventT): SensorsVecT</a></li>
+          </ul></dd>
+<dt><a name="AdafruitSensor" href="#AdafruitSensor"><span>AdafruitSensor:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: object AdafruitSensor" href="narduino/libs/adafruit_sensor.html#AdafruitSensor">adafruit_sensor: object AdafruitSensor</a></li>
+          </ul></dd>
 <dt><a name="add" href="#add"><span>add:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="wstring: template add(s: var String; val: cdouble)" href="narduino/api/wstring.html#add.t%2CString%2Ccdouble">wstring: template add(s: var String; val: cdouble)</a></li>
@@ -152,6 +160,14 @@
           data-doc-search-tag="wstring: template add(s: var String; val: SomeInteger)" href="narduino/api/wstring.html#add.t%2CString%2CSomeInteger">wstring: template add(s: var String; val: SomeInteger)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="wstring: template add(s: var String; val: String)" href="narduino/api/wstring.html#add.t%2CString%2CString">wstring: template add(s: var String; val: String)</a></li>
+          </ul></dd>
+<dt><a name="altitude" href="#altitude"><span>altitude:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc altitude(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#altitude%2CSensorsEventT">adafruit_sensor: proc altitude(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="AM2301" href="#AM2301"><span>AM2301:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: const AM2301" href="narduino/libs/dht_sensor.html#AM2301">dht_sensor: const AM2301</a></li>
           </ul></dd>
 <dt><a name="analogRead" href="#analogRead"><span>analogRead:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -173,6 +189,14 @@
 <li><a class="reference external"
           data-doc-search-tag="arduino: proc analogWriteResolution(bits: cint)" href="narduino/api/arduino.html#analogWriteResolution%2Ccint">arduino: proc analogWriteResolution(bits: cint)</a></li>
           </ul></dd>
+<dt><a name="ArduinoGraphics" href="#ArduinoGraphics"><span>ArduinoGraphics:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: object ArduinoGraphics" href="narduino/libs/arduino_graphics.html#ArduinoGraphics">arduino_graphics: object ArduinoGraphics</a></li>
+          </ul></dd>
+<dt><a name="ArduinoLEDMatrix" href="#ArduinoLEDMatrix"><span>ArduinoLEDMatrix:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: object ArduinoLEDMatrix" href="narduino/libs/arduino_led_matrix.html#ArduinoLEDMatrix">arduino_led_matrix: object ArduinoLEDMatrix</a></li>
+          </ul></dd>
 <dt><a name="attach" href="#attach"><span>attach:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="servo: proc attach(s: var Servo; pin: cint): uint8" href="narduino/libs/servo.html#attach%2CServo%2Ccint">servo: proc attach(s: var Servo; pin: cint): uint8</a></li>
@@ -187,6 +211,10 @@
 <li><a class="reference external"
           data-doc-search-tag="arduino: proc attachInterrupt(interruptNum: uint8; userFunc: proc () {.cdecl.}; mode: cint)" href="narduino/api/arduino.html#attachInterrupt%2Cuint8%2Cproc%29%2Ccint">arduino: proc attachInterrupt(interruptNum: uint8; userFunc: proc () {.cdecl.}; mode: cint)</a></li>
           </ul></dd>
+<dt><a name="autoscroll" href="#autoscroll"><span>autoscroll:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: proc autoscroll(m: var ArduinoLEDMatrix; interval_ms: uint32)" href="narduino/libs/arduino_led_matrix.html#autoscroll%2CArduinoLEDMatrix%2Cuint32">arduino_led_matrix: proc autoscroll(m: var ArduinoLEDMatrix; interval_ms: uint32)</a></li>
+          </ul></dd>
 <dt><a name="available" href="#available"><span>available:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="serial: proc available(s: SerialObj): cint" href="narduino/api/serial.html#available%2CSerialObj">serial: proc available(s: SerialObj): cint</a></li>
@@ -195,11 +223,39 @@
 <li><a class="reference external"
           data-doc-search-tag="serial: proc availableForWrite(s: SerialObj): cint" href="narduino/api/serial.html#availableForWrite%2CSerialObj">serial: proc availableForWrite(s: SerialObj): cint</a></li>
           </ul></dd>
+<dt><a name="background" href="#background"><span>background:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc background(g: ArduinoGraphics): uint32" href="narduino/libs/arduino_graphics.html#background%2CArduinoGraphics">arduino_graphics: proc background(g: ArduinoGraphics): uint32</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc background(g: var ArduinoGraphics; color: uint32)" href="narduino/libs/arduino_graphics.html#background%2CArduinoGraphics%2Cuint32">arduino_graphics: proc background(g: var ArduinoGraphics; color: uint32)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc background(g: var ArduinoGraphics; r, g2, b: uint8)" href="narduino/libs/arduino_graphics.html#background%2CArduinoGraphics%2Cuint8%2Cuint8%2Cuint8">arduino_graphics: proc background(g: var ArduinoGraphics; r, g2, b: uint8)</a></li>
+          </ul></dd>
 <dt><a name="begin" href="#begin"><span>begin:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="serial: proc begin(s: SerialObj; baud: uint32)" href="narduino/api/serial.html#begin%2CSerialObj%2Cuint32">serial: proc begin(s: SerialObj; baud: uint32)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="serial: proc begin(s: SerialObj; baud: uint32; config: uint8)" href="narduino/api/serial.html#begin%2CSerialObj%2Cuint32%2Cuint8">serial: proc begin(s: SerialObj; baud: uint32; config: uint8)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc begin(g: var ArduinoGraphics): cint" href="narduino/libs/arduino_graphics.html#begin%2CArduinoGraphics">arduino_graphics: proc begin(g: var ArduinoGraphics): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: proc begin(m: var ArduinoLEDMatrix): cint" href="narduino/libs/arduino_led_matrix.html#begin%2CArduinoLEDMatrix">arduino_led_matrix: proc begin(m: var ArduinoLEDMatrix): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc begin(d: var DHT; usec: uint8 = 55)" href="narduino/libs/dht_sensor.html#begin%2CDHT%2Cuint8">dht_sensor: proc begin(d: var DHT; usec: uint8 = 55)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc begin(d: var DHTUnified)" href="narduino/libs/dht_sensor.html#begin%2CDHTUnified">dht_sensor: proc begin(d: var DHTUnified)</a></li>
+          </ul></dd>
+<dt><a name="beginDraw" href="#beginDraw"><span>beginDraw:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc beginDraw(g: var ArduinoGraphics)" href="narduino/libs/arduino_graphics.html#beginDraw%2CArduinoGraphics">arduino_graphics: proc beginDraw(g: var ArduinoGraphics)</a></li>
+          </ul></dd>
+<dt><a name="beginText" href="#beginText"><span>beginText:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc beginText(g: var ArduinoGraphics; x: cint = 0; y: cint = 0)" href="narduino/libs/arduino_graphics.html#beginText%2CArduinoGraphics%2Ccint%2Ccint">arduino_graphics: proc beginText(g: var ArduinoGraphics; x: cint = 0; y: cint = 0)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc beginText(g: var ArduinoGraphics; x, y: cint; color: uint32)" href="narduino/libs/arduino_graphics.html#beginText%2CArduinoGraphics%2Ccint%2Ccint%2Cuint32">arduino_graphics: proc beginText(g: var ArduinoGraphics; x, y: cint; color: uint32)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc beginText(g: var ArduinoGraphics; x, y: cint; r, g2, b: uint8)" href="narduino/libs/arduino_graphics.html#beginText%2CArduinoGraphics%2Ccint%2Ccint%2Cuint8%2Cuint8%2Cuint8">arduino_graphics: proc beginText(g: var ArduinoGraphics; x, y: cint; r, g2, b: uint8)</a></li>
           </ul></dd>
 <dt><a name="BIN" href="#BIN"><span>BIN:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -221,9 +277,37 @@
 <li><a class="reference external"
           data-doc-search-tag="wstring: proc charAt(s: String; index: cuint): char" href="narduino/api/wstring.html#charAt%2CString%2Ccuint">wstring: proc charAt(s: String; index: cuint): char</a></li>
           </ul></dd>
+<dt><a name="circle" href="#circle"><span>circle:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc circle(g: var ArduinoGraphics; x, y, diameter: cint)" href="narduino/libs/arduino_graphics.html#circle%2CArduinoGraphics%2Ccint%2Ccint%2Ccint">arduino_graphics: proc circle(g: var ArduinoGraphics; x, y, diameter: cint)</a></li>
+          </ul></dd>
+<dt><a name="clear" href="#clear"><span>clear:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc clear(g: var ArduinoGraphics)" href="narduino/libs/arduino_graphics.html#clear%2CArduinoGraphics">arduino_graphics: proc clear(g: var ArduinoGraphics)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc clear(g: var ArduinoGraphics; x, y: cint)" href="narduino/libs/arduino_graphics.html#clear%2CArduinoGraphics%2Ccint%2Ccint">arduino_graphics: proc clear(g: var ArduinoGraphics; x, y: cint)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: proc clear(m: var ArduinoLEDMatrix)" href="narduino/libs/arduino_led_matrix.html#clear%2CArduinoLEDMatrix">arduino_led_matrix: proc clear(m: var ArduinoLEDMatrix)</a></li>
+          </ul></dd>
+<dt><a name="CO2" href="#CO2"><span>CO2:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc CO2(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#CO2%2CSensorsEventT">adafruit_sensor: proc CO2(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="color" href="#color"><span>color:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc color(e: SensorsEventT): SensorsColorT" href="narduino/libs/adafruit_sensor.html#color%2CSensorsEventT">adafruit_sensor: proc color(e: SensorsEventT): SensorsColorT</a></li>
+          </ul></dd>
 <dt><a name="compareTo" href="#compareTo"><span>compareTo:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="wstring: proc compareTo(s: String; other: String): cint" href="narduino/api/wstring.html#compareTo%2CString%2CString">wstring: proc compareTo(s: String; other: String): cint</a></li>
+          </ul></dd>
+<dt><a name="computeHeatIndex" href="#computeHeatIndex"><span>computeHeatIndex:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc computeHeatIndex(d: var DHT; isFahrenheit: bool = true): cfloat" href="narduino/libs/dht_sensor.html#computeHeatIndex%2CDHT%2Cbool">dht_sensor: proc computeHeatIndex(d: var DHT; isFahrenheit: bool = true): cfloat</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc computeHeatIndex(d: var DHT; temperature: cfloat; percentHumidity: cfloat;
+                 isFahrenheit: bool = true): cfloat" href="narduino/libs/dht_sensor.html#computeHeatIndex%2CDHT%2Ccfloat%2Ccfloat%2Cbool">dht_sensor: proc computeHeatIndex(d: var DHT; temperature: cfloat; percentHumidity: cfloat;
+                 isFahrenheit: bool = true): cfloat</a></li>
           </ul></dd>
 <dt><a name="concat" href="#concat"><span>concat:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -241,6 +325,14 @@
           <li><a class="reference external"
           data-doc-search-tag="wstring: template concat(s: var String; val: SomeInteger): bool" href="narduino/api/wstring.html#concat.t%2CString%2CSomeInteger">wstring: template concat(s: var String; val: SomeInteger): bool</a></li>
           </ul></dd>
+<dt><a name="convertCtoF" href="#convertCtoF"><span>convertCtoF:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc convertCtoF(d: var DHT; celsius: cfloat): cfloat" href="narduino/libs/dht_sensor.html#convertCtoF%2CDHT%2Ccfloat">dht_sensor: proc convertCtoF(d: var DHT; celsius: cfloat): cfloat</a></li>
+          </ul></dd>
+<dt><a name="convertFtoC" href="#convertFtoC"><span>convertFtoC:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc convertFtoC(d: var DHT; fahrenheit: cfloat): cfloat" href="narduino/libs/dht_sensor.html#convertFtoC%2CDHT%2Ccfloat">dht_sensor: proc convertFtoC(d: var DHT; fahrenheit: cfloat): cfloat</a></li>
+          </ul></dd>
 <dt><a name="coreFromFqbn" href="#coreFromFqbn"><span>coreFromFqbn:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="toolchain: proc coreFromFqbn(fqbn: string): string" href="narduino/toolchain.html#coreFromFqbn%2Cstring">toolchain: proc coreFromFqbn(fqbn: string): string</a></li>
@@ -256,6 +348,18 @@
 <dt><a name="c_str" href="#c_str"><span>c_str:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="wstring: proc c_str(s: String): cstring" href="narduino/api/wstring.html#c_str%2CString">wstring: proc c_str(s: String): cstring</a></li>
+          </ul></dd>
+<dt><a name="current" href="#current"><span>current:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc current(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#current%2CSensorsEventT">adafruit_sensor: proc current(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="data" href="#data"><span>data:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc data(e: SensorsEventT): ptr cfloat" href="narduino/libs/adafruit_sensor.html#data%2CSensorsEventT">adafruit_sensor: proc data(e: SensorsEventT): ptr cfloat</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc data(f: Font): ptr ptr uint8" href="narduino/libs/arduino_graphics.html#data%2CFont">arduino_graphics: proc data(f: Font): ptr ptr uint8</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc data(img: Image): ptr uint8" href="narduino/libs/arduino_graphics.html#data%2CImage">arduino_graphics: proc data(img: Image): ptr uint8</a></li>
           </ul></dd>
 <dt><a name="DEC" href="#DEC"><span>DEC:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -289,6 +393,38 @@
 <li><a class="reference external"
           data-doc-search-tag="toolchain: object DetectedPort" href="narduino/toolchain.html#DetectedPort">toolchain: object DetectedPort</a></li>
           </ul></dd>
+<dt><a name="DHT" href="#DHT"><span>DHT:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: object DHT" href="narduino/libs/dht_sensor.html#DHT">dht_sensor: object DHT</a></li>
+          </ul></dd>
+<dt><a name="DHT11" href="#DHT11"><span>DHT11:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: const DHT11" href="narduino/libs/dht_sensor.html#DHT11">dht_sensor: const DHT11</a></li>
+          </ul></dd>
+<dt><a name="DHT12" href="#DHT12"><span>DHT12:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: const DHT12" href="narduino/libs/dht_sensor.html#DHT12">dht_sensor: const DHT12</a></li>
+          </ul></dd>
+<dt><a name="DHT21" href="#DHT21"><span>DHT21:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: const DHT21" href="narduino/libs/dht_sensor.html#DHT21">dht_sensor: const DHT21</a></li>
+          </ul></dd>
+<dt><a name="DHT22" href="#DHT22"><span>DHT22:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: const DHT22" href="narduino/libs/dht_sensor.html#DHT22">dht_sensor: const DHT22</a></li>
+          </ul></dd>
+<dt><a name="DHTUnified" href="#DHTUnified"><span>DHTUnified:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: object DHTUnified" href="narduino/libs/dht_sensor.html#DHTUnified">dht_sensor: object DHTUnified</a></li>
+          </ul></dd>
+<dt><a name="DHTUnifiedHumidity" href="#DHTUnifiedHumidity"><span>DHTUnifiedHumidity:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: object DHTUnifiedHumidity" href="narduino/libs/dht_sensor.html#DHTUnifiedHumidity">dht_sensor: object DHTUnifiedHumidity</a></li>
+          </ul></dd>
+<dt><a name="DHTUnifiedTemperature" href="#DHTUnifiedTemperature"><span>DHTUnifiedTemperature:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: object DHTUnifiedTemperature" href="narduino/libs/dht_sensor.html#DHTUnifiedTemperature">dht_sensor: object DHTUnifiedTemperature</a></li>
+          </ul></dd>
 <dt><a name="digitalPinToInterrupt" href="#digitalPinToInterrupt"><span>digitalPinToInterrupt:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arduino: proc digitalPinToInterrupt(pin: uint8): cint" href="narduino/api/arduino.html#digitalPinToInterrupt%2Cuint8">arduino: proc digitalPinToInterrupt(pin: uint8): cint</a></li>
@@ -301,9 +437,73 @@
 <li><a class="reference external"
           data-doc-search-tag="arduino: proc digitalWrite(pin, value: uint8)" href="narduino/api/arduino.html#digitalWrite%2Cuint8%2Cuint8">arduino: proc digitalWrite(pin, value: uint8)</a></li>
           </ul></dd>
+<dt><a name="distance" href="#distance"><span>distance:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc distance(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#distance%2CSensorsEventT">adafruit_sensor: proc distance(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="eCO2" href="#eCO2"><span>eCO2:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc eCO2(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#eCO2%2CSensorsEventT">adafruit_sensor: proc eCO2(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="ellipse" href="#ellipse"><span>ellipse:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc ellipse(g: var ArduinoGraphics; x, y, width, height: cint)" href="narduino/libs/arduino_graphics.html#ellipse%2CArduinoGraphics%2Ccint%2Ccint%2Ccint%2Ccint">arduino_graphics: proc ellipse(g: var ArduinoGraphics; x, y, width, height: cint)</a></li>
+          </ul></dd>
+<dt><a name="enableAutoRange" href="#enableAutoRange"><span>enableAutoRange:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc enableAutoRange(s: var AdafruitSensor; enabled: bool)" href="narduino/libs/adafruit_sensor.html#enableAutoRange%2CAdafruitSensor%2Cbool">adafruit_sensor: proc enableAutoRange(s: var AdafruitSensor; enabled: bool)</a></li>
+          </ul></dd>
+<dt><a name="encoding" href="#encoding"><span>encoding:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc encoding(img: Image): cint" href="narduino/libs/arduino_graphics.html#encoding%2CImage">arduino_graphics: proc encoding(img: Image): cint</a></li>
+          </ul></dd>
+<dt><a name="ENCODING_NONE" href="#ENCODING_NONE"><span>ENCODING_NONE:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: const ENCODING_NONE" href="narduino/libs/arduino_graphics.html#ENCODING_NONE">arduino_graphics: const ENCODING_NONE</a></li>
+          </ul></dd>
+<dt><a name="ENCODING_RGB" href="#ENCODING_RGB"><span>ENCODING_RGB:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: const ENCODING_RGB" href="narduino/libs/arduino_graphics.html#ENCODING_RGB">arduino_graphics: const ENCODING_RGB</a></li>
+          </ul></dd>
+<dt><a name="ENCODING_RGB16" href="#ENCODING_RGB16"><span>ENCODING_RGB16:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: const ENCODING_RGB16" href="narduino/libs/arduino_graphics.html#ENCODING_RGB16">arduino_graphics: const ENCODING_RGB16</a></li>
+          </ul></dd>
+<dt><a name="ENCODING_RGB24" href="#ENCODING_RGB24"><span>ENCODING_RGB24:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: const ENCODING_RGB24" href="narduino/libs/arduino_graphics.html#ENCODING_RGB24">arduino_graphics: const ENCODING_RGB24</a></li>
+          </ul></dd>
+<dt><a name="endDraw" href="#endDraw"><span>endDraw:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc endDraw(g: var ArduinoGraphics)" href="narduino/libs/arduino_graphics.html#endDraw%2CArduinoGraphics">arduino_graphics: proc endDraw(g: var ArduinoGraphics)</a></li>
+          </ul></dd>
+<dt><a name="endGraphics" href="#endGraphics"><span>endGraphics:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc endGraphics(g: var ArduinoGraphics)" href="narduino/libs/arduino_graphics.html#endGraphics%2CArduinoGraphics">arduino_graphics: proc endGraphics(g: var ArduinoGraphics)</a></li>
+          </ul></dd>
 <dt><a name="endsWith" href="#endsWith"><span>endsWith:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="wstring: proc endsWith(s: String; suffix: String): bool" href="narduino/api/wstring.html#endsWith%2CString%2CString">wstring: proc endsWith(s: String; suffix: String): bool</a></li>
+          </ul></dd>
+<dt><a name="endText" href="#endText"><span>endText:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc endText(g: var ArduinoGraphics; scroll: cint = NO_SCROLL)" href="narduino/libs/arduino_graphics.html#endText%2CArduinoGraphics%2Ccint">arduino_graphics: proc endText(g: var ArduinoGraphics; scroll: cint = NO_SCROLL)</a></li>
+          </ul></dd>
+<dt><a name="endTextAnimation" href="#endTextAnimation"><span>endTextAnimation:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: template endTextAnimation[N: static int](m: var ArduinoLEDMatrix; scrollDirection: cint;
+                                frames: var array[N, array[4, uint32]];
+                                used: var uint32)" href="narduino/libs/arduino_led_matrix.html#endTextAnimation.t%2CArduinoLEDMatrix%2Ccint%2Carray%5BN%2Carray%5B%2Cuint32%5D%5D%2Cuint32">arduino_led_matrix: template endTextAnimation[N: static int](m: var ArduinoLEDMatrix; scrollDirection: cint;
+                                frames: var array[N, array[4, uint32]];
+                                used: var uint32)</a></li>
+          </ul></dd>
+<dt><a name="endTextToAnimationBuffer" href="#endTextToAnimationBuffer"><span>endTextToAnimationBuffer:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: proc endTextToAnimationBuffer(m: var ArduinoLEDMatrix; scrollDirection: cint;
+                         frames: ptr array[4, uint32]; howManyMax: uint32;
+                         howManyUsed: var uint32)" href="narduino/libs/arduino_led_matrix.html#endTextToAnimationBuffer%2CArduinoLEDMatrix%2Ccint%2Cptr.array%5B%2Cuint32%5D%2Cuint32%2Cuint32">arduino_led_matrix: proc endTextToAnimationBuffer(m: var ArduinoLEDMatrix; scrollDirection: cint;
+                         frames: ptr array[4, uint32]; howManyMax: uint32;
+                         howManyUsed: var uint32)</a></li>
           </ul></dd>
 <dt><a name="ensureCoreInstalled" href="#ensureCoreInstalled"><span>ensureCoreInstalled:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -331,6 +531,12 @@
 <li><a class="reference external"
           data-doc-search-tag="arduino: let FALLING" href="narduino/api/arduino.html#FALLING">arduino: let FALLING</a></li>
           </ul></dd>
+<dt><a name="fill" href="#fill"><span>fill:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc fill(g: var ArduinoGraphics; color: uint32)" href="narduino/libs/arduino_graphics.html#fill%2CArduinoGraphics%2Cuint32">arduino_graphics: proc fill(g: var ArduinoGraphics; color: uint32)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc fill(g: var ArduinoGraphics; r, g2, b: uint8)" href="narduino/libs/arduino_graphics.html#fill%2CArduinoGraphics%2Cuint8%2Cuint8%2Cuint8">arduino_graphics: proc fill(g: var ArduinoGraphics; r, g2, b: uint8)</a></li>
+          </ul></dd>
 <dt><a name="find" href="#find"><span>find:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="serial: proc find(s: SerialObj; target: char): bool" href="narduino/api/serial.html#find%2CSerialObj%2Cchar">serial: proc find(s: SerialObj; target: char): bool</a></li>
@@ -350,6 +556,24 @@
 <dt><a name="flush" href="#flush"><span>flush:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="serial: proc flush(s: SerialObj)" href="narduino/api/serial.html#flush%2CSerialObj">serial: proc flush(s: SerialObj)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc flush(g: var ArduinoGraphics)" href="narduino/libs/arduino_graphics.html#flush%2CArduinoGraphics">arduino_graphics: proc flush(g: var ArduinoGraphics)</a></li>
+          </ul></dd>
+<dt><a name="Font" href="#Font"><span>Font:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: object Font" href="narduino/libs/arduino_graphics.html#Font">arduino_graphics: object Font</a></li>
+          </ul></dd>
+<dt><a name="Font_4x6" href="#Font_4x6"><span>Font_4x6:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: let Font_4x6" href="narduino/libs/arduino_graphics.html#Font_4x6">arduino_graphics: let Font_4x6</a></li>
+          </ul></dd>
+<dt><a name="Font_5x7" href="#Font_5x7"><span>Font_5x7:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: let Font_5x7" href="narduino/libs/arduino_graphics.html#Font_5x7">arduino_graphics: let Font_5x7</a></li>
+          </ul></dd>
+<dt><a name="gas_resistance" href="#gas_resistance"><span>gas_resistance:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc gas_resistance(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#gas_resistance%2CSensorsEventT">adafruit_sensor: proc gas_resistance(e: SensorsEventT): cfloat</a></li>
           </ul></dd>
 <dt><a name="getActiveBoard" href="#getActiveBoard"><span>getActiveBoard:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -361,9 +585,41 @@
           <li><a class="reference external"
           data-doc-search-tag="wstring: template getBytes(s: String; buf: var openArray[uint8])" href="narduino/api/wstring.html#getBytes.t%2CString%2CopenArray%5Buint8%5D">wstring: template getBytes(s: String; buf: var openArray[uint8])</a></li>
           </ul></dd>
+<dt><a name="getEvent" href="#getEvent"><span>getEvent:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc getEvent(s: var AdafruitSensor; event: var SensorsEventT): bool" href="narduino/libs/adafruit_sensor.html#getEvent%2CAdafruitSensor%2CSensorsEventT">adafruit_sensor: proc getEvent(s: var AdafruitSensor; event: var SensorsEventT): bool</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc getEvent(h: var DHTUnifiedHumidity; event: var SensorsEventT): bool" href="narduino/libs/dht_sensor.html#getEvent%2CDHTUnifiedHumidity%2CSensorsEventT">dht_sensor: proc getEvent(h: var DHTUnifiedHumidity; event: var SensorsEventT): bool</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc getEvent(t: var DHTUnifiedTemperature; event: var SensorsEventT): bool" href="narduino/libs/dht_sensor.html#getEvent%2CDHTUnifiedTemperature%2CSensorsEventT">dht_sensor: proc getEvent(t: var DHTUnifiedTemperature; event: var SensorsEventT): bool</a></li>
+          </ul></dd>
+<dt><a name="getSensor" href="#getSensor"><span>getSensor:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc getSensor(s: var AdafruitSensor; sensor: var SensorT)" href="narduino/libs/adafruit_sensor.html#getSensor%2CAdafruitSensor%2CSensorT">adafruit_sensor: proc getSensor(s: var AdafruitSensor; sensor: var SensorT)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc getSensor(h: var DHTUnifiedHumidity; sensor: var SensorT)" href="narduino/libs/dht_sensor.html#getSensor%2CDHTUnifiedHumidity%2CSensorT">dht_sensor: proc getSensor(h: var DHTUnifiedHumidity; sensor: var SensorT)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc getSensor(t: var DHTUnifiedTemperature; sensor: var SensorT)" href="narduino/libs/dht_sensor.html#getSensor%2CDHTUnifiedTemperature%2CSensorT">dht_sensor: proc getSensor(t: var DHTUnifiedTemperature; sensor: var SensorT)</a></li>
+          </ul></dd>
 <dt><a name="getTimeout" href="#getTimeout"><span>getTimeout:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="serial: proc getTimeout(s: SerialObj): uint32" href="narduino/api/serial.html#getTimeout%2CSerialObj">serial: proc getTimeout(s: SerialObj): uint32</a></li>
+          </ul></dd>
+<dt><a name="gyro" href="#gyro"><span>gyro:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc gyro(e: SensorsEventT): SensorsVecT" href="narduino/libs/adafruit_sensor.html#gyro%2CSensorsEventT">adafruit_sensor: proc gyro(e: SensorsEventT): SensorsVecT</a></li>
+          </ul></dd>
+<dt><a name="heading" href="#heading"><span>heading:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: template heading(v: SensorsVecT): cfloat" href="narduino/libs/adafruit_sensor.html#heading.t%2CSensorsVecT">adafruit_sensor: template heading(v: SensorsVecT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="height" href="#height"><span>height:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc height(g: ArduinoGraphics): cint" href="narduino/libs/arduino_graphics.html#height%2CArduinoGraphics">arduino_graphics: proc height(g: ArduinoGraphics): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc height(f: Font): cint" href="narduino/libs/arduino_graphics.html#height%2CFont">arduino_graphics: proc height(f: Font): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc height(img: Image): cint" href="narduino/libs/arduino_graphics.html#height%2CImage">arduino_graphics: proc height(img: Image): cint</a></li>
           </ul></dd>
 <dt><a name="HEX" href="#HEX"><span>HEX:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -372,6 +628,20 @@
 <dt><a name="HIGH" href="#HIGH"><span>HIGH:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arduino: let HIGH" href="narduino/api/arduino.html#HIGH">arduino: let HIGH</a></li>
+          </ul></dd>
+<dt><a name="humidity" href="#humidity"><span>humidity:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc humidity(d: var DHTUnified): DHTUnifiedHumidity" href="narduino/libs/dht_sensor.html#humidity%2CDHTUnified">dht_sensor: proc humidity(d: var DHTUnified): DHTUnifiedHumidity</a></li>
+          </ul></dd>
+<dt><a name="Image" href="#Image"><span>Image:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: object Image" href="narduino/libs/arduino_graphics.html#Image">arduino_graphics: object Image</a></li>
+          </ul></dd>
+<dt><a name="image" href="#image"><span>image:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc image(g: var ArduinoGraphics; img: Image; x, y: cint)" href="narduino/libs/arduino_graphics.html#image%2CArduinoGraphics%2CImage%2Ccint%2Ccint">arduino_graphics: proc image(g: var ArduinoGraphics; img: Image; x, y: cint)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc image(g: var ArduinoGraphics; img: Image; x, y, width, height: cint)" href="narduino/libs/arduino_graphics.html#image%2CArduinoGraphics%2CImage%2Ccint%2Ccint%2Ccint%2Ccint">arduino_graphics: proc image(g: var ArduinoGraphics; img: Image; x, y, width, height: cint)</a></li>
           </ul></dd>
 <dt><a name="indexOf" href="#indexOf"><span>indexOf:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -382,6 +652,34 @@
           data-doc-search-tag="wstring: proc indexOf(s: String; str: String): cint" href="narduino/api/wstring.html#indexOf%2CString%2CString">wstring: proc indexOf(s: String; str: String): cint</a></li>
           <li><a class="reference external"
           data-doc-search-tag="wstring: proc indexOf(s: String; str: String; fromIndex: cuint): cint" href="narduino/api/wstring.html#indexOf%2CString%2CString%2Ccuint">wstring: proc indexOf(s: String; str: String; fromIndex: cuint): cint</a></li>
+          </ul></dd>
+<dt><a name="initArduinoLEDMatrix" href="#initArduinoLEDMatrix"><span>initArduinoLEDMatrix:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: proc initArduinoLEDMatrix(): ArduinoLEDMatrix" href="narduino/libs/arduino_led_matrix.html#initArduinoLEDMatrix">arduino_led_matrix: proc initArduinoLEDMatrix(): ArduinoLEDMatrix</a></li>
+          </ul></dd>
+<dt><a name="initDHT" href="#initDHT"><span>initDHT:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc initDHT(pin: uint8; sensorType: uint8; count: uint8 = 6): DHT" href="narduino/libs/dht_sensor.html#initDHT%2Cuint8%2Cuint8%2Cuint8">dht_sensor: proc initDHT(pin: uint8; sensorType: uint8; count: uint8 = 6): DHT</a></li>
+          </ul></dd>
+<dt><a name="initDHTUnified" href="#initDHTUnified"><span>initDHTUnified:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc initDHTUnified(pin: uint8; sensorType: uint8; count: uint8 = 6;
+               tempSensorId: int32 = -1; humiditySensorId: int32 = -1): DHTUnified" href="narduino/libs/dht_sensor.html#initDHTUnified%2Cuint8%2Cuint8%2Cuint8%2Cint32%2Cint32">dht_sensor: proc initDHTUnified(pin: uint8; sensorType: uint8; count: uint8 = 6;
+               tempSensorId: int32 = -1; humiditySensorId: int32 = -1): DHTUnified</a></li>
+          </ul></dd>
+<dt><a name="initFont" href="#initFont"><span>initFont:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc initFont(width, height: cint; data: ptr ptr uint8): Font" href="narduino/libs/arduino_graphics.html#initFont%2Ccint%2Ccint%2Cptr.ptr.uint8">arduino_graphics: proc initFont(width, height: cint; data: ptr ptr uint8): Font</a></li>
+          </ul></dd>
+<dt><a name="initImage" href="#initImage"><span>initImage:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc initImage(): Image" href="narduino/libs/arduino_graphics.html#initImage">arduino_graphics: proc initImage(): Image</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc initImage(encoding: cint; data: ptr uint16; width, height: cint): Image" href="narduino/libs/arduino_graphics.html#initImage%2Ccint%2Cptr.uint16%2Ccint%2Ccint">arduino_graphics: proc initImage(encoding: cint; data: ptr uint16; width, height: cint): Image</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc initImage(encoding: cint; data: ptr uint32; width, height: cint): Image" href="narduino/libs/arduino_graphics.html#initImage%2Ccint%2Cptr.uint32%2Ccint%2Ccint">arduino_graphics: proc initImage(encoding: cint; data: ptr uint32; width, height: cint): Image</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc initImage(encoding: cint; data: ptr uint8; width, height: cint): Image" href="narduino/libs/arduino_graphics.html#initImage%2Ccint%2Cptr.uint8%2Ccint%2Ccint">arduino_graphics: proc initImage(encoding: cint; data: ptr uint8; width, height: cint): Image</a></li>
           </ul></dd>
 <dt><a name="initServo" href="#initServo"><span>initServo:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -488,6 +786,8 @@
 <dt><a name="isValid" href="#isValid"><span>isValid:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="wstring: proc isValid(s: String): bool" href="narduino/api/wstring.html#isValid%2CString">wstring: proc isValid(s: String): bool</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc isValid(img: Image): bool" href="narduino/libs/arduino_graphics.html#isValid%2CImage">arduino_graphics: proc isValid(img: Image): bool</a></li>
           </ul></dd>
 <dt><a name="isWhitespace" href="#isWhitespace"><span>isWhitespace:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -515,9 +815,49 @@
 <li><a class="reference external"
           data-doc-search-tag="wstring: proc length(s: String): cuint" href="narduino/api/wstring.html#length%2CString">wstring: proc length(s: String): cuint</a></li>
           </ul></dd>
+<dt><a name="light" href="#light"><span>light:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc light(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#light%2CSensorsEventT">adafruit_sensor: proc light(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="line" href="#line"><span>line:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc line(g: var ArduinoGraphics; x1, y1, x2, y2: cint)" href="narduino/libs/arduino_graphics.html#line%2CArduinoGraphics%2Ccint%2Ccint%2Ccint%2Ccint">arduino_graphics: proc line(g: var ArduinoGraphics; x1, y1, x2, y2: cint)</a></li>
+          </ul></dd>
 <dt><a name="listBoards" href="#listBoards"><span>listBoards:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="toolchain: proc listBoards(): BoardList" href="narduino/toolchain.html#listBoards">toolchain: proc listBoards(): BoardList</a></li>
+          </ul></dd>
+<dt><a name="loadFrame" href="#loadFrame"><span>loadFrame:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: proc loadFrame(m: var ArduinoLEDMatrix; buffer: ptr uint32)" href="narduino/libs/arduino_led_matrix.html#loadFrame%2CArduinoLEDMatrix%2Cptr.uint32">arduino_led_matrix: proc loadFrame(m: var ArduinoLEDMatrix; buffer: ptr uint32)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: template loadFrame(m: var ArduinoLEDMatrix; buffer: var array[3, uint32])" href="narduino/libs/arduino_led_matrix.html#loadFrame.t%2CArduinoLEDMatrix%2Carray%5B%2Cuint32%5D">arduino_led_matrix: template loadFrame(m: var ArduinoLEDMatrix; buffer: var array[3, uint32])</a></li>
+          </ul></dd>
+<dt><a name="loadPixels" href="#loadPixels"><span>loadPixels:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: proc loadPixels(m: var ArduinoLEDMatrix; arr: ptr uint8; size: csize_t)" href="narduino/libs/arduino_led_matrix.html#loadPixels%2CArduinoLEDMatrix%2Cptr.uint8%2Ccsize_t">arduino_led_matrix: proc loadPixels(m: var ArduinoLEDMatrix; arr: ptr uint8; size: csize_t)</a></li>
+          </ul></dd>
+<dt><a name="loadPixelsToBuffer" href="#loadPixelsToBuffer"><span>loadPixelsToBuffer:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: proc loadPixelsToBuffer(arr: ptr uint8; size: csize_t; dst: ptr uint32)" href="narduino/libs/arduino_led_matrix.html#loadPixelsToBuffer%2Cptr.uint8%2Ccsize_t%2Cptr.uint32">arduino_led_matrix: proc loadPixelsToBuffer(arr: ptr uint8; size: csize_t; dst: ptr uint32)</a></li>
+          </ul></dd>
+<dt><a name="loadSequence" href="#loadSequence"><span>loadSequence:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: template loadSequence[N: static int](m: var ArduinoLEDMatrix;
+                            frames: var array[N, array[4, uint32]])" href="narduino/libs/arduino_led_matrix.html#loadSequence.t%2CArduinoLEDMatrix%2Carray%5BN%2Carray%5B%2Cuint32%5D%5D">arduino_led_matrix: template loadSequence[N: static int](m: var ArduinoLEDMatrix;
+                            frames: var array[N, array[4, uint32]])</a></li>
+          </ul></dd>
+<dt><a name="loadTextAnimationSequence" href="#loadTextAnimationSequence"><span>loadTextAnimationSequence:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: template loadTextAnimationSequence[N: static int](m: var ArduinoLEDMatrix;
+    frames: var array[N, array[4, uint32]]; used: uint32)" href="narduino/libs/arduino_led_matrix.html#loadTextAnimationSequence.t%2CArduinoLEDMatrix%2Carray%5BN%2Carray%5B%2Cuint32%5D%5D%2Cuint32">arduino_led_matrix: template loadTextAnimationSequence[N: static int](m: var ArduinoLEDMatrix;
+    frames: var array[N, array[4, uint32]]; used: uint32)</a></li>
+          </ul></dd>
+<dt><a name="loadWrapper" href="#loadWrapper"><span>loadWrapper:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: proc loadWrapper(m: var ArduinoLEDMatrix; frames: ptr array[4, uint32];
+            howMany: uint32)" href="narduino/libs/arduino_led_matrix.html#loadWrapper%2CArduinoLEDMatrix%2Cptr.array%5B%2Cuint32%5D%2Cuint32">arduino_led_matrix: proc loadWrapper(m: var ArduinoLEDMatrix; frames: ptr array[4, uint32];
+            howMany: uint32)</a></li>
           </ul></dd>
 <dt><a name="LookaheadMode" href="#LookaheadMode"><span>LookaheadMode:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -534,6 +874,10 @@
 <dt><a name="LSBFIRST" href="#LSBFIRST"><span>LSBFIRST:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arduino: let LSBFIRST" href="narduino/api/arduino.html#LSBFIRST">arduino: let LSBFIRST</a></li>
+          </ul></dd>
+<dt><a name="magnetic" href="#magnetic"><span>magnetic:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc magnetic(e: SensorsEventT): SensorsVecT" href="narduino/libs/adafruit_sensor.html#magnetic%2CSensorsEventT">adafruit_sensor: proc magnetic(e: SensorsEventT): SensorsVecT</a></li>
           </ul></dd>
 <dt><a name="makeWord" href="#makeWord"><span>makeWord:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -573,6 +917,14 @@
 <li><a class="reference external"
           data-doc-search-tag="arduino: let MSBFIRST" href="narduino/api/arduino.html#MSBFIRST">arduino: let MSBFIRST</a></li>
           </ul></dd>
+<dt><a name="next" href="#next"><span>next:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: proc next(m: var ArduinoLEDMatrix)" href="narduino/libs/arduino_led_matrix.html#next%2CArduinoLEDMatrix">arduino_led_matrix: proc next(m: var ArduinoLEDMatrix)</a></li>
+          </ul></dd>
+<dt><a name="noFill" href="#noFill"><span>noFill:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc noFill(g: var ArduinoGraphics)" href="narduino/libs/arduino_graphics.html#noFill%2CArduinoGraphics">arduino_graphics: proc noFill(g: var ArduinoGraphics)</a></li>
+          </ul></dd>
 <dt><a name="NO_IGNORE_CHAR" href="#NO_IGNORE_CHAR"><span>NO_IGNORE_CHAR:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="serial: const NO_IGNORE_CHAR" href="narduino/api/serial.html#NO_IGNORE_CHAR">serial: const NO_IGNORE_CHAR</a></li>
@@ -580,6 +932,14 @@
 <dt><a name="noInterrupts" href="#noInterrupts"><span>noInterrupts:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="arduino: proc noInterrupts()" href="narduino/api/arduino.html#noInterrupts">arduino: proc noInterrupts()</a></li>
+          </ul></dd>
+<dt><a name="NO_SCROLL" href="#NO_SCROLL"><span>NO_SCROLL:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: const NO_SCROLL" href="narduino/libs/arduino_graphics.html#NO_SCROLL">arduino_graphics: const NO_SCROLL</a></li>
+          </ul></dd>
+<dt><a name="noStroke" href="#noStroke"><span>noStroke:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc noStroke(g: var ArduinoGraphics)" href="narduino/libs/arduino_graphics.html#noStroke%2CArduinoGraphics">arduino_graphics: proc noStroke(g: var ArduinoGraphics)</a></li>
           </ul></dd>
 <dt><a name="NOT_AN_INTERRUPT" href="#NOT_AN_INTERRUPT"><span>NOT_AN_INTERRUPT:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -597,9 +957,29 @@
 <li><a class="reference external"
           data-doc-search-tag="arduino: proc noTone(pin: uint8)" href="narduino/api/arduino.html#noTone%2Cuint8">arduino: proc noTone(pin: uint8)</a></li>
           </ul></dd>
+<dt><a name="nox_index" href="#nox_index"><span>nox_index:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc nox_index(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#nox_index%2CSensorsEventT">adafruit_sensor: proc nox_index(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="NUM_LEDS" href="#NUM_LEDS"><span>NUM_LEDS:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: const NUM_LEDS" href="narduino/libs/arduino_led_matrix.html#NUM_LEDS">arduino_led_matrix: const NUM_LEDS</a></li>
+          </ul></dd>
 <dt><a name="OCT" href="#OCT"><span>OCT:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="serial: let OCT" href="narduino/api/serial.html#OCT">serial: let OCT</a></li>
+          </ul></dd>
+<dt><a name="off" href="#off"><span>off:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: proc off(m: var ArduinoLEDMatrix; pin: csize_t)" href="narduino/libs/arduino_led_matrix.html#off%2CArduinoLEDMatrix%2Ccsize_t">arduino_led_matrix: proc off(m: var ArduinoLEDMatrix; pin: csize_t)</a></li>
+          </ul></dd>
+<dt><a name="on" href="#on"><span>on:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: proc on(m: var ArduinoLEDMatrix; pin: csize_t)" href="narduino/libs/arduino_led_matrix.html#on%2CArduinoLEDMatrix%2Ccsize_t">arduino_led_matrix: proc on(m: var ArduinoLEDMatrix; pin: csize_t)</a></li>
+          </ul></dd>
+<dt><a name="orientation" href="#orientation"><span>orientation:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc orientation(e: SensorsEventT): SensorsVecT" href="narduino/libs/adafruit_sensor.html#orientation%2CSensorsEventT">adafruit_sensor: proc orientation(e: SensorsEventT): SensorsVecT</a></li>
           </ul></dd>
 <dt><a name="OUTPUT" href="#OUTPUT"><span>OUTPUT:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -625,9 +1005,49 @@
 <li><a class="reference external"
           data-doc-search-tag="arduino: proc pinMode(pin, mode: uint8)" href="narduino/api/arduino.html#pinMode%2Cuint8%2Cuint8">arduino: proc pinMode(pin, mode: uint8)</a></li>
           </ul></dd>
+<dt><a name="pitch" href="#pitch"><span>pitch:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: template pitch(v: SensorsVecT): cfloat" href="narduino/libs/adafruit_sensor.html#pitch.t%2CSensorsVecT">adafruit_sensor: template pitch(v: SensorsVecT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="play" href="#play"><span>play:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: proc play(m: var ArduinoLEDMatrix; loop: bool = false)" href="narduino/libs/arduino_led_matrix.html#play%2CArduinoLEDMatrix%2Cbool">arduino_led_matrix: proc play(m: var ArduinoLEDMatrix; loop: bool = false)</a></li>
+          </ul></dd>
+<dt><a name="pm100_env" href="#pm100_env"><span>pm100_env:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc pm100_env(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#pm100_env%2CSensorsEventT">adafruit_sensor: proc pm100_env(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="pm100_std" href="#pm100_std"><span>pm100_std:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc pm100_std(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#pm100_std%2CSensorsEventT">adafruit_sensor: proc pm100_std(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="pm10_env" href="#pm10_env"><span>pm10_env:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc pm10_env(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#pm10_env%2CSensorsEventT">adafruit_sensor: proc pm10_env(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="pm10_std" href="#pm10_std"><span>pm10_std:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc pm10_std(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#pm10_std%2CSensorsEventT">adafruit_sensor: proc pm10_std(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="pm25_env" href="#pm25_env"><span>pm25_env:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc pm25_env(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#pm25_env%2CSensorsEventT">adafruit_sensor: proc pm25_env(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="pm25_std" href="#pm25_std"><span>pm25_std:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc pm25_std(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#pm25_std%2CSensorsEventT">adafruit_sensor: proc pm25_std(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="point" href="#point"><span>point:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc point(g: var ArduinoGraphics; x, y: cint)" href="narduino/libs/arduino_graphics.html#point%2CArduinoGraphics%2Ccint%2Ccint">arduino_graphics: proc point(g: var ArduinoGraphics; x, y: cint)</a></li>
+          </ul></dd>
 <dt><a name="Port" href="#Port"><span>Port:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="toolchain: object Port" href="narduino/toolchain.html#Port">toolchain: object Port</a></li>
+          </ul></dd>
+<dt><a name="pressure" href="#pressure"><span>pressure:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc pressure(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#pressure%2CSensorsEventT">adafruit_sensor: proc pressure(e: SensorsEventT): cfloat</a></li>
           </ul></dd>
 <dt><a name="print" href="#print"><span>print:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -644,6 +1064,18 @@
           data-doc-search-tag="serial: template print(s: SerialObj; value: bool)" href="narduino/api/serial.html#print.t%2CSerialObj%2Cbool">serial: template print(s: SerialObj; value: bool)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="serial: template print(s: SerialObj; value: SomeInteger; base: cint = 10): csize_t" href="narduino/api/serial.html#print.t%2CSerialObj%2CSomeInteger%2Ccint">serial: template print(s: SerialObj; value: SomeInteger; base: cint = 10): csize_t</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc print(g: var ArduinoGraphics; value: cdouble; digits: cint = 2): csize_t" href="narduino/libs/arduino_graphics.html#print%2CArduinoGraphics%2Ccdouble%2Ccint">arduino_graphics: proc print(g: var ArduinoGraphics; value: cdouble; digits: cint = 2): csize_t</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc print(g: var ArduinoGraphics; value: char): csize_t" href="narduino/libs/arduino_graphics.html#print%2CArduinoGraphics%2Cchar">arduino_graphics: proc print(g: var ArduinoGraphics; value: char): csize_t</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc print(g: var ArduinoGraphics; value: cstring): csize_t" href="narduino/libs/arduino_graphics.html#print%2CArduinoGraphics%2Ccstring">arduino_graphics: proc print(g: var ArduinoGraphics; value: cstring): csize_t</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc print(g: var ArduinoGraphics; value: ptr FlashStringHelper): csize_t" href="narduino/libs/arduino_graphics.html#print%2CArduinoGraphics%2Cptr.FlashStringHelper">arduino_graphics: proc print(g: var ArduinoGraphics; value: ptr FlashStringHelper): csize_t</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc print(g: var ArduinoGraphics; value: String): csize_t" href="narduino/libs/arduino_graphics.html#print%2CArduinoGraphics%2CString">arduino_graphics: proc print(g: var ArduinoGraphics; value: String): csize_t</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: template print(g: var ArduinoGraphics; value: SomeInteger; base: cint = 10): csize_t" href="narduino/libs/arduino_graphics.html#print.t%2CArduinoGraphics%2CSomeInteger%2Ccint">arduino_graphics: template print(g: var ArduinoGraphics; value: SomeInteger; base: cint = 10): csize_t</a></li>
           </ul></dd>
 <dt><a name="println" href="#println"><span>println:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -662,6 +1094,24 @@
           data-doc-search-tag="serial: template println(s: SerialObj; value: bool)" href="narduino/api/serial.html#println.t%2CSerialObj%2Cbool">serial: template println(s: SerialObj; value: bool)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="serial: template println(s: SerialObj; value: SomeInteger; base: cint = 10): csize_t" href="narduino/api/serial.html#println.t%2CSerialObj%2CSomeInteger%2Ccint">serial: template println(s: SerialObj; value: SomeInteger; base: cint = 10): csize_t</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc println(g: var ArduinoGraphics): csize_t" href="narduino/libs/arduino_graphics.html#println%2CArduinoGraphics">arduino_graphics: proc println(g: var ArduinoGraphics): csize_t</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc println(g: var ArduinoGraphics; value: cdouble; digits: cint = 2): csize_t" href="narduino/libs/arduino_graphics.html#println%2CArduinoGraphics%2Ccdouble%2Ccint">arduino_graphics: proc println(g: var ArduinoGraphics; value: cdouble; digits: cint = 2): csize_t</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc println(g: var ArduinoGraphics; value: char): csize_t" href="narduino/libs/arduino_graphics.html#println%2CArduinoGraphics%2Cchar">arduino_graphics: proc println(g: var ArduinoGraphics; value: char): csize_t</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc println(g: var ArduinoGraphics; value: cstring): csize_t" href="narduino/libs/arduino_graphics.html#println%2CArduinoGraphics%2Ccstring">arduino_graphics: proc println(g: var ArduinoGraphics; value: cstring): csize_t</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc println(g: var ArduinoGraphics; value: ptr FlashStringHelper): csize_t" href="narduino/libs/arduino_graphics.html#println%2CArduinoGraphics%2Cptr.FlashStringHelper">arduino_graphics: proc println(g: var ArduinoGraphics; value: ptr FlashStringHelper): csize_t</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc println(g: var ArduinoGraphics; value: String): csize_t" href="narduino/libs/arduino_graphics.html#println%2CArduinoGraphics%2CString">arduino_graphics: proc println(g: var ArduinoGraphics; value: String): csize_t</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: template println(g: var ArduinoGraphics; value: SomeInteger; base: cint = 10): csize_t" href="narduino/libs/arduino_graphics.html#println.t%2CArduinoGraphics%2CSomeInteger%2Ccint">arduino_graphics: template println(g: var ArduinoGraphics; value: SomeInteger; base: cint = 10): csize_t</a></li>
+          </ul></dd>
+<dt><a name="printSensorDetails" href="#printSensorDetails"><span>printSensorDetails:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc printSensorDetails(s: var AdafruitSensor)" href="narduino/libs/adafruit_sensor.html#printSensorDetails%2CAdafruitSensor">adafruit_sensor: proc printSensorDetails(s: var AdafruitSensor)</a></li>
           </ul></dd>
 <dt><a name="pulseIn" href="#pulseIn"><span>pulseIn:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -685,6 +1135,8 @@
 <li><a class="reference external"
           data-doc-search-tag="serial: proc read(s: SerialObj): cint" href="narduino/api/serial.html#read%2CSerialObj">serial: proc read(s: SerialObj): cint</a></li>
           <li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc read(d: var DHT; force: bool = false): bool" href="narduino/libs/dht_sensor.html#read%2CDHT%2Cbool">dht_sensor: proc read(d: var DHT; force: bool = false): bool</a></li>
+          <li><a class="reference external"
           data-doc-search-tag="servo: proc read(s: Servo): cint" href="narduino/libs/servo.html#read%2CServo">servo: proc read(s: Servo): cint</a></li>
           </ul></dd>
 <dt><a name="readBytes" href="#readBytes"><span>readBytes:</span></a></dt><dd><ul class="simple">
@@ -701,6 +1153,10 @@
           <li><a class="reference external"
           data-doc-search-tag="serial: template readBytesUntil(s: SerialObj; terminator: char; buf: var openArray[uint8]): csize_t" href="narduino/api/serial.html#readBytesUntil.t%2CSerialObj%2Cchar%2CopenArray%5Buint8%5D">serial: template readBytesUntil(s: SerialObj; terminator: char; buf: var openArray[uint8]): csize_t</a></li>
           </ul></dd>
+<dt><a name="readHumidity" href="#readHumidity"><span>readHumidity:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc readHumidity(d: var DHT; force: bool = false): cfloat" href="narduino/libs/dht_sensor.html#readHumidity%2CDHT%2Cbool">dht_sensor: proc readHumidity(d: var DHT; force: bool = false): cfloat</a></li>
+          </ul></dd>
 <dt><a name="readMicroseconds" href="#readMicroseconds"><span>readMicroseconds:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="servo: proc readMicroseconds(s: Servo): cint" href="narduino/libs/servo.html#readMicroseconds%2CServo">servo: proc readMicroseconds(s: Servo): cint</a></li>
@@ -713,15 +1169,37 @@
 <li><a class="reference external"
           data-doc-search-tag="serial: proc readStringUntil(s: SerialObj; terminator: char): String" href="narduino/api/serial.html#readStringUntil%2CSerialObj%2Cchar">serial: proc readStringUntil(s: SerialObj; terminator: char): String</a></li>
           </ul></dd>
+<dt><a name="readTemperature" href="#readTemperature"><span>readTemperature:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc readTemperature(d: var DHT; fahrenheit: bool = false; force: bool = false): cfloat" href="narduino/libs/dht_sensor.html#readTemperature%2CDHT%2Cbool%2Cbool">dht_sensor: proc readTemperature(d: var DHT; fahrenheit: bool = false; force: bool = false): cfloat</a></li>
+          </ul></dd>
+<dt><a name="rect" href="#rect"><span>rect:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc rect(g: var ArduinoGraphics; x, y, width, height: cint)" href="narduino/libs/arduino_graphics.html#rect%2CArduinoGraphics%2Ccint%2Ccint%2Ccint%2Ccint">arduino_graphics: proc rect(g: var ArduinoGraphics; x, y, width, height: cint)</a></li>
+          </ul></dd>
 <dt><a name="REFRESH_INTERVAL" href="#REFRESH_INTERVAL"><span>REFRESH_INTERVAL:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="servo: const REFRESH_INTERVAL" href="narduino/libs/servo.html#REFRESH_INTERVAL">servo: const REFRESH_INTERVAL</a></li>
+          </ul></dd>
+<dt><a name="relative_humidity" href="#relative_humidity"><span>relative_humidity:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc relative_humidity(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#relative_humidity%2CSensorsEventT">adafruit_sensor: proc relative_humidity(e: SensorsEventT): cfloat</a></li>
           </ul></dd>
 <dt><a name="remove" href="#remove"><span>remove:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="wstring: proc remove(s: var String; index: cuint)" href="narduino/api/wstring.html#remove%2CString%2Ccuint">wstring: proc remove(s: var String; index: cuint)</a></li>
           <li><a class="reference external"
           data-doc-search-tag="wstring: proc remove(s: var String; index: cuint; count: cuint)" href="narduino/api/wstring.html#remove%2CString%2Ccuint%2Ccuint">wstring: proc remove(s: var String; index: cuint; count: cuint)</a></li>
+          </ul></dd>
+<dt><a name="renderBitmap" href="#renderBitmap"><span>renderBitmap:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: template renderBitmap[R, C: static int](m: var ArduinoLEDMatrix;
+                               bitmap: var array[R, array[C, uint8]])" href="narduino/libs/arduino_led_matrix.html#renderBitmap.t%2CArduinoLEDMatrix%2Carray%5BR%2Carray%5BC%2Cuint8%5D%5D">arduino_led_matrix: template renderBitmap[R, C: static int](m: var ArduinoLEDMatrix;
+                               bitmap: var array[R, array[C, uint8]])</a></li>
+          </ul></dd>
+<dt><a name="renderFrame" href="#renderFrame"><span>renderFrame:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: proc renderFrame(m: var ArduinoLEDMatrix; frameNumber: uint8)" href="narduino/libs/arduino_led_matrix.html#renderFrame%2CArduinoLEDMatrix%2Cuint8">arduino_led_matrix: proc renderFrame(m: var ArduinoLEDMatrix; frameNumber: uint8)</a></li>
           </ul></dd>
 <dt><a name="replace" href="#replace"><span>replace:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -737,9 +1215,93 @@
 <li><a class="reference external"
           data-doc-search-tag="arduino: let RISING" href="narduino/api/arduino.html#RISING">arduino: let RISING</a></li>
           </ul></dd>
+<dt><a name="roll" href="#roll"><span>roll:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: template roll(v: SensorsVecT): cfloat" href="narduino/libs/adafruit_sensor.html#roll.t%2CSensorsVecT">adafruit_sensor: template roll(v: SensorsVecT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="SCROLL_DOWN" href="#SCROLL_DOWN"><span>SCROLL_DOWN:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: const SCROLL_DOWN" href="narduino/libs/arduino_graphics.html#SCROLL_DOWN">arduino_graphics: const SCROLL_DOWN</a></li>
+          </ul></dd>
+<dt><a name="SCROLL_LEFT" href="#SCROLL_LEFT"><span>SCROLL_LEFT:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: const SCROLL_LEFT" href="narduino/libs/arduino_graphics.html#SCROLL_LEFT">arduino_graphics: const SCROLL_LEFT</a></li>
+          </ul></dd>
+<dt><a name="SCROLL_RIGHT" href="#SCROLL_RIGHT"><span>SCROLL_RIGHT:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: const SCROLL_RIGHT" href="narduino/libs/arduino_graphics.html#SCROLL_RIGHT">arduino_graphics: const SCROLL_RIGHT</a></li>
+          </ul></dd>
+<dt><a name="SCROLL_UP" href="#SCROLL_UP"><span>SCROLL_UP:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: const SCROLL_UP" href="narduino/libs/arduino_graphics.html#SCROLL_UP">arduino_graphics: const SCROLL_UP</a></li>
+          </ul></dd>
 <dt><a name="searchLib" href="#searchLib"><span>searchLib:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="toolchain: proc searchLib(query: string)" href="narduino/toolchain.html#searchLib%2Cstring">toolchain: proc searchLib(query: string)</a></li>
+          </ul></dd>
+<dt><a name="SensorsColorT" href="#SensorsColorT"><span>SensorsColorT:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: object SensorsColorT" href="narduino/libs/adafruit_sensor.html#SensorsColorT">adafruit_sensor: object SensorsColorT</a></li>
+          </ul></dd>
+<dt><a name="SENSORS_DPS_TO_RADS" href="#SENSORS_DPS_TO_RADS"><span>SENSORS_DPS_TO_RADS:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: const SENSORS_DPS_TO_RADS" href="narduino/libs/adafruit_sensor.html#SENSORS_DPS_TO_RADS">adafruit_sensor: const SENSORS_DPS_TO_RADS</a></li>
+          </ul></dd>
+<dt><a name="SensorsEventT" href="#SensorsEventT"><span>SensorsEventT:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: object SensorsEventT" href="narduino/libs/adafruit_sensor.html#SensorsEventT">adafruit_sensor: object SensorsEventT</a></li>
+          </ul></dd>
+<dt><a name="SENSORS_GAUSS_TO_MICROTESLA" href="#SENSORS_GAUSS_TO_MICROTESLA"><span>SENSORS_GAUSS_TO_MICROTESLA:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: const SENSORS_GAUSS_TO_MICROTESLA" href="narduino/libs/adafruit_sensor.html#SENSORS_GAUSS_TO_MICROTESLA">adafruit_sensor: const SENSORS_GAUSS_TO_MICROTESLA</a></li>
+          </ul></dd>
+<dt><a name="SENSORS_GRAVITY_EARTH" href="#SENSORS_GRAVITY_EARTH"><span>SENSORS_GRAVITY_EARTH:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: const SENSORS_GRAVITY_EARTH" href="narduino/libs/adafruit_sensor.html#SENSORS_GRAVITY_EARTH">adafruit_sensor: const SENSORS_GRAVITY_EARTH</a></li>
+          </ul></dd>
+<dt><a name="SENSORS_GRAVITY_MOON" href="#SENSORS_GRAVITY_MOON"><span>SENSORS_GRAVITY_MOON:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: const SENSORS_GRAVITY_MOON" href="narduino/libs/adafruit_sensor.html#SENSORS_GRAVITY_MOON">adafruit_sensor: const SENSORS_GRAVITY_MOON</a></li>
+          </ul></dd>
+<dt><a name="SENSORS_GRAVITY_STANDARD" href="#SENSORS_GRAVITY_STANDARD"><span>SENSORS_GRAVITY_STANDARD:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: const SENSORS_GRAVITY_STANDARD" href="narduino/libs/adafruit_sensor.html#SENSORS_GRAVITY_STANDARD">adafruit_sensor: const SENSORS_GRAVITY_STANDARD</a></li>
+          </ul></dd>
+<dt><a name="SENSORS_GRAVITY_SUN" href="#SENSORS_GRAVITY_SUN"><span>SENSORS_GRAVITY_SUN:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: const SENSORS_GRAVITY_SUN" href="narduino/libs/adafruit_sensor.html#SENSORS_GRAVITY_SUN">adafruit_sensor: const SENSORS_GRAVITY_SUN</a></li>
+          </ul></dd>
+<dt><a name="SENSORS_MAGFIELD_EARTH_MAX" href="#SENSORS_MAGFIELD_EARTH_MAX"><span>SENSORS_MAGFIELD_EARTH_MAX:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: const SENSORS_MAGFIELD_EARTH_MAX" href="narduino/libs/adafruit_sensor.html#SENSORS_MAGFIELD_EARTH_MAX">adafruit_sensor: const SENSORS_MAGFIELD_EARTH_MAX</a></li>
+          </ul></dd>
+<dt><a name="SENSORS_MAGFIELD_EARTH_MIN" href="#SENSORS_MAGFIELD_EARTH_MIN"><span>SENSORS_MAGFIELD_EARTH_MIN:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: const SENSORS_MAGFIELD_EARTH_MIN" href="narduino/libs/adafruit_sensor.html#SENSORS_MAGFIELD_EARTH_MIN">adafruit_sensor: const SENSORS_MAGFIELD_EARTH_MIN</a></li>
+          </ul></dd>
+<dt><a name="SENSORS_PRESSURE_SEALEVELHPA" href="#SENSORS_PRESSURE_SEALEVELHPA"><span>SENSORS_PRESSURE_SEALEVELHPA:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: const SENSORS_PRESSURE_SEALEVELHPA" href="narduino/libs/adafruit_sensor.html#SENSORS_PRESSURE_SEALEVELHPA">adafruit_sensor: const SENSORS_PRESSURE_SEALEVELHPA</a></li>
+          </ul></dd>
+<dt><a name="SENSORS_RADS_TO_DPS" href="#SENSORS_RADS_TO_DPS"><span>SENSORS_RADS_TO_DPS:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: const SENSORS_RADS_TO_DPS" href="narduino/libs/adafruit_sensor.html#SENSORS_RADS_TO_DPS">adafruit_sensor: const SENSORS_RADS_TO_DPS</a></li>
+          </ul></dd>
+<dt><a name="SensorsTypeT" href="#SensorsTypeT"><span>SensorsTypeT:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: enum SensorsTypeT" href="narduino/libs/adafruit_sensor.html#SensorsTypeT">adafruit_sensor: enum SensorsTypeT</a></li>
+          </ul></dd>
+<dt><a name="SensorsVecT" href="#SensorsVecT"><span>SensorsVecT:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: object SensorsVecT" href="narduino/libs/adafruit_sensor.html#SensorsVecT">adafruit_sensor: object SensorsVecT</a></li>
+          </ul></dd>
+<dt><a name="SensorT" href="#SensorT"><span>SensorT:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: object SensorT" href="narduino/libs/adafruit_sensor.html#SensorT">adafruit_sensor: object SensorT</a></li>
+          </ul></dd>
+<dt><a name="sequenceDone" href="#sequenceDone"><span>sequenceDone:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: proc sequenceDone(m: var ArduinoLEDMatrix): bool" href="narduino/libs/arduino_led_matrix.html#sequenceDone%2CArduinoLEDMatrix">arduino_led_matrix: proc sequenceDone(m: var ArduinoLEDMatrix): bool</a></li>
           </ul></dd>
 <dt><a name="Serial" href="#Serial"><span>Serial:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -861,6 +1423,16 @@
 <li><a class="reference external"
           data-doc-search-tag="servo: object Servo" href="narduino/libs/servo.html#Servo">servo: object Servo</a></li>
           </ul></dd>
+<dt><a name="set" href="#set"><span>set:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc set(g: var ArduinoGraphics; x, y: cint; color: uint32)" href="narduino/libs/arduino_graphics.html#set%2CArduinoGraphics%2Ccint%2Ccint%2Cuint32">arduino_graphics: proc set(g: var ArduinoGraphics; x, y: cint; color: uint32)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc set(g: var ArduinoGraphics; x, y: cint; r, g2, b: uint8)" href="narduino/libs/arduino_graphics.html#set%2CArduinoGraphics%2Ccint%2Ccint%2Cuint8%2Cuint8%2Cuint8">arduino_graphics: proc set(g: var ArduinoGraphics; x, y: cint; r, g2, b: uint8)</a></li>
+          </ul></dd>
+<dt><a name="setCallback" href="#setCallback"><span>setCallback:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_led_matrix: proc setCallback(m: var ArduinoLEDMatrix; callBack: proc () {.cdecl.})" href="narduino/libs/arduino_led_matrix.html#setCallback%2CArduinoLEDMatrix%2Cproc%29">arduino_led_matrix: proc setCallback(m: var ArduinoLEDMatrix; callBack: proc () {.cdecl.})</a></li>
+          </ul></dd>
 <dt><a name="setCharAt" href="#setCharAt"><span>setCharAt:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="wstring: proc setCharAt(s: var String; index: cuint; c: char)" href="narduino/api/wstring.html#setCharAt%2CString%2Ccuint%2Cchar">wstring: proc setCharAt(s: var String; index: cuint; c: char)</a></li>
@@ -891,11 +1463,51 @@
 <li><a class="reference external"
           data-doc-search-tag="wstring: object String" href="narduino/api/wstring.html#String">wstring: object String</a></li>
           </ul></dd>
+<dt><a name="stroke" href="#stroke"><span>stroke:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc stroke(g: var ArduinoGraphics; color: uint32)" href="narduino/libs/arduino_graphics.html#stroke%2CArduinoGraphics%2Cuint32">arduino_graphics: proc stroke(g: var ArduinoGraphics; color: uint32)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc stroke(g: var ArduinoGraphics; r, g2, b: uint8)" href="narduino/libs/arduino_graphics.html#stroke%2CArduinoGraphics%2Cuint8%2Cuint8%2Cuint8">arduino_graphics: proc stroke(g: var ArduinoGraphics; r, g2, b: uint8)</a></li>
+          </ul></dd>
 <dt><a name="substring" href="#substring"><span>substring:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="wstring: proc substring(s: String; beginIndex: cuint): String" href="narduino/api/wstring.html#substring%2CString%2Ccuint">wstring: proc substring(s: String; beginIndex: cuint): String</a></li>
           <li><a class="reference external"
           data-doc-search-tag="wstring: proc substring(s: String; beginIndex: cuint; endIndex: cuint): String" href="narduino/api/wstring.html#substring%2CString%2Ccuint%2Ccuint">wstring: proc substring(s: String; beginIndex: cuint; endIndex: cuint): String</a></li>
+          </ul></dd>
+<dt><a name="temperature" href="#temperature"><span>temperature:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc temperature(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#temperature%2CSensorsEventT">adafruit_sensor: proc temperature(e: SensorsEventT): cfloat</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="dht_sensor: proc temperature(d: var DHTUnified): DHTUnifiedTemperature" href="narduino/libs/dht_sensor.html#temperature%2CDHTUnified">dht_sensor: proc temperature(d: var DHTUnified): DHTUnifiedTemperature</a></li>
+          </ul></dd>
+<dt><a name="text" href="#text"><span>text:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc text(g: var ArduinoGraphics; str: cstring; x: cint = 0; y: cint = 0)" href="narduino/libs/arduino_graphics.html#text%2CArduinoGraphics%2Ccstring%2Ccint%2Ccint">arduino_graphics: proc text(g: var ArduinoGraphics; str: cstring; x: cint = 0; y: cint = 0)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc text(g: var ArduinoGraphics; str: String; x: cint = 0; y: cint = 0)" href="narduino/libs/arduino_graphics.html#text%2CArduinoGraphics%2CString%2Ccint%2Ccint">arduino_graphics: proc text(g: var ArduinoGraphics; str: String; x: cint = 0; y: cint = 0)</a></li>
+          </ul></dd>
+<dt><a name="textFont" href="#textFont"><span>textFont:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc textFont(g: var ArduinoGraphics; which: Font)" href="narduino/libs/arduino_graphics.html#textFont%2CArduinoGraphics%2CFont">arduino_graphics: proc textFont(g: var ArduinoGraphics; which: Font)</a></li>
+          </ul></dd>
+<dt><a name="textFontHeight" href="#textFontHeight"><span>textFontHeight:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc textFontHeight(g: ArduinoGraphics): cint" href="narduino/libs/arduino_graphics.html#textFontHeight%2CArduinoGraphics">arduino_graphics: proc textFontHeight(g: ArduinoGraphics): cint</a></li>
+          </ul></dd>
+<dt><a name="textFontWidth" href="#textFontWidth"><span>textFontWidth:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc textFontWidth(g: ArduinoGraphics): cint" href="narduino/libs/arduino_graphics.html#textFontWidth%2CArduinoGraphics">arduino_graphics: proc textFontWidth(g: ArduinoGraphics): cint</a></li>
+          </ul></dd>
+<dt><a name="textScrollSpeed" href="#textScrollSpeed"><span>textScrollSpeed:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc textScrollSpeed(g: var ArduinoGraphics; speed: culong = 150)" href="narduino/libs/arduino_graphics.html#textScrollSpeed%2CArduinoGraphics%2Cculong">arduino_graphics: proc textScrollSpeed(g: var ArduinoGraphics; speed: culong = 150)</a></li>
+          </ul></dd>
+<dt><a name="textSize" href="#textSize"><span>textSize:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc textSize(g: var ArduinoGraphics; s: uint8)" href="narduino/libs/arduino_graphics.html#textSize%2CArduinoGraphics%2Cuint8">arduino_graphics: proc textSize(g: var ArduinoGraphics; s: uint8)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc textSize(g: var ArduinoGraphics; sx, sy: uint8)" href="narduino/libs/arduino_graphics.html#textSize%2CArduinoGraphics%2Cuint8%2Cuint8">arduino_graphics: proc textSize(g: var ArduinoGraphics; sx, sy: uint8)</a></li>
           </ul></dd>
 <dt><a name="toAscii" href="#toAscii"><span>toAscii:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -937,11 +1549,35 @@
 <li><a class="reference external"
           data-doc-search-tag="wstring: proc trim(s: var String)" href="narduino/api/wstring.html#trim%2CString">wstring: proc trim(s: var String)</a></li>
           </ul></dd>
+<dt><a name="tvoc" href="#tvoc"><span>tvoc:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc tvoc(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#tvoc%2CSensorsEventT">adafruit_sensor: proc tvoc(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="unitless_percent" href="#unitless_percent"><span>unitless_percent:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc unitless_percent(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#unitless_percent%2CSensorsEventT">adafruit_sensor: proc unitless_percent(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
 <dt><a name="upload" href="#upload"><span>upload:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="toolchain: proc upload(sketchDir, fqbn, port: string = &quot;&quot;; autoInstallCore: bool = true;
        verbose: bool = false)" href="narduino/toolchain.html#upload%2Cstring%2Cstring%2Cstring%2Cbool%2Cbool">toolchain: proc upload(sketchDir, fqbn, port: string = &quot;&quot;; autoInstallCore: bool = true;
        verbose: bool = false)</a></li>
+          </ul></dd>
+<dt><a name="voc_index" href="#voc_index"><span>voc_index:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc voc_index(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#voc_index%2CSensorsEventT">adafruit_sensor: proc voc_index(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="voltage" href="#voltage"><span>voltage:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="adafruit_sensor: proc voltage(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#voltage%2CSensorsEventT">adafruit_sensor: proc voltage(e: SensorsEventT): cfloat</a></li>
+          </ul></dd>
+<dt><a name="width" href="#width"><span>width:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc width(g: ArduinoGraphics): cint" href="narduino/libs/arduino_graphics.html#width%2CArduinoGraphics">arduino_graphics: proc width(g: ArduinoGraphics): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc width(f: Font): cint" href="narduino/libs/arduino_graphics.html#width%2CFont">arduino_graphics: proc width(f: Font): cint</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc width(img: Image): cint" href="narduino/libs/arduino_graphics.html#width%2CImage">arduino_graphics: proc width(img: Image): cint</a></li>
           </ul></dd>
 <dt><a name="write" href="#write"><span>write:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -952,6 +1588,12 @@
           data-doc-search-tag="serial: proc write(s: SerialObj; value: uint8): csize_t" href="narduino/api/serial.html#write%2CSerialObj%2Cuint8">serial: proc write(s: SerialObj; value: uint8): csize_t</a></li>
           <li><a class="reference external"
           data-doc-search-tag="serial: template write(s: SerialObj; buf: openArray[uint8]): csize_t" href="narduino/api/serial.html#write.t%2CSerialObj%2CopenArray%5Buint8%5D">serial: template write(s: SerialObj; buf: openArray[uint8]): csize_t</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc write(g: var ArduinoGraphics; str: cstring): csize_t" href="narduino/libs/arduino_graphics.html#write%2CArduinoGraphics%2Ccstring">arduino_graphics: proc write(g: var ArduinoGraphics; str: cstring): csize_t</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc write(g: var ArduinoGraphics; buffer: ptr uint8; size: csize_t): csize_t" href="narduino/libs/arduino_graphics.html#write%2CArduinoGraphics%2Cptr.uint8%2Ccsize_t">arduino_graphics: proc write(g: var ArduinoGraphics; buffer: ptr uint8; size: csize_t): csize_t</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="arduino_graphics: proc write(g: var ArduinoGraphics; b: uint8): csize_t" href="narduino/libs/arduino_graphics.html#write%2CArduinoGraphics%2Cuint8">arduino_graphics: proc write(g: var ArduinoGraphics; b: uint8): csize_t</a></li>
           <li><a class="reference external"
           data-doc-search-tag="servo: proc write(s: var Servo; value: cint)" href="narduino/libs/servo.html#write%2CServo%2Ccint">servo: proc write(s: var Servo; value: cint)</a></li>
           </ul></dd>
@@ -967,7 +1609,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-26 06:57:49 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-26 19:48:45 UTC</small>
       </div>
     </div>
   </div>
