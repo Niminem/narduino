@@ -107,6 +107,8 @@ proc print*(s: SerialObj, value: String): csize_t {.importcpp, discardable.}
 proc print*(s: SerialObj, value: ptr FlashStringHelper): csize_t {.importcpp, discardable.}
 proc println*(s: SerialObj, value: String): csize_t {.importcpp, discardable.}
 proc println*(s: SerialObj, value: ptr FlashStringHelper): csize_t {.importcpp, discardable.}
+template print*(s: SerialObj, value: bool) = s.print(uint32 value) ## helper to print bool
+template println*(s: SerialObj, value: bool) = s.println(uint32 value) ## helper to print bool
 proc read*(s: SerialObj): cint {.importcpp.}
   ## Returns the next incoming byte, or -1 if none is available
 proc readBytes*(s: SerialObj, buffer: ptr uint8, length: csize_t): csize_t {.importcpp.}

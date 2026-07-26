@@ -6,7 +6,7 @@
 ## ArduinoLEDMatrix derives from ArduinoGraphics, so every proc from
 ## arduino_graphics (beginDraw, beginText, text, set, endText, print,
 ## println, ...) works directly on an ArduinoLEDMatrix. That module is
-## imported and re-exported here; the ArduinoGraphics library must be
+## imported and re-exported here; the ArduinoGraphics library MUST be
 ## installed (narduino libinstall --lib:ArduinoGraphics), which also
 ## enables the graphics half of the C++ class itself.
 ##
@@ -16,6 +16,7 @@
 ## versions in C++ and therefore have their own bindings below.
 
 import arduino_graphics
+export arduino_graphics
 
 const header = "Arduino_LED_Matrix.h"
 
