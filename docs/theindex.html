@@ -28,7 +28,7 @@
     <label for="nav-toggle" id="nav-overlay"></label>
     <div class="container">
       <h1 class="title">Index</h1>
-      Modules: <a href="narduino.html">narduino</a>, <a href="narduino/api.html">narduino/api</a>, <a href="narduino/api/arduino.html">narduino/api/arduino</a>, <a href="narduino/api/serial.html">narduino/api/serial</a>, <a href="narduino/api/wstring.html">narduino/api/wstring</a>, <a href="narduino/libs/adafruit_sensor.html">narduino/libs/adafruit_sensor</a>, <a href="narduino/libs/arduino_graphics.html">narduino/libs/arduino_graphics</a>, <a href="narduino/libs/arduino_led_matrix.html">narduino/libs/arduino_led_matrix</a>, <a href="narduino/libs/dht_sensor.html">narduino/libs/dht_sensor</a>, <a href="narduino/libs/servo.html">narduino/libs/servo</a>, <a href="narduino/toolchain.html">narduino/toolchain</a>.<br/><p /><h2>API symbols</h2>
+      Modules: <a href="narduino.html">narduino</a>, <a href="narduino/api.html">narduino/api</a>, <a href="narduino/api/arduino.html">narduino/api/arduino</a>, <a href="narduino/api/serial.html">narduino/api/serial</a>, <a href="narduino/api/wstring.html">narduino/api/wstring</a>, <a href="narduino/libs/adafruit_sensor.html">narduino/libs/adafruit_sensor</a>, <a href="narduino/libs/arduino_graphics.html">narduino/libs/arduino_graphics</a>, <a href="narduino/libs/arduino_led_matrix.html">narduino/libs/arduino_led_matrix</a>, <a href="narduino/libs/dht_sensor.html">narduino/libs/dht_sensor</a>, <a href="narduino/libs/servo.html">narduino/libs/servo</a>, <a href="narduino/libs/stepper.html">narduino/libs/stepper</a>, <a href="narduino/toolchain.html">narduino/toolchain</a>.<br/><p /><h2>API symbols</h2>
 <dl><dt><a name="%60%24%60" href="#%60%24%60"><span>`$`:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="toolchain: proc `$`(board: Board): string" href="narduino/toolchain.html#%24%2CBoard">toolchain: proc `$`(board: Board): string</a></li>
@@ -684,6 +684,18 @@
 <dt><a name="initServo" href="#initServo"><span>initServo:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="servo: proc initServo(): Servo" href="narduino/libs/servo.html#initServo">servo: proc initServo(): Servo</a></li>
+          </ul></dd>
+<dt><a name="initStepper" href="#initStepper"><span>initStepper:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="stepper: proc initStepper(numberOfSteps: cint; motorPin1, motorPin2: cint): Stepper" href="narduino/libs/stepper.html#initStepper%2Ccint%2Ccint%2Ccint">stepper: proc initStepper(numberOfSteps: cint; motorPin1, motorPin2: cint): Stepper</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="stepper: proc initStepper(numberOfSteps: cint;
+            motorPin1, motorPin2, motorPin3, motorPin4: cint): Stepper" href="narduino/libs/stepper.html#initStepper%2Ccint%2Ccint%2Ccint%2Ccint%2Ccint">stepper: proc initStepper(numberOfSteps: cint;
+            motorPin1, motorPin2, motorPin3, motorPin4: cint): Stepper</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="stepper: proc initStepper(numberOfSteps: cint;
+            motorPin1, motorPin2, motorPin3, motorPin4, motorPin5: cint): Stepper" href="narduino/libs/stepper.html#initStepper%2Ccint%2Ccint%2Ccint%2Ccint%2Ccint%2Ccint">stepper: proc initStepper(numberOfSteps: cint;
+            motorPin1, motorPin2, motorPin3, motorPin4, motorPin5: cint): Stepper</a></li>
           </ul></dd>
 <dt><a name="initString" href="#initString"><span>initString:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1437,6 +1449,10 @@
 <li><a class="reference external"
           data-doc-search-tag="wstring: proc setCharAt(s: var String; index: cuint; c: char)" href="narduino/api/wstring.html#setCharAt%2CString%2Ccuint%2Cchar">wstring: proc setCharAt(s: var String; index: cuint; c: char)</a></li>
           </ul></dd>
+<dt><a name="setSpeed" href="#setSpeed"><span>setSpeed:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="stepper: proc setSpeed(s: var Stepper; whatSpeed: clong)" href="narduino/libs/stepper.html#setSpeed%2CStepper%2Cclong">stepper: proc setSpeed(s: var Stepper; whatSpeed: clong)</a></li>
+          </ul></dd>
 <dt><a name="setTimeout" href="#setTimeout"><span>setTimeout:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="serial: proc setTimeout(s: SerialObj; time: uint32 = 1000'u32)" href="narduino/api/serial.html#setTimeout%2CSerialObj%2Cuint32">serial: proc setTimeout(s: SerialObj; time: uint32 = 1000'u32)</a></li>
@@ -1458,6 +1474,14 @@
           data-doc-search-tag="wstring: proc startsWith(s: String; prefix: String): bool" href="narduino/api/wstring.html#startsWith%2CString%2CString">wstring: proc startsWith(s: String; prefix: String): bool</a></li>
           <li><a class="reference external"
           data-doc-search-tag="wstring: proc startsWith(s: String; prefix: String; offset: cuint): bool" href="narduino/api/wstring.html#startsWith%2CString%2CString%2Ccuint">wstring: proc startsWith(s: String; prefix: String; offset: cuint): bool</a></li>
+          </ul></dd>
+<dt><a name="step" href="#step"><span>step:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="stepper: proc step(s: var Stepper; numberOfSteps: cint)" href="narduino/libs/stepper.html#step%2CStepper%2Ccint">stepper: proc step(s: var Stepper; numberOfSteps: cint)</a></li>
+          </ul></dd>
+<dt><a name="Stepper" href="#Stepper"><span>Stepper:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="stepper: object Stepper" href="narduino/libs/stepper.html#Stepper">stepper: object Stepper</a></li>
           </ul></dd>
 <dt><a name="String" href="#String"><span>String:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1563,6 +1587,10 @@
        verbose: bool = false)" href="narduino/toolchain.html#upload%2Cstring%2Cstring%2Cstring%2Cbool%2Cbool">toolchain: proc upload(sketchDir, fqbn, port: string = &quot;&quot;; autoInstallCore: bool = true;
        verbose: bool = false)</a></li>
           </ul></dd>
+<dt><a name="version" href="#version"><span>version:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="stepper: proc version(s: Stepper): cint" href="narduino/libs/stepper.html#version%2CStepper">stepper: proc version(s: Stepper): cint</a></li>
+          </ul></dd>
 <dt><a name="voc_index" href="#voc_index"><span>voc_index:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="adafruit_sensor: proc voc_index(e: SensorsEventT): cfloat" href="narduino/libs/adafruit_sensor.html#voc_index%2CSensorsEventT">adafruit_sensor: proc voc_index(e: SensorsEventT): cfloat</a></li>
@@ -1609,7 +1637,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-07-26 19:48:45 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-08-04 02:31:35 UTC</small>
       </div>
     </div>
   </div>
