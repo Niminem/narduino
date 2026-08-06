@@ -82,7 +82,7 @@ proc loadWrapper*(m: var ArduinoLEDMatrix, frames: ptr array[4, uint32],
                   howMany: uint32)
   {.importcpp: "#.loadWrapper((const uint32_t(*)[4])(#), #)".}
   ## Load a sequence of frames. `frames` points to a contiguous array of
-  ## [4]uint32 entries (3 words of pixel data + 1 word duration per frame).
+  ## `[4]uint32` entries (3 words of pixel data + 1 word duration per frame).
   ## `howMany` is the total byte size of the frames array.
 
 proc setCallback*(m: var ArduinoLEDMatrix, callBack: proc() {.cdecl.})
@@ -118,7 +118,7 @@ proc endTextToAnimationBuffer*(m: var ArduinoLEDMatrix,
   {.importcpp: "#.endTextToAnimationBuffer(#, (uint32_t(*)[4])(#), #, #)",
     header: header.}
   ## Render scrolling text into a frame buffer for later playback.
-  ## `frames` points to a pre-allocated buffer of [4]uint32 entries.
+  ## `frames` points to a pre-allocated buffer of `[4]uint32` entries.
   ## `howManyMax` is the total byte size of the buffer.
   ## `howManyUsed` receives the number of bytes actually written.
 
@@ -133,7 +133,7 @@ template loadFrame*(m: var ArduinoLEDMatrix, buffer: var array[3, uint32]) =
 template loadSequence*[N: static int](m: var ArduinoLEDMatrix,
                                       frames: var array[N, array[4, uint32]]) =
   ## Load a frame sequence from a Nim array. Each element is
-  ## [pixel0, pixel1, pixel2, duration_ms].
+  ## `[pixel0, pixel1, pixel2, duration_ms]`.
   m.loadWrapper(addr frames[0], uint32(sizeof(frames)))
 
 template renderBitmap*[R, C: static int](m: var ArduinoLEDMatrix,

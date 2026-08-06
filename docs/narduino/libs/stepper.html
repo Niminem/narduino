@@ -102,7 +102,18 @@
     <div id="tocRoot"></div>
     
     <p class="module-desc"><p>Bindings for the Arduino Stepper library (Stepper.h).</p>
-<p>Drives unipolar, bipolar, or five-phase stepper motors using 2, 4, or 5 control wires. Reference: <a class="reference external" href="https://github.com/arduino-libraries/Stepper">https://github.com/arduino-libraries/Stepper</a> Install via <tt class="docutils literal"><span class="pre"><span class="Identifier">narduino</span> <span class="Identifier">libinstall</span> <span class="Operator">--</span><span class="Identifier">lib</span><span class="Punctuation">:</span><span class="StringLit">&quot;Stepper&quot;</span></span></tt></p>
+<p>Drives unipolar, bipolar, or five-phase stepper motors using 2, 4, or 5 control wires.</p>
+<p>When wiring multiple stepper motors to a microcontroller, you quickly run out of output pins, with each motor requiring 4 connections.</p>
+<p>By making use of the fact that at any time two of the four motor coils are the inverse of the other two, the number of control connections can be reduced from 4 to 2 for the unipolar and bipolar motors.</p>
+<p>A slightly modified circuit around a Darlington transistor array or an L293 H-bridge connects to only 2 microcontroller pins, inverts the signals received, and delivers the 4 (2 plus 2 inverted ones) output signals required for driving a stepper motor. Similarly the Arduino motor shields 2 direction pins may be used.</p>
+<p>Control signal sequences:</p>
+<p>5-phase, 5 wires::</p>
+<p>Step C0 C1 C2 C3 C4 1  0  1  1  0  1 2  0  1  0  0  1 3  0  1  0  1  1 4  0  1  0  1  0 5  1  1  0  1  0 6  1  0  0  1  0 7  1  0  1  1  0 8  1  0  1  0  0 9  1  0  1  0  1 10  0  0  1  0  1</p>
+<p>4 wires::</p>
+<p>Step C0 C1 C2 C3 1  1  0  1  0 2  0  1  1  0 3  0  1  0  1 4  1  0  0  1</p>
+<p>2 wires::</p>
+<p>Step C0 C1 1  0  1 2  1  1 3  1  0 4  0  0</p>
+<p>Reference: <a class="reference external" href="https://github.com/arduino-libraries/Stepper">https://github.com/arduino-libraries/Stepper</a> Circuits: <a class="reference external" href="http://www.arduino.cc/en/Tutorial/Stepper">http://www.arduino.cc/en/Tutorial/Stepper</a> Install via <tt class="docutils literal"><span class="pre"><span class="Identifier">narduino</span> <span class="Identifier">libinstall</span> <span class="Operator">--</span><span class="Identifier">lib</span><span class="Punctuation">:</span><span class="StringLit">&quot;Stepper&quot;</span></span></tt></p>
 </p>
     <div class="section" id="7">
   <h1><a class="toc-backref" href="#7">Types</a></h1>
@@ -202,7 +213,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-08-04 02:31:35 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-08-06 20:50:05 UTC</small>
       </div>
     </div>
   </div>

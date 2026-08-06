@@ -1,0 +1,182 @@
+nimTitle	wifis3	narduino/libs/wifis3.html	module src/narduino/libs/wifis3		0
+nim	WL_SSID_MAX_LENGTH	narduino/libs/wifis3.html#WL_SSID_MAX_LENGTH	const WL_SSID_MAX_LENGTH		35
+nim	WL_WPA_KEY_MAX_LENGTH	narduino/libs/wifis3.html#WL_WPA_KEY_MAX_LENGTH	const WL_WPA_KEY_MAX_LENGTH		37
+nim	WL_WEP_KEY_MAX_LENGTH	narduino/libs/wifis3.html#WL_WEP_KEY_MAX_LENGTH	const WL_WEP_KEY_MAX_LENGTH		39
+nim	WL_MAC_ADDR_LENGTH	narduino/libs/wifis3.html#WL_MAC_ADDR_LENGTH	const WL_MAC_ADDR_LENGTH		41
+nim	WL_IPV4_LENGTH	narduino/libs/wifis3.html#WL_IPV4_LENGTH	const WL_IPV4_LENGTH		43
+nim	WIFI_FIRMWARE_LATEST_VERSION	narduino/libs/wifis3.html#WIFI_FIRMWARE_LATEST_VERSION	const WIFI_FIRMWARE_LATEST_VERSION		45
+nim	WIFI_MAX_SSID_COUNT	narduino/libs/wifis3.html#WIFI_MAX_SSID_COUNT	const WIFI_MAX_SSID_COUNT		47
+nim	WL_IDLE_STATUS	narduino/libs/wifis3.html#WL_IDLE_STATUS	const WL_IDLE_STATUS		53
+nim	WL_NO_SSID_AVAIL	narduino/libs/wifis3.html#WL_NO_SSID_AVAIL	const WL_NO_SSID_AVAIL		55
+nim	WL_SCAN_COMPLETED	narduino/libs/wifis3.html#WL_SCAN_COMPLETED	const WL_SCAN_COMPLETED		57
+nim	WL_CONNECTED	narduino/libs/wifis3.html#WL_CONNECTED	const WL_CONNECTED		59
+nim	WL_CONNECT_FAILED	narduino/libs/wifis3.html#WL_CONNECT_FAILED	const WL_CONNECT_FAILED		61
+nim	WL_CONNECTION_LOST	narduino/libs/wifis3.html#WL_CONNECTION_LOST	const WL_CONNECTION_LOST		63
+nim	WL_DISCONNECTED	narduino/libs/wifis3.html#WL_DISCONNECTED	const WL_DISCONNECTED		65
+nim	WL_AP_LISTENING	narduino/libs/wifis3.html#WL_AP_LISTENING	const WL_AP_LISTENING		67
+nim	WL_AP_CONNECTED	narduino/libs/wifis3.html#WL_AP_CONNECTED	const WL_AP_CONNECTED		69
+nim	WL_AP_FAILED	narduino/libs/wifis3.html#WL_AP_FAILED	const WL_AP_FAILED		71
+nim	WL_NO_SHIELD	narduino/libs/wifis3.html#WL_NO_SHIELD	const WL_NO_SHIELD		73
+nim	WL_NO_MODULE	narduino/libs/wifis3.html#WL_NO_MODULE	const WL_NO_MODULE		75
+nim	ENC_TYPE_WEP	narduino/libs/wifis3.html#ENC_TYPE_WEP	const ENC_TYPE_WEP		81
+nim	ENC_TYPE_WPA	narduino/libs/wifis3.html#ENC_TYPE_WPA	const ENC_TYPE_WPA		83
+nim	ENC_TYPE_TKIP	narduino/libs/wifis3.html#ENC_TYPE_TKIP	const ENC_TYPE_TKIP		85
+nim	ENC_TYPE_WPA2	narduino/libs/wifis3.html#ENC_TYPE_WPA2	const ENC_TYPE_WPA2		87
+nim	ENC_TYPE_CCMP	narduino/libs/wifis3.html#ENC_TYPE_CCMP	const ENC_TYPE_CCMP		89
+nim	ENC_TYPE_WPA2_ENTERPRISE	narduino/libs/wifis3.html#ENC_TYPE_WPA2_ENTERPRISE	const ENC_TYPE_WPA2_ENTERPRISE		91
+nim	ENC_TYPE_WPA3	narduino/libs/wifis3.html#ENC_TYPE_WPA3	const ENC_TYPE_WPA3		93
+nim	ENC_TYPE_NONE	narduino/libs/wifis3.html#ENC_TYPE_NONE	const ENC_TYPE_NONE		95
+nim	ENC_TYPE_AUTO	narduino/libs/wifis3.html#ENC_TYPE_AUTO	const ENC_TYPE_AUTO		97
+nim	ENC_TYPE_UNKNOWN	narduino/libs/wifis3.html#ENC_TYPE_UNKNOWN	const ENC_TYPE_UNKNOWN		99
+nim	WL_PING_DEST_UNREACHABLE	narduino/libs/wifis3.html#WL_PING_DEST_UNREACHABLE	const WL_PING_DEST_UNREACHABLE		105
+nim	WL_PING_TIMEOUT	narduino/libs/wifis3.html#WL_PING_TIMEOUT	const WL_PING_TIMEOUT		107
+nim	WL_PING_UNKNOWN_HOST	narduino/libs/wifis3.html#WL_PING_UNKNOWN_HOST	const WL_PING_UNKNOWN_HOST		109
+nim	WL_PING_ERROR	narduino/libs/wifis3.html#WL_PING_ERROR	const WL_PING_ERROR		111
+nim	IPAddress	narduino/libs/wifis3.html#IPAddress	object IPAddress		119
+nim	CWifi	narduino/libs/wifis3.html#CWifi	object CWifi		122
+nim	WiFiClient	narduino/libs/wifis3.html#WiFiClient	object WiFiClient		125
+nim	WiFiServer	narduino/libs/wifis3.html#WiFiServer	object WiFiServer		128
+nim	WiFiUDP	narduino/libs/wifis3.html#WiFiUDP	object WiFiUDP		131
+nim	WiFiSSLClient	narduino/libs/wifis3.html#WiFiSSLClient	object WiFiSSLClient		135
+nim	initIPAddress	narduino/libs/wifis3.html#initIPAddress	proc initIPAddress(): IPAddress		143
+nim	initIPAddress	narduino/libs/wifis3.html#initIPAddress,uint8,uint8,uint8,uint8	proc initIPAddress(a, b, c, d: uint8): IPAddress		147
+nim	initIPAddress	narduino/libs/wifis3.html#initIPAddress,uint32	proc initIPAddress(raw: uint32): IPAddress		151
+nim	`[]`	narduino/libs/wifis3.html#[],IPAddress,cint	proc `[]`(ip: IPAddress; idx: cint): uint8		155
+nim	initCWifi	narduino/libs/wifis3.html#initCWifi	proc initCWifi(): CWifi		163
+nim	firmwareVersion	narduino/libs/wifis3.html#firmwareVersion,typedesc[CWifi]	proc firmwareVersion(_: typedesc[CWifi]): cstring		167
+nim	firmwareVersionU32	narduino/libs/wifis3.html#firmwareVersionU32,CWifi	proc firmwareVersionU32(w: var CWifi): uint32		177
+nim	ping	narduino/libs/wifis3.html#ping,CWifi,IPAddress,uint8,uint8	proc ping(w: var CWifi; ip: IPAddress; ttl: uint8 = 128; count: uint8 = 1): cint		182
+nim	ping	narduino/libs/wifis3.html#ping,CWifi,cstring,uint8,uint8	proc ping(w: var CWifi; host: cstring; ttl: uint8 = 128; count: uint8 = 1): cint		186
+nim	begin	narduino/libs/wifis3.html#begin,CWifi,cstring	proc begin(w: var CWifi; ssid: cstring): cint		192
+nim	begin	narduino/libs/wifis3.html#begin,CWifi,cstring,cstring	proc begin(w: var CWifi; ssid, passphrase: cstring): cint		196
+nim	disconnect	narduino/libs/wifis3.html#disconnect,CWifi	proc disconnect(w: var CWifi): cint		201
+nim	`end`	narduino/libs/wifis3.html#end,CWifi	proc `end`(w: var CWifi)		204
+nim	beginAP	narduino/libs/wifis3.html#beginAP,CWifi,cstring	proc beginAP(w: var CWifi; ssid: cstring): uint8		209
+nim	beginAP	narduino/libs/wifis3.html#beginAP,CWifi,cstring,uint8	proc beginAP(w: var CWifi; ssid: cstring; channel: uint8): uint8		212
+nim	beginAP	narduino/libs/wifis3.html#beginAP,CWifi,cstring,cstring	proc beginAP(w: var CWifi; ssid, passphrase: cstring): uint8		216
+nim	beginAP	narduino/libs/wifis3.html#beginAP,CWifi,cstring,cstring,uint8	proc beginAP(w: var CWifi; ssid, passphrase: cstring; channel: uint8): uint8		220
+nim	config	narduino/libs/wifis3.html#config,CWifi,IPAddress	proc config(w: var CWifi; localIp: IPAddress)		227
+nim	config	narduino/libs/wifis3.html#config,CWifi,IPAddress,IPAddress	proc config(w: var CWifi; localIp, dnsServer: IPAddress)		230
+nim	config	narduino/libs/wifis3.html#config,CWifi,IPAddress,IPAddress,IPAddress	proc config(w: var CWifi; localIp, dnsServer, gateway: IPAddress)		233
+nim	config	narduino/libs/wifis3.html#config,CWifi,IPAddress,IPAddress,IPAddress,IPAddress	proc config(w: var CWifi; localIp, dnsServer, gateway, subnet: IPAddress)		236
+nim	setDNS	narduino/libs/wifis3.html#setDNS,CWifi,IPAddress	proc setDNS(w: var CWifi; dns1: IPAddress)		240
+nim	setDNS	narduino/libs/wifis3.html#setDNS,CWifi,IPAddress,IPAddress	proc setDNS(w: var CWifi; dns1, dns2: IPAddress)		243
+nim	setHostname	narduino/libs/wifis3.html#setHostname,CWifi,cstring	proc setHostname(w: var CWifi; name: cstring)		246
+nim	macAddress	narduino/libs/wifis3.html#macAddress,CWifi,ptr.uint8	proc macAddress(w: var CWifi; mac: ptr uint8): ptr uint8		251
+nim	localIP	narduino/libs/wifis3.html#localIP,CWifi	proc localIP(w: var CWifi): IPAddress		254
+nim	subnetMask	narduino/libs/wifis3.html#subnetMask,CWifi	proc subnetMask(w: var CWifi): IPAddress		257
+nim	gatewayIP	narduino/libs/wifis3.html#gatewayIP,CWifi	proc gatewayIP(w: var CWifi): IPAddress		260
+nim	dnsIP	narduino/libs/wifis3.html#dnsIP,CWifi,cint	proc dnsIP(w: var CWifi; n: cint = 0): IPAddress		263
+nim	softAPIP	narduino/libs/wifis3.html#softAPIP,CWifi	proc softAPIP(w: var CWifi): IPAddress		266
+nim	SSID	narduino/libs/wifis3.html#SSID,CWifi	proc SSID(w: var CWifi): cstring		269
+nim	BSSID	narduino/libs/wifis3.html#BSSID,CWifi,ptr.uint8	proc BSSID(w: var CWifi; bssid: ptr uint8): ptr uint8		272
+nim	RSSI	narduino/libs/wifis3.html#RSSI,CWifi	proc RSSI(w: var CWifi): int32		275
+nim	softAPSSID	narduino/libs/wifis3.html#softAPSSID,CWifi	proc softAPSSID(w: var CWifi): cstring		278
+nim	scanNetworks	narduino/libs/wifis3.html#scanNetworks,CWifi	proc scanNetworks(w: var CWifi): int8		283
+nim	SSID	narduino/libs/wifis3.html#SSID,CWifi,uint8	proc SSID(w: var CWifi; networkItem: uint8): cstring		286
+nim	encryptionType	narduino/libs/wifis3.html#encryptionType,CWifi,uint8	proc encryptionType(w: var CWifi; networkItem: uint8): uint8		289
+nim	encryptionType	narduino/libs/wifis3.html#encryptionType,CWifi	proc encryptionType(w: var CWifi): uint8		292
+nim	BSSID	narduino/libs/wifis3.html#BSSID,CWifi,uint8,ptr.uint8	proc BSSID(w: var CWifi; networkItem: uint8; bssid: ptr uint8): ptr uint8		295
+nim	channel	narduino/libs/wifis3.html#channel,CWifi,uint8	proc channel(w: var CWifi; networkItem: uint8): uint8		299
+nim	RSSI	narduino/libs/wifis3.html#RSSI,CWifi,uint8	proc RSSI(w: var CWifi; networkItem: uint8): int32		302
+nim	status	narduino/libs/wifis3.html#status,CWifi	proc status(w: var CWifi): uint8		307
+nim	reasonCode	narduino/libs/wifis3.html#reasonCode,CWifi	proc reasonCode(w: var CWifi): uint8		310
+nim	hostByName	narduino/libs/wifis3.html#hostByName,CWifi,cstring,IPAddress	proc hostByName(w: var CWifi; hostname: cstring; aResult: var IPAddress): cint		313
+nim	getTime	narduino/libs/wifis3.html#getTime,CWifi	proc getTime(w: var CWifi): culong		317
+nim	setTimeout	narduino/libs/wifis3.html#setTimeout,CWifi,culong	proc setTimeout(w: var CWifi; timeout: culong)		320
+nim	initWiFiClient	narduino/libs/wifis3.html#initWiFiClient	proc initWiFiClient(): WiFiClient		329
+nim	connect	narduino/libs/wifis3.html#connect,WiFiClient,IPAddress,uint16	proc connect(c: var WiFiClient; ip: IPAddress; port: uint16): cint		335
+nim	connect	narduino/libs/wifis3.html#connect,WiFiClient,cstring,uint16	proc connect(c: var WiFiClient; host: cstring; port: uint16): cint		339
+nim	write	narduino/libs/wifis3.html#write,WiFiClient,uint8	proc write(c: var WiFiClient; b: uint8): csize_t		343
+nim	write	narduino/libs/wifis3.html#write,WiFiClient,ptr.uint8,csize_t	proc write(c: var WiFiClient; buf: ptr uint8; size: csize_t): csize_t		346
+nim	write	narduino/libs/wifis3.html#write,WiFiClient,cstring	proc write(c: var WiFiClient; str: cstring): csize_t		350
+nim	available	narduino/libs/wifis3.html#available,WiFiClient	proc available(c: var WiFiClient): cint		354
+nim	read	narduino/libs/wifis3.html#read,WiFiClient	proc read(c: var WiFiClient): cint		357
+nim	read	narduino/libs/wifis3.html#read,WiFiClient,ptr.uint8,csize_t	proc read(c: var WiFiClient; buf: ptr uint8; size: csize_t): cint		360
+nim	peek	narduino/libs/wifis3.html#peek,WiFiClient	proc peek(c: var WiFiClient): cint		364
+nim	flush	narduino/libs/wifis3.html#flush,WiFiClient	proc flush(c: var WiFiClient)		367
+nim	stop	narduino/libs/wifis3.html#stop,WiFiClient	proc stop(c: var WiFiClient)		370
+nim	connected	narduino/libs/wifis3.html#connected,WiFiClient	proc connected(c: var WiFiClient): uint8		373
+nim	isValid	narduino/libs/wifis3.html#isValid,WiFiClient	proc isValid(c: var WiFiClient): bool		376
+nim	remoteIP	narduino/libs/wifis3.html#remoteIP,WiFiClient	proc remoteIP(c: var WiFiClient): IPAddress		382
+nim	remotePort	narduino/libs/wifis3.html#remotePort,WiFiClient	proc remotePort(c: var WiFiClient): uint16		385
+nim	setConnectionTimeout	narduino/libs/wifis3.html#setConnectionTimeout,WiFiClient,cint	proc setConnectionTimeout(c: var WiFiClient; timeout: cint)		388
+nim	`==`	narduino/libs/wifis3.html#==,WiFiClient,WiFiClient	proc `==`(a, b: WiFiClient): bool		391
+nim	`!=`	narduino/libs/wifis3.html#!=,WiFiClient,WiFiClient	proc `!=`(a, b: WiFiClient): bool		395
+nim	print	narduino/libs/wifis3.html#print,WiFiClient,cstring	proc print(c: var WiFiClient; s: cstring): csize_t		401
+nim	println	narduino/libs/wifis3.html#println,WiFiClient,cstring	proc println(c: var WiFiClient; s: cstring): csize_t		405
+nim	println	narduino/libs/wifis3.html#println,WiFiClient	proc println(c: var WiFiClient): csize_t		409
+nim	initWiFiServer	narduino/libs/wifis3.html#initWiFiServer	proc initWiFiServer(): WiFiServer		418
+nim	initWiFiServer	narduino/libs/wifis3.html#initWiFiServer,cint	proc initWiFiServer(port: cint): WiFiServer		422
+nim	available	narduino/libs/wifis3.html#available,WiFiServer	proc available(s: var WiFiServer): WiFiClient		428
+nim	accept	narduino/libs/wifis3.html#accept,WiFiServer	proc accept(s: var WiFiServer): WiFiClient		431
+nim	begin	narduino/libs/wifis3.html#begin,WiFiServer,cint	proc begin(s: var WiFiServer; port: cint)		434
+nim	begin	narduino/libs/wifis3.html#begin,WiFiServer	proc begin(s: var WiFiServer)		437
+nim	write	narduino/libs/wifis3.html#write,WiFiServer,uint8	proc write(s: var WiFiServer; b: uint8): csize_t		440
+nim	write	narduino/libs/wifis3.html#write,WiFiServer,ptr.uint8,csize_t	proc write(s: var WiFiServer; buf: ptr uint8; size: csize_t): csize_t		443
+nim	write	narduino/libs/wifis3.html#write,WiFiServer,cstring	proc write(s: var WiFiServer; str: cstring): csize_t		447
+nim	`end`	narduino/libs/wifis3.html#end,WiFiServer	proc `end`(s: var WiFiServer)		451
+nim	isValid	narduino/libs/wifis3.html#isValid,WiFiServer	proc isValid(s: var WiFiServer): bool		454
+nim	`==`	narduino/libs/wifis3.html#==,WiFiServer,WiFiServer	proc `==`(a, b: WiFiServer): bool		458
+nim	`!=`	narduino/libs/wifis3.html#!=,WiFiServer,WiFiServer	proc `!=`(a, b: WiFiServer): bool		462
+nim	print	narduino/libs/wifis3.html#print,WiFiServer,cstring	proc print(s: var WiFiServer; str: cstring): csize_t		468
+nim	println	narduino/libs/wifis3.html#println,WiFiServer,cstring	proc println(s: var WiFiServer; str: cstring): csize_t		472
+nim	println	narduino/libs/wifis3.html#println,WiFiServer	proc println(s: var WiFiServer): csize_t		476
+nim	initWiFiUDP	narduino/libs/wifis3.html#initWiFiUDP	proc initWiFiUDP(): WiFiUDP		485
+nim	begin	narduino/libs/wifis3.html#begin,WiFiUDP,uint16	proc begin(u: var WiFiUDP; port: uint16): uint8		491
+nim	begin	narduino/libs/wifis3.html#begin,WiFiUDP,IPAddress,uint16	proc begin(u: var WiFiUDP; ip: IPAddress; port: uint16): uint8		494
+nim	beginMulticast	narduino/libs/wifis3.html#beginMulticast,WiFiUDP,IPAddress,uint16	proc beginMulticast(u: var WiFiUDP; ip: IPAddress; port: uint16): uint8		498
+nim	stop	narduino/libs/wifis3.html#stop,WiFiUDP	proc stop(u: var WiFiUDP)		502
+nim	beginMulticastPacket	narduino/libs/wifis3.html#beginMulticastPacket,WiFiUDP	proc beginMulticastPacket(u: var WiFiUDP): cint		507
+nim	beginPacket	narduino/libs/wifis3.html#beginPacket,WiFiUDP,IPAddress,uint16	proc beginPacket(u: var WiFiUDP; ip: IPAddress; port: uint16): cint		510
+nim	beginPacket	narduino/libs/wifis3.html#beginPacket,WiFiUDP,cstring,uint16	proc beginPacket(u: var WiFiUDP; host: cstring; port: uint16): cint		514
+nim	endPacket	narduino/libs/wifis3.html#endPacket,WiFiUDP	proc endPacket(u: var WiFiUDP): cint		518
+nim	write	narduino/libs/wifis3.html#write,WiFiUDP,uint8	proc write(u: var WiFiUDP; b: uint8): csize_t		521
+nim	write	narduino/libs/wifis3.html#write,WiFiUDP,ptr.uint8,csize_t	proc write(u: var WiFiUDP; buf: ptr uint8; size: csize_t): csize_t		524
+nim	write	narduino/libs/wifis3.html#write,WiFiUDP,cstring	proc write(u: var WiFiUDP; str: cstring): csize_t		528
+nim	parsePacket	narduino/libs/wifis3.html#parsePacket,WiFiUDP	proc parsePacket(u: var WiFiUDP): cint		534
+nim	available	narduino/libs/wifis3.html#available,WiFiUDP	proc available(u: var WiFiUDP): cint		537
+nim	read	narduino/libs/wifis3.html#read,WiFiUDP	proc read(u: var WiFiUDP): cint		540
+nim	read	narduino/libs/wifis3.html#read,WiFiUDP,ptr.uint8,csize_t	proc read(u: var WiFiUDP; buf: ptr uint8; size: csize_t): cint		543
+nim	peek	narduino/libs/wifis3.html#peek,WiFiUDP	proc peek(u: var WiFiUDP): cint		547
+nim	flush	narduino/libs/wifis3.html#flush,WiFiUDP	proc flush(u: var WiFiUDP)		550
+nim	remoteIP	narduino/libs/wifis3.html#remoteIP,WiFiUDP	proc remoteIP(u: var WiFiUDP): IPAddress		553
+nim	remotePort	narduino/libs/wifis3.html#remotePort,WiFiUDP	proc remotePort(u: var WiFiUDP): uint16		556
+nim	`==`	narduino/libs/wifis3.html#==,WiFiUDP,WiFiUDP	proc `==`(a, b: WiFiUDP): bool		559
+nim	`!=`	narduino/libs/wifis3.html#!=,WiFiUDP,WiFiUDP	proc `!=`(a, b: WiFiUDP): bool		563
+nim	initWiFiSSLClient	narduino/libs/wifis3.html#initWiFiSSLClient	proc initWiFiSSLClient(): WiFiSSLClient		573
+nim	setCACert	narduino/libs/wifis3.html#setCACert,WiFiSSLClient,cstring	proc setCACert(c: var WiFiSSLClient; rootCa: cstring)		579
+nim	setEccSlot	narduino/libs/wifis3.html#setEccSlot,WiFiSSLClient,cint,ptr.uint8,cint	proc setEccSlot(c: var WiFiSSLClient; slot: cint; cert: ptr uint8; certLen: cint)		583
+nim	WiFi	narduino/libs/wifis3.html#WiFi	var WiFi		594
+nim	macAddress	narduino/libs/wifis3.html#macAddress.t,CWifi,array[,uint8]	template macAddress(w: var CWifi; mac: var array[6, uint8]): ptr uint8		601
+nim	BSSID	narduino/libs/wifis3.html#BSSID.t,CWifi,array[,uint8]	template BSSID(w: var CWifi; bssid: var array[6, uint8]): ptr uint8		605
+nim	BSSID	narduino/libs/wifis3.html#BSSID.t,CWifi,uint8,array[,uint8]	template BSSID(w: var CWifi; networkItem: uint8; bssid: var array[6, uint8]): ptr uint8		609
+nim	hostByName	narduino/libs/wifis3.html#hostByName.t,CWifi,cstring	template hostByName(w: var CWifi; hostname: cstring): IPAddress		614
+nimgrp	end	narduino/libs/wifis3.html#end-procs-all	proc		204
+nimgrp	config	narduino/libs/wifis3.html#config-procs-all	proc		227
+nimgrp	!=	narduino/libs/wifis3.html#!=-procs-all	proc		395
+nimgrp	initipaddress	narduino/libs/wifis3.html#initIPAddress-procs-all	proc		143
+nimgrp	beginpacket	narduino/libs/wifis3.html#beginPacket-procs-all	proc		510
+nimgrp	Rssi	narduino/libs/wifis3.html#RSSI-procs-all	proc		275
+nimgrp	remoteip	narduino/libs/wifis3.html#remoteIP-procs-all	proc		382
+nimgrp	flush	narduino/libs/wifis3.html#flush-procs-all	proc		367
+nimgrp	beginap	narduino/libs/wifis3.html#beginAP-procs-all	proc		209
+nimgrp	Bssid	narduino/libs/wifis3.html#BSSID-procs-all	proc		272
+nimgrp	==	narduino/libs/wifis3.html#==-procs-all	proc		391
+nimgrp	peek	narduino/libs/wifis3.html#peek-procs-all	proc		364
+nimgrp	Ssid	narduino/libs/wifis3.html#SSID-procs-all	proc		269
+nimgrp	connect	narduino/libs/wifis3.html#connect-procs-all	proc		335
+nimgrp	isvalid	narduino/libs/wifis3.html#isValid-procs-all	proc		376
+nimgrp	write	narduino/libs/wifis3.html#write-procs-all	proc		343
+nimgrp	remoteport	narduino/libs/wifis3.html#remotePort-procs-all	proc		385
+nimgrp	read	narduino/libs/wifis3.html#read-procs-all	proc		357
+nimgrp	begin	narduino/libs/wifis3.html#begin-procs-all	proc		192
+nimgrp	stop	narduino/libs/wifis3.html#stop-procs-all	proc		370
+nimgrp	available	narduino/libs/wifis3.html#available-procs-all	proc		354
+nimgrp	ping	narduino/libs/wifis3.html#ping-procs-all	proc		182
+nimgrp	setdns	narduino/libs/wifis3.html#setDNS-procs-all	proc		240
+nimgrp	encryptiontype	narduino/libs/wifis3.html#encryptionType-procs-all	proc		289
+nimgrp	print	narduino/libs/wifis3.html#print-procs-all	proc		401
+nimgrp	initwifiserver	narduino/libs/wifis3.html#initWiFiServer-procs-all	proc		418
+nimgrp	println	narduino/libs/wifis3.html#println-procs-all	proc		405
+nimgrp	Bssid	narduino/libs/wifis3.html#BSSID-templates-all	template		605

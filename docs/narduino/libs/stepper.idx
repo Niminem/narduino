@@ -1,9 +1,9 @@
 nimTitle	stepper	narduino/libs/stepper.html	module src/narduino/libs/stepper		0
-nim	Stepper	narduino/libs/stepper.html#Stepper	object Stepper		13
-nim	initStepper	narduino/libs/stepper.html#initStepper,cint,cint,cint	proc initStepper(numberOfSteps: cint; motorPin1, motorPin2: cint): Stepper		15
-nim	initStepper	narduino/libs/stepper.html#initStepper,cint,cint,cint,cint,cint	proc initStepper(numberOfSteps: cint;\n            motorPin1, motorPin2, motorPin3, motorPin4: cint): Stepper		21
-nim	initStepper	narduino/libs/stepper.html#initStepper,cint,cint,cint,cint,cint,cint	proc initStepper(numberOfSteps: cint;\n            motorPin1, motorPin2, motorPin3, motorPin4, motorPin5: cint): Stepper		27
-nim	setSpeed	narduino/libs/stepper.html#setSpeed,Stepper,clong	proc setSpeed(s: var Stepper; whatSpeed: clong)		34
-nim	step	narduino/libs/stepper.html#step,Stepper,cint	proc step(s: var Stepper; numberOfSteps: cint)		37
-nim	version	narduino/libs/stepper.html#version,Stepper	proc version(s: Stepper): cint		41
-nimgrp	initstepper	narduino/libs/stepper.html#initStepper-procs-all	proc		15
+nim	Stepper	narduino/libs/stepper.html#Stepper	object Stepper		60
+nim	initStepper	narduino/libs/stepper.html#initStepper,cint,cint,cint	proc initStepper(numberOfSteps: cint; motorPin1, motorPin2: cint): Stepper		62
+nim	initStepper	narduino/libs/stepper.html#initStepper,cint,cint,cint,cint,cint	proc initStepper(numberOfSteps: cint;\n            motorPin1, motorPin2, motorPin3, motorPin4: cint): Stepper		68
+nim	initStepper	narduino/libs/stepper.html#initStepper,cint,cint,cint,cint,cint,cint	proc initStepper(numberOfSteps: cint;\n            motorPin1, motorPin2, motorPin3, motorPin4, motorPin5: cint): Stepper		74
+nim	setSpeed	narduino/libs/stepper.html#setSpeed,Stepper,clong	proc setSpeed(s: var Stepper; whatSpeed: clong)		81
+nim	step	narduino/libs/stepper.html#step,Stepper,cint	proc step(s: var Stepper; numberOfSteps: cint)		84
+nim	version	narduino/libs/stepper.html#version,Stepper	proc version(s: Stepper): cint		88
+nimgrp	initstepper	narduino/libs/stepper.html#initStepper-procs-all	proc		62

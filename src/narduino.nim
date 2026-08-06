@@ -4,14 +4,16 @@
 import narduino/api
 export api
 
-when defined(nimdoc):
+{.warning[UnusedImport]:off.} # suppress unused import warnings for the wrapped libraries
+when defined(nimdoc): # documentation for the wrapped libraries
   import narduino/toolchain
   import narduino/libs/servo
   import narduino/libs/arduino_graphics
   import narduino/libs/arduino_led_matrix
   import narduino/libs/adafruit_sensor
   import narduino/libs/dht_sensor
-  import narduino/libs/stepper # TODO: add other libs here as they are created !!!
+  import narduino/libs/stepper
+  import narduino/libs/wifis3 # TODO: add other libs here as they are created !!!
   # TODO: make macros that will loop through and include the libs here !!!
 
 

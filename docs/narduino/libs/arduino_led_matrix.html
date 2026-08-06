@@ -289,7 +289,7 @@
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;Arduino_LED_Matrix.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    Render scrolling text into a frame buffer for later playback. <tt class="docutils literal"><span class="pre"><span class="Identifier">frames</span></span></tt> points to a pre-allocated buffer of <a class="reference internal" href="#4">4</a>uint32 entries. <tt class="docutils literal"><span class="pre"><span class="Identifier">howManyMax</span></span></tt> is the total byte size of the buffer. <tt class="docutils literal"><span class="pre"><span class="Identifier">howManyUsed</span></span></tt> receives the number of bytes actually written.
+    Render scrolling text into a frame buffer for later playback. <tt class="docutils literal"><span class="pre"><span class="Identifier">frames</span></span></tt> points to a pre-allocated buffer of <tt class="docutils literal"><span class="pre"><span class="Punctuation">[</span><span class="DecNumber">4</span><span class="Punctuation">]</span><span class="Identifier">uint32</span></span></tt> entries. <tt class="docutils literal"><span class="pre"><span class="Identifier">howManyMax</span></span></tt> is the total byte size of the buffer. <tt class="docutils literal"><span class="pre"><span class="Identifier">howManyUsed</span></span></tt> receives the number of bytes actually written.
     
   </dd>
 </div>
@@ -353,7 +353,7 @@
                                     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    Load a sequence of frames. <tt class="docutils literal"><span class="pre"><span class="Identifier">frames</span></span></tt> points to a contiguous array of <a class="reference internal" href="#4">4</a>uint32 entries (3 words of pixel data + 1 word duration per frame). <tt class="docutils literal"><span class="pre"><span class="Identifier">howMany</span></span></tt> is the total byte size of the frames array.
+    Load a sequence of frames. <tt class="docutils literal"><span class="pre"><span class="Identifier">frames</span></span></tt> points to a contiguous array of <tt class="docutils literal"><span class="pre"><span class="Punctuation">[</span><span class="DecNumber">4</span><span class="Punctuation">]</span><span class="Identifier">uint32</span></span></tt> entries (3 words of pixel data + 1 word duration per frame). <tt class="docutils literal"><span class="pre"><span class="Identifier">howMany</span></span></tt> is the total byte size of the frames array.
     
   </dd>
 </div>
@@ -479,7 +479,7 @@
                                      <span class="Identifier">frames</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">array</span><span class="Other">[</span><span class="Identifier">N</span><span class="Other">,</span> <span class="Identifier">array</span><span class="Other">[</span><span class="DecNumber">4</span><span class="Other">,</span> <span class="Identifier">uint32</span><span class="Other">]</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
   <dd>
     
-    Load a frame sequence from a Nim array. Each element is <a class="reference internal" href="#pixel0, pixel1, pixel2, duration_ms">pixel0, pixel1, pixel2, duration_ms</a>.
+    Load a frame sequence from a Nim array. Each element is <tt class="docutils literal"><span class="pre"><span class="Punctuation">[</span><span class="Identifier">pixel0</span><span class="Punctuation">,</span> <span class="Identifier">pixel1</span><span class="Punctuation">,</span> <span class="Identifier">pixel2</span><span class="Punctuation">,</span> <span class="Identifier">duration_ms</span><span class="Punctuation">]</span></span></tt>.
     
   </dd>
 </div>
@@ -525,7 +525,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-08-04 02:31:35 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-08-06 20:50:05 UTC</small>
       </div>
     </div>
   </div>
