@@ -66,6 +66,16 @@ Zero-config is the default everywhere: the board's fqbn, serial port, and target
 
 Every flag exists only to override that detection (multiple boards connected, boards like Teensy that can't report their cpu, uploading to a board that isn't currently attached, etc.).
 
+## Examples
+
+The [examples/](examples/) directory is a collection of working firmware written with narduino — flash any of them with `narduino flash --src:examples/<name>.nim`. Some are commented walkthroughs, others are bare-bones references, but all are real programs tested on real hardware:
+
+- **Basics** — blink, serial echo, button input, internal pull-up, RGB LED with buttons
+- **Sensors** — photoresistor, PIR motion, DHT11 temperature/humidity
+- **Motors** — servo sweep, servo driven by a potentiometer or photoresistor, DC motor, stepper
+- **Sound** — active buzzer via transistor, passive buzzer playing a melody
+- **UNO R4 WiFi** — built-in LED matrix, temperature readout on the matrix, LED toggling from a browser over WiFi, and a UDP listener with a host-side client
+
 ## CLI reference
 
 ```
