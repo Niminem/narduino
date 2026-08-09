@@ -4,8 +4,9 @@ author        = "Leon Lysak (Niminem)"
 description   = "Write and flash Arduino firmware with Nim using your favorite IDE - easily!"
 license       = "MIT"
 srcDir        = "src"
+installExt    = @["nim"]
 bin           = @["narduino"]
-installDirs   = @["docs","src"]
+installDirs   = @["docs"]
 
 # Dependencies
 requires "nim >= 2.2.10"
