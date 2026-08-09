@@ -1,6 +1,6 @@
 # narduino
 
-Write and flash Arduino firmware with **Nim** using your favorite IDE — easily!
+Write and flash Arduino firmware (and ESP32) with **Nim** using your favorite IDE — easily!
 
 [Arduino CLI](https://arduino.github.io/arduino-cli/) powers the Arduino IDE and other official tooling. `narduino` provides abstractions on top of it and the Nim compiler so you can build firmware in Nim from any editor: your Nim code is translated to C++, placed into a standard Arduino sketch, and arduino-cli then compiles that sketch for your board and flashes it — all from one command.
 
@@ -84,6 +84,7 @@ narduino <command> [--flag:value]
 
 | Command | What it does |
 |---|---|
+| `new` | Creates a new, blank Nim firmware file |
 | `boards` | Lists connected boards (detected serial ports and their matches) |
 | `active` | Shows the active board (fqbn and port) |
 | `install` | Installs the core (platform) for the active board |
@@ -95,6 +96,15 @@ narduino <command> [--flag:value]
 | `libinstall` | Installs an Arduino library |
 | `docs` | Opens the API documentation in your default browser |
 | `help` | Shows help for all commands (also shown when run with no arguments) |
+
+### `narduino new`
+
+Creates a new Nim firmware file from a minimal template (`setup:` with `Serial` ready, empty `loop:`) — a quick starting point for a new project. Won't overwrite an existing file.
+
+| Flag | Description |
+|---|---|
+| `--dest:<path>` | Destination directory, relative or absolute (default: current directory) |
+| `--name:<name>` | Filename without extension, e.g. `--name:motor` creates `motor.nim` (default: `blank`) |
 
 ### `narduino sketch`
 

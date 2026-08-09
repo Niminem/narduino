@@ -4,7 +4,7 @@ import toolchain
 type Args* = object
   command*, src*, dir*, cpu*, fqbn*,
    port*, autoinstall*, verbose*, baud*,
-   lib*, query*: string
+   lib*, query*, dest*, name*: string
 
 
 const HelpText = """
@@ -14,6 +14,9 @@ Usage:
   narduino <command> [--flag:value]
 
 Commands:
+  new       Creates a new, blank Nim firmware file
+              --dest:<path>       destination directory, relative or absolute (default: current directory)
+              --name:<name>       name of the file without extension (default: blank)
   boards    Lists connected boards (detected serial ports and their matches)
   active    Shows the active board (fqbn and port)
   install   Installs the core (platform) for the active board
@@ -67,10 +70,34 @@ proc getArgs*(): Args =
       elif key == "baud": result.baud = val
       elif key == "lib": result.lib = val
       elif key == "query": result.query = val
+      elif key == "dest": result.dest = val
+      elif key == "name": result.name = val
       else:
         quit "Invalid Option: " & key & "\nRun 'narduino help' for a list of valid options."
     of cmdArgument:
       result.command = key
+
+
+const BlankTemplate = """# import std/[]
+import narduino
+
+setup:
+    Serial.begin(9600)
+    delay(1000)
+
+loop:
+    discard
+"""
+
+proc runNewCommand*(args: Args) =
+  let dest = if args.dest.len > 0: args.dest else: getCurrentDir()
+  let name = if args.name.len > 0: args.name else: "blank"
+  let path = dest / addFileExt(name, "nim")
+  if fileExists(path):
+    quit "File already exists: " & path
+  createDir(dest)
+  writeFile(path, BlankTemplate)
+  echo "Created " & path
 
 
 proc runBoardsCommand*() =
@@ -175,6 +202,7 @@ proc runHelpCommand*() =
 
 proc runCommand*(args: Args) =
   case args.command
+  of "new": runNewCommand(args)
   of "boards": runBoardsCommand()
   of "active": runActiveCommand()
   of "install": runInstallCommand()
