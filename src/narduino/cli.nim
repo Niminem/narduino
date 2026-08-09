@@ -79,7 +79,7 @@ proc getArgs*(): Args =
 
 
 const BlankTemplate = """# import std/[]
-import narduino
+import pkg/narduino
 
 setup:
     Serial.begin(9600)

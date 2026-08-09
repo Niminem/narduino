@@ -5,7 +5,7 @@ description   = "Write and flash Arduino firmware with Nim using your favorite I
 license       = "MIT"
 srcDir        = "src"
 bin           = @["narduino"]
-installDirs   = @["docs"]
+installDirs   = @["docs","src"]
 
 # Dependencies
 requires "nim >= 2.2.10"
