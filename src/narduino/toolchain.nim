@@ -205,7 +205,7 @@ proc createSketch*(nimSrcFile: string, sketchDir, cpu: string = ""): string {.di
   # build the command
   # note: we are providing flags like this in order to more easily modify the command later
   var cmd = "nim cpp "
-  let flags = @[
+  var flags = @[
     "--cpu:" & finalCpu,
     "--os:any",
     "--mm:arc",
@@ -221,6 +221,9 @@ proc createSketch*(nimSrcFile: string, sketchDir, cpu: string = ""): string {.di
     "--nimcache:" & quoteShell(tmpDir),
     quoteShell(nimSrcFile),
   ]
+  # ESP32 Arduino core declares setup()/loop() with C++ linkage (not extern "C")
+  if finalCpu == "esp":
+    flags.insert("-d:narduinoExportCpp", 0)
   cmd &= flags.join(" ")
   
   # execute the command

@@ -1,6 +1,6 @@
 # narduino
 
-Write and flash Arduino firmware (and ESP32) with **Nim** using your favorite IDE — easily!
+Write and flash Arduino firmware (+ ESP32 and more!) with **Nim** using your favorite IDE — easily!
 
 [Arduino CLI](https://arduino.github.io/arduino-cli/) powers the Arduino IDE and other official tooling. `narduino` provides abstractions on top of it and the Nim compiler so you can build firmware in Nim from any editor: your Nim code is translated to C++, placed into a standard Arduino sketch, and arduino-cli then compiles that sketch for your board and flashes it — all from one command.
 
@@ -281,10 +281,65 @@ Third-party cores that aren't in the official package index (ESP8266, ATTinyCore
 work too: register the core's package index URL with arduino-cli once, and narduino's
 core installation picks it up automatically from your arduino-cli configuration.
 
+*Note: ESP32 has been tested (see below). Other third-party cores (ESP8266, ATTinyCore, ...) should work but are untested — see the [arduino-cli docs](https://arduino.github.io/arduino-cli/latest/getting-started/#adding-3rd-party-cores) for details on registering additional package indexes.*
+
+### ESP32
+
+ESP32 boards are fully supported. Because the ESP32 platform is a third-party core, there are a few one-time setup steps before you can flash:
+
+**1. Register the ESP32 board manager URL:**
+
 ```sh
-arduino-cli config add board_manager.additional_urls https://arduino.esp8266.com/stable/package_esp8266com_index.json
+arduino-cli config add board_manager.additional_urls https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
-*note: third-party cores are untested with narduino; see the [arduino-cli docs](https://arduino.github.io/arduino-cli/latest/getting-started/#adding-3rd-party-cores) for details on registering additional package indexes*
+
+**2. Install the ESP32 core:**
+
+```sh
+arduino-cli core install esp32:esp32
+```
+
+**3. Install the USB-to-serial driver (if needed):**
+
+Most ESP32 dev boards use a CP2102 or CH340 USB-to-serial chip. If your board doesn't appear as a COM port (Windows) or `/dev/ttyUSB*` (Linux/macOS) when plugged in, you need the driver:
+
+- **CP2102/CP2104:** [Silicon Labs CP210x Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
+- **CH340/CH341:** [WCH CH340 Drivers](http://www.wch-ic.com/downloads/CH341SER_EXE.html)
+
+**4. Flash with explicit flags:**
+
+ESP32 boards typically don't self-identify over serial, so auto-detection won't find them. Pass the `--fqbn` and `--port` flags explicitly:
+
+```sh
+narduino flash --src:examples/blink.nim --fqbn:esp32:esp32:esp32 --port:COM5
+```
+
+Replace `COM5` with your board's actual port (check Device Manager on Windows or `ls /dev/ttyUSB*` on Linux). Common ESP32 FQBNs:
+
+| Board | FQBN |
+|---|---|
+| ESP32 (generic / DevKit) | `esp32:esp32:esp32` |
+| ESP32-S2 | `esp32:esp32:esp32s2` |
+| ESP32-S3 | `esp32:esp32:esp32s3` |
+| ESP32-C3 | `esp32:esp32:esp32c3` |
+| NodeMCU-32S | `esp32:esp32:nodemcu-32s` |
+
+*Note: the generic ESP32 FQBN does not define `LED_BUILTIN`. If you're using the blink example, either choose a board-specific FQBN that defines it, or use the GPIO pin number directly (GPIO 2 is the built-in LED on most ESP32 dev boards):*
+
+```nim
+import narduino
+
+const LED_PIN = 2'u8
+
+setup:
+  pinMode(LED_PIN, OUTPUT)
+
+loop:
+  digitalWrite(LED_PIN, HIGH)
+  delay(1000)
+  digitalWrite(LED_PIN, LOW)
+  delay(1000)
+```
 
 ## Troubleshooting
 

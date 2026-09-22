@@ -8,15 +8,24 @@ template setup*(body) =
   ## Template for the setup function
   ## No name mangling as Arduino expects this function
   ## Includes NimMain() to initialize the Nim runtime for convenience
-  proc setup {.exportc.} =
-    NimMain()
-    body
+  when defined(narduinoExportCpp):
+    proc setup {.exportcpp.} =
+      NimMain()
+      body
+  else:
+    proc setup {.exportc.} =
+      NimMain()
+      body
 
 template loop*(body) =
   ## Template for the loop function
   ## No name mangling as Arduino expects this function
-  proc loop {.exportc.} =
-    body
+  when defined(narduinoExportCpp):
+    proc loop {.exportcpp.} =
+      body
+  else:
+    proc loop {.exportc.} =
+      body
 
 
 {.push importc, nodecl, header:"Arduino.h".}
